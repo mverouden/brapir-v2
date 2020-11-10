@@ -34,6 +34,13 @@ an array with exactly 1 element.
 The common crop name can be used as a search parameter for Programs,
 Studies, and Germplasm.
 }
+\examples{
+\dontrun{
+con <- brapi_db()$testserver
+brapi_get_commoncropnames(con = con)
+}
+
+}
 \references{
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Common\%20Crop\%20Names/get_commoncropnames}{BrAPI SwaggerHub}
 }

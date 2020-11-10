@@ -31,7 +31,7 @@
 #' @family brapi-core
 #' @family Common Crop Names
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' brapi_get_commoncropnames(con = con)
