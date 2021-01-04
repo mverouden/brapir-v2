@@ -45,7 +45,7 @@ brapi_get_commoncropnames(con = con)
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Common\%20Crop\%20Names/get_commoncropnames}{BrAPI SwaggerHub}
 }
 \author{
-brapir generator package
+Maikel Verouden
 }
 \concept{Common Crop Names}
 \concept{brapi-core}

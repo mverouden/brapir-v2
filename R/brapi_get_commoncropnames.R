@@ -24,7 +24,7 @@
 #'
 #' @return data.frame
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Common%20Crop%20Names/get_commoncropnames}{BrAPI SwaggerHub}
 #'
