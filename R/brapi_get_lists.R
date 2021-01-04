@@ -25,7 +25,7 @@
 #' @family brapi-core
 #' @family Lists
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' brapi_get_lists(con = con)

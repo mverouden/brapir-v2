@@ -44,6 +44,13 @@ Get filtered set of generic lists
 \details{
 Get filtered set of generic lists
 }
+\examples{
+\dontrun{
+con <- brapi_db()$testserver
+brapi_get_lists(con = con)
+}
+
+}
 \references{
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Lists/get_lists}{BrAPI SwaggerHub}
 }
