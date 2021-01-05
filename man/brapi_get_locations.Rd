@@ -39,7 +39,8 @@ Get a filtered list of Locations
 Get a list of locations.
 \itemize{
 \item The \code{countryCode} is as per \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}{ISO_3166-1_alpha-3} spec.
-\item \code{altitude} is in meters.
+\item coordinates are specified as longitude, latitude (in this specific order).
+\item \code{altitude} (optional third parameter to coordinates) is in meters.
 }
 }
 \examples{

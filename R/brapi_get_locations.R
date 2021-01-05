@@ -14,7 +14,8 @@
 #'
 #' @details Get a list of locations.
 #' * The `countryCode` is as per [ISO_3166-1_alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) spec.
-#' * `altitude` is in meters.
+#' * coordinates are specified as longitude, latitude (in this specific order).
+#' * `altitude` (optional third parameter to coordinates) is in meters.
 #'
 #' @return data.frame
 #'
