@@ -56,7 +56,11 @@ brapi_get_lists(con = con)
 }
 \seealso{
 Other brapi-core: 
-\code{\link{brapi_get_commoncropnames}()}
+\code{\link{brapi_get_commoncropnames}()},
+\code{\link{brapi_get_lists_listDbId}()}
+
+Other Lists: 
+\code{\link{brapi_get_lists_listDbId}()}
 }
 \author{
 Maikel Verouden
