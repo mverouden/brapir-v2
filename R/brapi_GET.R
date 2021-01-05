@@ -30,7 +30,7 @@ brapi_GET <- function(url, usedArgs) {
   }
 
   txt <- ifelse(resp[["status_code"]] == 200, " ok!", " problem!")
-  brapi_message(msg = paste0("Server status: ", txt, "\n"))
+  brapi_message(msg = paste0("Server status (Code ", resp[["status_code"]], ") : ", txt, "\n"))
   # url <- httr::content(resp)
   # if (format == "json") show_server_status_messages(resp)
   return(resp)
