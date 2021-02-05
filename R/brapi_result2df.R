@@ -14,11 +14,31 @@
 ###    repeat single response part to match dimensions).
 #' @importFrom utils as.relistable read.csv read.delim
 brapi_result2df <- function(cont, usedArgs) {
+  ## Helper functions
+  jointDetail <- function(detailDat, colName) {
+    detailDatCol <- data.frame(detailDat[[colName]],
+                               stringsAsFactors = FALSE)
+    if (!colName %in% c("taxonIds", "seasons", "studies")) {
+      names(detailDatCol) <- paste(colName, names(detailDatCol), sep = ".")
+    }
+    detailDat[[colName]] <- NULL
+    if (nrow(detailDatCol) > 0) {
+      detailDat <-  detailDat[rep(seq_len(nrow(detailDat)), each = nrow(detailDatCol)), ]
+      df <- cbind(detailDat, detailDatCol)
+    } else {# nrow(detailDatCol) == 0
+      df <- detailDat
+    }
+    row.names(df) <- seq_len(nrow(df))
+    df <- jsonlite::flatten(df)
+    return(df)
+  }
+
   ## Parse JSON content into a list that consists of a metadata and result
   ## element
   contList <- jsonlite::fromJSON(txt = cont)
   ## Use only the result element from the content list (contList)
   resultList <- contList[["result"]]
+  ## Determine payload variable value
   if ("data" %in% names(resultList)) {
     payload <- ifelse(test = length(resultList) == 1,
                       yes = "detail",
@@ -26,6 +46,7 @@ brapi_result2df <- function(cont, usedArgs) {
   } else {
     payload <- "master"
   }
+  ## Handle and process payload variable
   switch(payload,
          "master" = {
            if (all(lengths(resultList) <= 1)) {
