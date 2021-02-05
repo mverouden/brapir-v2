@@ -58,6 +58,7 @@ brapi_get_lists(con = con)
 Other brapi-core: 
 \code{\link{brapi_get_commoncropnames}()},
 \code{\link{brapi_get_lists_listDbId}()},
+\code{\link{brapi_get_locations_locationDbId}()},
 \code{\link{brapi_get_locations}()}
 
 Other Lists: 
