@@ -1,4 +1,7 @@
-### Internal function to check required and used arguments
+#' Helper function for checking required and used arguments
+#'
+#' @noRd
+#' @keywords internal
 brapi_checkArgs <- function(usedArgs, reqArgs) {
   ## Remove con list (connection object) from used arguments
   usedArgs[["con"]] <- NULL

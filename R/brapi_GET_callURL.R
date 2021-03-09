@@ -1,4 +1,7 @@
-### Internal function to create a callURL for a GET call
+#' Helper function to create a callURL for a GET call
+#'
+#' @noRd
+#' @keywords internal
 brapi_GET_callURL <- function(usedArgs, callPath, reqArgs, packageName, callVersion) {
   if (is.null(usedArgs[["con"]])) {return(NULL)}
   ## Preprocess required arguments

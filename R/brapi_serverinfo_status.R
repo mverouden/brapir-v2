@@ -1,5 +1,7 @@
-### Internal function to display status serverinfo
-### used to be show_server_status_messages
+#' Helper function to display status serverinfo used to be called: show_server_status_messages()
+#'
+#' @noRd
+#' @keywords internal
 brapi_serverinfo_status <- function(out) {
   show_message <- function(msg_type, msg_Title, msg_color) {
     brapi_message(msg = msg_color(paste0("\n", msg_Title,":")))

@@ -1,4 +1,7 @@
-### Internal function to create a call body for a PUT call
+#' Helper function to create a call body for a PUT call
+#'
+#' @noRd
+#' @keywords internal
 brapi_PUT_callBody <- function(usedArgs, reqArgs) {
   if (is.null(usedArgs[["con"]])) {return(NULL)}
   ## Preprocess required arguments

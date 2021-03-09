@@ -1,3 +1,7 @@
+#' Helper function for pagination information
+#'
+#' @noRd
+#' @keywords internal
 brapi_serverinfo_pagination <- function(cont) {
   if (jsonlite::validate(txt = cont)) {
     contList <- jsonlite::fromJSON(txt = cont)

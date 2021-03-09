@@ -1,4 +1,7 @@
-### Internal function to obtain a response from a GET call
+#' Helper function to obtain a response from a GET call
+#'
+#' @noRd
+#' @keywords internal
 brapi_GET <- function(url, usedArgs) {
   brapi_message(msg = paste0("URL call was: ", url, "\n"))
   brapi_message(msg = paste0("Waiting for response from server: ...\n"))

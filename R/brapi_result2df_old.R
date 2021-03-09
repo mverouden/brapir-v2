@@ -1,5 +1,8 @@
-### Internal function for parsing the result part of the response content into
-### a flattened data.frame object
+#' Helper function for parsing the result part of the response content into a
+#' flattened data.frame object
+#'
+#' @noRd
+#' @keywords internal
 #' @importFrom utils as.relistable read.csv read.delim
 brapi_result2df_old <- function(cont, usedArgs) {
   ## Helper functions

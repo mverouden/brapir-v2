@@ -1,4 +1,7 @@
-### Internal function to obtain a response from a PUT call
+#' Helper function to obtain a response from a PUT call
+#'
+#' @noRd
+#' @keywords internal
 brapi_PUT <- function(url, body, usedArgs) {
   brapi_message(msg = paste0("URL call was: ", url, "\n"))
   brapi_message(msg = paste0("Waiting for response from server: ...\n"))

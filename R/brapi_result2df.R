@@ -1,17 +1,21 @@
-### Internal function for parsing the result part of the response content into
-### a flattened data.frame object
-###
-### resultList can consist of:
-### 1) Single Response (master): In this type of response, the result field is an object
-###    describing a single record of data. There should NOT be a "data" array/element
-###    in this case and pagination does not apply. A Single Response is used when
-###    you are requesting or modifying a single, specific data object by its DbId.
-### 2) List Response (detail): In this type of response, the result object only contains
-###    a "data" array/element, which is an arbitrarily long array of objects of
-###    the same type. Pagination request parameters and pagination metadata
-###    fields apply to this data array.
-### 3) Special cases (master/detail: mix of Single and List response (parse "data" element and
-###    repeat single response part to match dimensions).
+#' Helper function for parsing the result part of the response content into a
+#' flattened data.frame object
+#'
+#' resultList can consist of:
+#' 1) Single Response (master): In this type of response, the result field is an
+#'    object describing a single record of data. There should NOT be a "data"
+#'    array/element in this case and pagination does not apply. A Single Response
+#'    is used when you are requesting or modifying a single, specific data object
+#'    by its DbId.
+#' 2) List Response (detail): In this type of response, the result object only
+#'    contains a "data" array/element, which is an arbitrarily long array of
+#'    objects of the same type. Pagination request parameters and pagination
+#'    metadata fields apply to this data array.
+#' 3) Special cases (master/detail: mix of Single and List response (parse "data"
+#'    element and repeat single response part to match dimensions).
+#'
+#' @noRd
+#' @keywords internal
 #' @importFrom utils as.relistable read.csv read.delim
 brapi_result2df <- function(cont, usedArgs) {
   ## Helper functions

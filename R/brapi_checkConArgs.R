@@ -1,4 +1,7 @@
-### Internal function to check connection object arguments
+#' Helper function for checking connection object arguments
+#'
+#' @noRd
+#' @keywords internal
 brapi_checkConArgs <- function(secure = FALSE,
                                protocol = "http://",
                                db = "127.0.0.1",
