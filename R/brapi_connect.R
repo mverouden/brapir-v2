@@ -55,19 +55,19 @@ brapi_connect <- function(brapiDb = NULL,
   } else {
     # check for net connectivity
     brapi_canInternet()
-    brapi_checkConArgs(secure = secure,
-                       protocol = protocol,
-                       db = db,
-                       port = port,
-                       apipath = apipath,
-                       multicrop = multicrop,
-                       commoncropname = commoncropname,
-                       user = user,
-                       password = password,
-                       token = token,
-                       granttype = granttype,
-                       clientid = clientid,
-                       bms = bms)
+    brapir:::brapi_checkConArgs(secure = secure,
+                                protocol = protocol,
+                                db = db,
+                                port = port,
+                                apipath = apipath,
+                                multicrop = multicrop,
+                                commoncropname = commoncropname,
+                                user = user,
+                                password = password,
+                                token = token,
+                                granttype = granttype,
+                                clientid = clientid,
+                                bms = bms)
     # bms == TRUE, then always multicrop == TRUE
     if (bms == TRUE) {
       multicrop <- TRUE

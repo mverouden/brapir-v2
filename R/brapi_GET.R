@@ -3,8 +3,8 @@
 #' @noRd
 #' @keywords internal
 brapi_GET <- function(url, usedArgs) {
-  brapi_message(msg = paste0("URL call was: ", url, "\n"))
-  brapi_message(msg = paste0("Waiting for response from server: ...\n"))
+  brapir:::brapi_message(msg = paste0("URL call was: ", url, "\n"))
+  brapir:::brapi_message(msg = paste0("Waiting for response from server: ...\n"))
 
   if ("format" %in% names(usedArgs)) {
     if (is.na(usedArgs[["format"]])) {
@@ -33,7 +33,7 @@ brapi_GET <- function(url, usedArgs) {
   }
 
   txt <- ifelse(resp[["status_code"]] == 200, " ok!", " problem!")
-  brapi_message(msg = paste0("Server status (Code ", resp[["status_code"]], ") : ", txt, "\n"))
+  brapir:::brapi_message(msg = paste0("Server status (Code ", resp[["status_code"]], ") : ", txt, "\n"))
   # url <- httr::content(resp)
   # if (format == "json") show_server_status_messages(resp)
   return(resp)

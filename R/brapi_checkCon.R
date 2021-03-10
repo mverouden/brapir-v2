@@ -29,8 +29,8 @@ brapi_checkCon <- function(con = NULL, verbose = TRUE, brapi_calls = "any") {
   brapi_canInternet(url = url)
 
   if (verbose) {
-    brapi_message(msg = "BrAPI connection ok.")
-    brapi_message(paste(con, collapse = "\n"))
+    brapir:::brapi_message(msg = "BrAPI connection ok.")
+    brapir:::brapi_message(paste(con, collapse = "\n"))
   }
   return(TRUE)
 }

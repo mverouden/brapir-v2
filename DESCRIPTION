@@ -23,6 +23,7 @@ Imports:
     stringr,
     curl,
     magrittr,
+    plyr,
     dplyr,
     utils,
     readr,

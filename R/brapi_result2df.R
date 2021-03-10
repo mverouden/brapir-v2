@@ -17,6 +17,7 @@
 #' @noRd
 #' @keywords internal
 #' @importFrom utils as.relistable read.csv read.delim
+#' @importFrom plyr empty
 brapi_result2df <- function(cont, usedArgs) {
   ## Helper functions
   jointDetail <- function(detailDat, colName) {
@@ -226,10 +227,12 @@ brapi_result2df <- function(cont, usedArgs) {
            if (exists("headerRow")) {
              colnames(detail) <- headerRow
              namesListCols <- names(detail)
-           } else {
+           } else if (!plyr::empty(detail)) {
              namesListCols <- names(which(sapply(X = detail,
                                                  FUN = inherits,
                                                  what = "list")))
+           } else {
+## continue here!!             namesListCols <- ""
            }
            for (colName in namesListCols) {
              ## list of data.frame
