@@ -1,5 +1,7 @@
 #' Helper function to create a call body for a PUT call
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_PUT_callBody <- function(usedArgs, reqArgs) {

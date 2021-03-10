@@ -1,5 +1,7 @@
 #' Helper function for pagination information
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_serverinfo_pagination <- function(cont) {

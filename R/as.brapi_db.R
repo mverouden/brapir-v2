@@ -21,7 +21,7 @@
 #'
 #' @return An BrAPI compliant database connection object of class brapi_db.
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @family brapiutils
 #'

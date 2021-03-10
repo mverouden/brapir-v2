@@ -1,5 +1,7 @@
 #' Helper function to obtain a response from a POST call
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_POST <- function(url, body, usedArgs) {

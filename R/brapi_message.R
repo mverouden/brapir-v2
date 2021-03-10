@@ -1,5 +1,7 @@
 #' Helper function to pass a diagnostic message
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_message <- function(msg = "Using local test server.") {

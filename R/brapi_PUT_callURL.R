@@ -1,5 +1,7 @@
 #' Helper function to create a callURL for a PUT call
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_PUT_callURL <- function(usedArgs, callPath, reqArgs, packageName, callVersion) {

@@ -8,7 +8,7 @@
 #' @param x list; a BrAPI connection object (of class `brapi_con`).
 #' @param ... further arguments passed to or from other methods.
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @family brapiutils
 #'
@@ -30,7 +30,7 @@ print.brapi_con <- function(x, ...) {
 #' @param x list; a `brapi_db` class object.
 #' @param ... further arguments passed to or from other methods.
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @family brapiutils
 #'

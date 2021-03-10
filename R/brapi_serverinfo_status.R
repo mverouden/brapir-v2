@@ -1,5 +1,7 @@
 #' Helper function to display status serverinfo used to be called: show_server_status_messages()
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_serverinfo_status <- function(out) {

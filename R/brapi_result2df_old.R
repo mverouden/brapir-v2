@@ -1,6 +1,8 @@
 #' Helper function for parsing the result part of the response content into a
 #' flattened data.frame object
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 #' @importFrom utils as.relistable read.csv read.delim

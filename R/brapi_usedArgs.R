@@ -1,5 +1,7 @@
 #' Helper function to obtain all used arguments within a function definition
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_usedArgs <- function(origValues = FALSE) {

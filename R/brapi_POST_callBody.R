@@ -1,5 +1,7 @@
 #' Helper function to create a call body for a POST call
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_POST_callBody <- function(usedArgs, reqArgs) {

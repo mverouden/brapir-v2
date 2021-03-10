@@ -1,5 +1,7 @@
 #' Helper function to obtain a response from a GET call
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_GET <- function(url, usedArgs) {

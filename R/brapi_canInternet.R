@@ -8,7 +8,7 @@
 #'
 #' @return NULL when internet access is available or ERROR when internet access is not available
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @references \href{http://stackoverflow.com/questions/5076593/how-to-determine-if-you-have-an-internet-connection-in-r}{Stack Overflow} and \code{\link[curl]{has_internet}}
 #'

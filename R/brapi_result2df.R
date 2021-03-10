@@ -180,7 +180,7 @@ brapi_result2df <- function(cont, usedArgs) {
                                   masterList[["observationVariableDbIds"]],
                                   sep = "|"))
            } else {
-             if (!all(lengths(masterList) <= 1)) {
+             if (!all(lengths(masterList) <= 1)) {# some masterList elements lengths > 1
                master <- masterList[lengths(masterList) == 1]
                tempmaster <- list()
                for (l1name in names(which(lengths(masterList) > 1))) {
@@ -211,7 +211,7 @@ brapi_result2df <- function(cont, usedArgs) {
                } else {
                  master <- c(master, tempmaster)
                }
-             } else {
+             } else {# masterList elements all length <= 1
                master <-  masterList[lengths(masterList) == 1]
              }
            }
@@ -232,7 +232,7 @@ brapi_result2df <- function(cont, usedArgs) {
                                                  FUN = inherits,
                                                  what = "list")))
            } else {
-## continue here!!             namesListCols <- ""
+             namesListCols <- character(length = 0L)
            }
            for (colName in namesListCols) {
              ## list of data.frame
@@ -302,7 +302,15 @@ brapi_result2df <- function(cont, usedArgs) {
            if (exists("headerRow")) {
              dat <- detail
            } else {
-             dat <- cbind(as.data.frame(master, stringsAsFactors = FALSE), detail)
+             if (!plyr::empty(detail)) {
+               dat <- cbind(as.data.frame(master, stringsAsFactors = FALSE), detail)
+             } else {
+               master[["data"]] <- as.character(NA)
+               dat <- as.data.frame(master, stringsAsFactors = FALSE)
+             }
+             if ("resultList[[\"data\"]]" %in% colnames(dat)) {
+               colnames(dat)[colnames(dat) == "resultList[[\"data\"]]"] <- "data"
+             }
            }
          })
   return(dat)

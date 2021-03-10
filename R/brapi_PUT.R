@@ -1,5 +1,7 @@
 #' Helper function to obtain a response from a PUT call
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_PUT <- function(url, body, usedArgs) {

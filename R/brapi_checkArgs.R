@@ -1,5 +1,7 @@
 #' Helper function for checking required and used arguments
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_checkArgs <- function(usedArgs, reqArgs) {

@@ -6,6 +6,8 @@
 #'
 #' @param con list; required: **TRUE**; BrAPI connection object of class `brapi_con`.
 #'
+#' @author Maikel Verouden
+#'
 #' @examples
 #' library(brapir)
 #'

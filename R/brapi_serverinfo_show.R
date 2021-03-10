@@ -6,6 +6,8 @@
 #'
 #' @param show logical; default is TRUE
 #'
+#' @author Maikel Verouden
+#'
 #' @family brapiutils
 #'
 #' @export

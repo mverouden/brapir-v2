@@ -8,7 +8,7 @@
 #'
 #' @return boolean (TRUE of FALSE)
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @family brapiutils
 #'

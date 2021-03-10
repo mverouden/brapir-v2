@@ -13,7 +13,7 @@
 #'
 #' @return logical
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @family brapiutils
 #'

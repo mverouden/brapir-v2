@@ -1,5 +1,7 @@
 #' Helper function for checking connection object arguments
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_checkConArgs <- function(secure = FALSE,

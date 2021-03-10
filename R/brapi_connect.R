@@ -24,7 +24,7 @@
 #' @details
 #' If the brapiDb argument is used to specify a connection object as created by the `as.brapi_db()` function or from the white list in the `brapi_db()` function, it will override the other parameters; except for user, password and token.
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @return An BrAPI compliant database connection object of class brapi_db.
 #'

@@ -2,6 +2,8 @@
 #' where also an empty string "" is possible. Revision of match.arg to be able
 #' to match empty strings ""
 #'
+#' @author Maikel Verouden
+#'
 #' @noRd
 #' @keywords internal
 brapi_matchArg <- function(arg, choices, several.ok = FALSE) {
