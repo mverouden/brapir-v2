@@ -23,4 +23,7 @@ Other brapiutils:
 \code{\link{print.brapi_con}()},
 \code{\link{print.brapi_db}()}
 }
+\author{
+Maikel Verouden
+}
 \concept{brapiutils}

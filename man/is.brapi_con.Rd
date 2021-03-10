@@ -27,6 +27,6 @@ Other brapiutils:
 \code{\link{print.brapi_db}()}
 }
 \author{
-brapir generator package
+Maikel Verouden
 }
 \concept{brapiutils}

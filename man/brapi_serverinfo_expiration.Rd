@@ -21,3 +21,6 @@ if (interactive()) {
 }
 
 }
+\author{
+Maikel Verouden
+}

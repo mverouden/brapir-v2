@@ -26,6 +26,6 @@ Other brapiutils:
 \code{\link{print.brapi_con}()}
 }
 \author{
-brapir generator package
+Maikel Verouden
 }
 \concept{brapiutils}
