@@ -164,6 +164,18 @@ brapi_result2df <- function(cont, usedArgs) {
                  detail[[colName]] <- NULL
                }
              }
+             ## list of geometry.coordinates
+             if (all(tail(strsplit(colName, split = "\\.")[[1]], n = 2) %in% c("geometry", "coordinates"))) {
+               tempCoord <- detail[[colName]]
+               for (i in 1:length(tempCoord)) {
+                 if (inherits(x = tempCoord[[i]], what = "array")) {# exterior ring only
+                   tempCoord[[i]] <- matrix(tempCoord[[i]], prod(dim(tempCoord[[i]])[1:2]), dim(tempCoord[[i]])[3])
+                 } else {# "numeric" point, "list of matrix" polygon with exterior and inner ring(s)
+                   next()
+                 }
+               }
+               detail[[colName]] <- tempCoord
+             }
              if (exists("tempDetail")) {
                detail <- tempDetail
                rm(tempDetail)
