@@ -60,6 +60,7 @@ Other brapi-core:
 \code{\link{brapi_get_lists_listDbId}()},
 \code{\link{brapi_get_locations_locationDbId}()},
 \code{\link{brapi_get_locations}()},
+\code{\link{brapi_get_people_personDbId}()},
 \code{\link{brapi_get_people}()}
 
 Other Lists: 
