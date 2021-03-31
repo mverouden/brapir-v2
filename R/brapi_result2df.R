@@ -80,15 +80,40 @@ brapi_result2df <- function(cont, usedArgs) {
                         }
                       },
                       "list" = {
-                        templist <- as.list(data.frame(t(as.matrix(unlist(as.relistable(resultList[[l1name]])))),
-                                                       stringsAsFactors = FALSE))
-                        names(templist) <- paste(l1name, names(templist), sep = ".")
-                        tempmaster <- c(tempmaster, templist)
+                        if (!l1name %in% c("coordinates")) {# a list other than coordinates
+                          templist <- as.list(data.frame(t(as.matrix(unlist(as.relistable(resultList[[l1name]])))),
+                                                         stringsAsFactors = FALSE))
+                          names(templist) <- paste(l1name, names(templist), sep = ".")
+                          tempmaster <- c(tempmaster, templist)
+                        } else {# when dealing with GeoJSON coordinates
+                          master$coordinates.geometry.type <- resultList[[l1name]]$geometry$type
+                          switch(class(resultList[[l1name]]$geometry$coordinates),
+                                 ## Point geometry
+                                 "numeric" = {
+                                   master$coordinates.geometry.coordinates[[1]] <-
+                                     resultList[[l1name]]$geometry$coordinates
+                                 },
+                                 ## Polygon geometry with only exterior ring
+                                 "array" = {
+                                   temparray <- resultList[[l1name]]$geometry$coordinates
+                                   master$coordinates.geometry.coordinates[[1]] <-
+                                     matrix(data = temparray,
+                                            nrow = prod(dim(temparray)[1:2]),
+                                            ncol = dim(temparray)[3])
+                                 },
+                                 ## Polygon geometry with exterior ring and possibly multiple interior rings
+                                 "list" = {
+                                   master$coordinates.geometry.coordinates[1] <- resultList[[l1name]]$geometry$coordinates
+                                 })
+                          master$coordinates.type <- resultList[[l1name]]$type
+                        }
                       })
              }
-             if (length(master) == 0) {
+             if (length(master) == 0) {# master is empty
                dat <- as.data.frame(tempmaster, stringsAsFactors = FALSE)
-             } else {
+             } else if (length(tempmaster) == 0) {# master has values and tempmaster is empty
+               dat <- master
+             } else {# master and tempmaster have values
                dat <- cbind(master, as.data.frame(tempmaster, stringsAsFactors = FALSE))
              }
            }
