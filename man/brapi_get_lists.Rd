@@ -59,7 +59,8 @@ Other brapi-core:
 \code{\link{brapi_get_commoncropnames}()},
 \code{\link{brapi_get_lists_listDbId}()},
 \code{\link{brapi_get_locations_locationDbId}()},
-\code{\link{brapi_get_locations}()}
+\code{\link{brapi_get_locations}()},
+\code{\link{brapi_get_people}()}
 
 Other Lists: 
 \code{\link{brapi_get_lists_listDbId}()}

@@ -40,7 +40,8 @@ Other brapi-core:
 \code{\link{brapi_get_commoncropnames}()},
 \code{\link{brapi_get_lists_listDbId}()},
 \code{\link{brapi_get_lists}()},
-\code{\link{brapi_get_locations}()}
+\code{\link{brapi_get_locations}()},
+\code{\link{brapi_get_people}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations}()}
