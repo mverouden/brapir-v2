@@ -61,6 +61,7 @@ Other brapi-core:
 \code{\link{brapi_get_locations_locationDbId}()},
 \code{\link{brapi_get_people_personDbId}()},
 \code{\link{brapi_get_people}()},
+\code{\link{brapi_get_programs_programDbId}()},
 \code{\link{brapi_get_programs}()}
 
 Other Locations: 
