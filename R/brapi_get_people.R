@@ -11,8 +11,7 @@
 #' @param userID character; required: FALSE; A systems user ID associated with this person. Different from personDbId because you could have a person who is not a user of the system.
 #' @param externalReferenceID character; required: FALSE; An external reference ID. Could be a simple string or a URI. (use with `externalReferenceSource` parameter)
 #' @param externalReferenceSource character; required: FALSE; An identifier for the source system or database of an external reference (use with `externalReferenceID` parameter)
-#' @param page integer; required: FALSE; Used to request a specific page of data to be returned.
-#' The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
+#' @param page integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
 #' @param pageSize integer; required: FALSE; The size of the pages to be returned. Default is `1000`.
 #'
 #' @details Get filtered list of people

@@ -68,7 +68,8 @@ Other brapi-core:
 \code{\link{brapi_get_search_people_searchResultsDbId}()},
 \code{\link{brapi_get_search_programs_searchResultsDbId}()},
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},
-\code{\link{brapi_get_search_trials_searchResultsDbId}()}
+\code{\link{brapi_get_search_trials_searchResultsDbId}()},
+\code{\link{brapi_get_seasons}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations_locationDbId}()},

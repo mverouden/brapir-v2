@@ -16,8 +16,7 @@ brapi_get_search_people_searchResultsDbId(
 
 \item{searchResultsDbId}{character; required: TRUE; Unique identifier which references the search results}
 
-\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned.
-The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
+\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
 
 \item{pageSize}{integer; required: FALSE; The size of the pages to be returned. Default is \code{1000}.}
 }
@@ -56,7 +55,8 @@ Other brapi-core:
 \code{\link{brapi_get_search_locations_searchResultsDbId}()},
 \code{\link{brapi_get_search_programs_searchResultsDbId}()},
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},
-\code{\link{brapi_get_search_trials_searchResultsDbId}()}
+\code{\link{brapi_get_search_trials_searchResultsDbId}()},
+\code{\link{brapi_get_seasons}()}
 
 Other People: 
 \code{\link{brapi_get_people_personDbId}()},
