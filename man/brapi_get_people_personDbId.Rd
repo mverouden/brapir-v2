@@ -20,6 +20,13 @@ Get the details for a specific Person
 \details{
 Get the details for a specific Person
 }
+\examples{
+\dontrun{
+con <- brapi_db()$testserver
+brapi_get_people_personDbId(con = con, personDbId = "person1")
+}
+
+}
 \references{
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/People/get_people__personDbId_ }{BrAPI SwaggerHub}
 }
@@ -30,7 +37,8 @@ Other brapi-core:
 \code{\link{brapi_get_lists}()},
 \code{\link{brapi_get_locations_locationDbId}()},
 \code{\link{brapi_get_locations}()},
-\code{\link{brapi_get_people}()}
+\code{\link{brapi_get_people}()},
+\code{\link{brapi_get_programs}()}
 
 Other People: 
 \code{\link{brapi_get_people}()}

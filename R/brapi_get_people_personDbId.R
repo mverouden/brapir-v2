@@ -19,6 +19,7 @@
 #' @family People
 #'
 #' @examples
+#' \dontrun{
 #' con <- brapi_db()$testserver
 #' brapi_get_people_personDbId(con = con, personDbId = "person1")
 #' }
