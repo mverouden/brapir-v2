@@ -53,7 +53,13 @@ Other brapi-core:
 \code{\link{brapi_get_people_personDbId}()},
 \code{\link{brapi_get_people}()},
 \code{\link{brapi_get_programs_programDbId}()},
-\code{\link{brapi_get_programs}()}
+\code{\link{brapi_get_programs}()},
+\code{\link{brapi_get_search_lists_searchResultsDbId}()},
+\code{\link{brapi_get_search_locations_searchResultsDbId}()},
+\code{\link{brapi_get_search_people_searchResultsDbId}()},
+\code{\link{brapi_get_search_programs_searchResultsDbId}()},
+\code{\link{brapi_get_search_studies_searchResultsDbId}()},
+\code{\link{brapi_get_search_trials_searchResultsDbId}()}
 }
 \author{
 Maikel Verouden
