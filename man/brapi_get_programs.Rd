@@ -21,7 +21,7 @@ brapi_get_programs(
 
 \item{commonCropName}{character; required: FALSE; Filter by the common crop name. Exact match.}
 
-\item{programDbId}{character; required: FALSE; Program filter to only return trials associated with given program id.}
+\item{programDbId}{character; required: FALSE; Program filter to only return trials associated with given program id. Exact match.}
 
 \item{programName}{character; required: FALSE; Filter by program name. Exact match.}
 
