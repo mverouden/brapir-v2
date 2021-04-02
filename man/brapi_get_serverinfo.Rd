@@ -68,6 +68,7 @@ Other brapi-core:
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
 \code{\link{brapi_get_seasons_seasonDbId}()},
 \code{\link{brapi_get_seasons}()},
+\code{\link{brapi_get_studies_studyDbId}()},
 \code{\link{brapi_get_studies}()}
 }
 \author{
