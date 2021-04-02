@@ -48,7 +48,8 @@ Other brapi-core:
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
 \code{\link{brapi_get_seasons_seasonDbId}()},
 \code{\link{brapi_get_seasons}()},
-\code{\link{brapi_get_serverinfo}()}
+\code{\link{brapi_get_serverinfo}()},
+\code{\link{brapi_get_studies}()}
 
 Other People: 
 \code{\link{brapi_get_people}()},
