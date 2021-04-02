@@ -117,10 +117,12 @@ Other brapi-core:
 \code{\link{brapi_get_serverinfo}()},
 \code{\link{brapi_get_studies_studyDbId}()},
 \code{\link{brapi_get_studies}()},
-\code{\link{brapi_get_studytypes}()}
+\code{\link{brapi_get_studytypes}()},
+\code{\link{brapi_get_trials_trialDbId}()}
 
 Other Trials: 
-\code{\link{brapi_get_search_trials_searchResultsDbId}()}
+\code{\link{brapi_get_search_trials_searchResultsDbId}()},
+\code{\link{brapi_get_trials_trialDbId}()}
 }
 \author{
 Maikel Verouden
