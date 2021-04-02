@@ -43,6 +43,10 @@ brapi_result2df <- function(cont, usedArgs) {
   contList <- jsonlite::fromJSON(txt = cont)
   ## Use only the result element from the content list (contList)
   resultList <- contList[["result"]]
+  ## Solve Issue that get_serverinfo has "calls" instead of "data"
+  if ("calls" %in% names(resultList)) {
+    names(resultList)[which(names(resultList) == "calls")] <- "data"
+  }
   ## Determine payload variable value
   if ("data" %in% names(resultList)) {
     payload <- ifelse(test = length(resultList) == 1,

@@ -70,7 +70,8 @@ Other brapi-core:
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
 \code{\link{brapi_get_seasons_seasonDbId}()},
-\code{\link{brapi_get_seasons}()}
+\code{\link{brapi_get_seasons}()},
+\code{\link{brapi_get_serverinfo}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations_locationDbId}()},
