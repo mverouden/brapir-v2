@@ -53,7 +53,8 @@ Other brapi-core:
 \code{\link{brapi_get_seasons}()},
 \code{\link{brapi_get_serverinfo}()},
 \code{\link{brapi_get_studies_studyDbId}()},
-\code{\link{brapi_get_studies}()}
+\code{\link{brapi_get_studies}()},
+\code{\link{brapi_get_trials}()}
 
 Other Studies: 
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},

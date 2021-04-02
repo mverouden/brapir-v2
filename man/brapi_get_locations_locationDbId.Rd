@@ -56,7 +56,8 @@ Other brapi-core:
 \code{\link{brapi_get_serverinfo}()},
 \code{\link{brapi_get_studies_studyDbId}()},
 \code{\link{brapi_get_studies}()},
-\code{\link{brapi_get_studytypes}()}
+\code{\link{brapi_get_studytypes}()},
+\code{\link{brapi_get_trials}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations}()},
