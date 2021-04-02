@@ -75,7 +75,8 @@ Other brapi-core:
 \code{\link{brapi_get_seasons}()},
 \code{\link{brapi_get_serverinfo}()},
 \code{\link{brapi_get_studies_studyDbId}()},
-\code{\link{brapi_get_studies}()}
+\code{\link{brapi_get_studies}()},
+\code{\link{brapi_get_studytypes}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs_programDbId}()},
