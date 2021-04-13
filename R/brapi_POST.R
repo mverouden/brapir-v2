@@ -23,6 +23,9 @@ brapi_POST <- function(url, body, usedArgs) {
              usedArgs[["Accept"]] <- "application/flapjack"})
   }
 
+  ## Adaptation for v2.0 where json body is wrapped in []
+  body <- list(body)
+
   if ("Accept" %in% names(usedArgs)) {
     if ("Content-Type" %in% names(usedArgs)) {
       resp <- httr::POST(url = url,
