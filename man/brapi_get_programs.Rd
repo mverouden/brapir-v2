@@ -78,7 +78,8 @@ Other brapi-core:
 \code{\link{brapi_get_studies}()},
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
-\code{\link{brapi_get_trials}()}
+\code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs_programDbId}()},
