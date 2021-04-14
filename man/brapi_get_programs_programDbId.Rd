@@ -9,7 +9,8 @@ brapi_get_programs_programDbId(con = NULL, programDbId = "")
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{programDbId}{character; required: TRUE; Filter by the common crop name. Exact match.}
+\item{programDbId}{character; required: TRUE; Filter by the common crop name.
+Exact match.}
 }
 \value{
 data.frame
@@ -18,12 +19,14 @@ data.frame
 Get a breeding Program by Id
 }
 \details{
-Get a single breeding Program by Id. This can be used to quickly get the details of a Program when you have the Id from another entity.
+Get a single breeding Program by Id. This can be used to quickly get
+the details of a Program when you have the Id from another entity.
 }
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_programs_programDbId(con = con, programDbId = "program1")
+brapi_get_programs_programDbId(con = con,
+                               programDbId = "program1")
 }
 
 }
@@ -54,6 +57,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Programs: 

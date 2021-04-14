@@ -5,11 +5,14 @@
 #' Get the details for a specific Study
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param studyDbId character; required: TRUE; Identifier of the study. Usually a number, could be alphanumeric.
+#' @param studyDbId character; required: TRUE; Identifier of the study. Usually
+#'    a number, could be alphanumeric.
 #'
-#' @details Retrieve the information of the study required for field data collection
+#' @details Retrieve the information of the study required for field data
+#'    collection
 #'
-#' An additionalInfo field was added to provide a controlled vocabulary for less common data fields.
+#' An additionalInfo field was added to provide a controlled vocabulary for less
+#'    common data fields.
 #'
 #' @return data.frame
 #'
@@ -23,11 +26,13 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_studies_studyDbId(con = con, studyDbId = "study1")
+#' brapi_get_studies_studyDbId(con = con,
+#'                             studyDbId = "study1")
 #' }
 #'
 #' @export
-brapi_get_studies_studyDbId <- function(con = NULL, studyDbId = '') {
+brapi_get_studies_studyDbId <- function(con = NULL,
+                                        studyDbId = '') {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

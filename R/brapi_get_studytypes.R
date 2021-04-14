@@ -5,8 +5,11 @@
 #' Get the Study Types
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param page integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
-#' @param pageSize integer; required: FALSE; The size of the pages to be returned. Default is `1000`.
+#' @param page integer; required: FALSE; Used to request a specific page of data
+#'    to be returned. The page indexing starts at 0 (the first page is 'page'= 0
+#'    ). Default is `0`.
+#' @param pageSize integer; required: FALSE; The size of the pages to be
+#'    returned. Default is `1000`.
 #'
 #' @details Call to retrieve the list of study types.
 #'
@@ -26,7 +29,9 @@
 #' }
 #'
 #' @export
-brapi_get_studytypes <- function(con = NULL, page = 0, pageSize = 1000) {
+brapi_get_studytypes <- function(con = NULL,
+                                 page = 0,
+                                 pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

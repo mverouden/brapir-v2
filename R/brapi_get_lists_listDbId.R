@@ -21,11 +21,13 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_lists_listDbId(con = con, listDbId = "list1")
+#' brapi_get_lists_listDbId(con = con,
+#'                          listDbId = "list1")
 #' }
 #'
 #' @export
-brapi_get_lists_listDbId <- function(con = NULL, listDbId = '') {
+brapi_get_lists_listDbId <- function(con = NULL,
+                                     listDbId = '') {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

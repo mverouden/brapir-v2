@@ -23,35 +23,59 @@ brapi_post_lists(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{data}{vector of type character; required: FALSE; The list of DbIds contained in this list; default: "", when using multiple values supply as c("value1", "value2").}
+\item{data}{vector of type character; required: FALSE; The list of DbIds
+contained in this list; default: "", when using multiple values
+supply as c("value1", "value2").}
 
-\item{additionalInfo}{list; required: FALSE; Additional arbitrary information. If provided use the following construct list(additionalProp1 = "string", additionalProp2 =  "string", additionalProp3 = "string"). The Examples Section shows an example on how to construct the \code{additionalInfo} argument as a list.}
+\item{additionalInfo}{list; required: FALSE; Additional arbitrary information.
+If provided use the following construct list(additionalProp1 = "string",
+additionalProp2 =  "string", additionalProp3 = "string"). The Examples
+Section shows an example on how to construct the \code{additionalInfo} argument
+as a list.}
 
-\item{dateCreated}{character; required: FALSE; Timestamp when the entity was first created. Coded in the ISO 8601 standard extended format, where date, time and time zone information needs to be provided (check for example https://www.w3.org/TR/NOTE-datetime).}
+\item{dateCreated}{character; required: FALSE; Timestamp when the entity was
+first created. Coded in the ISO 8601 standard extended format, where date,
+time and time zone information needs to be provided (check for example
+https://www.w3.org/TR/NOTE-datetime).}
 
-\item{dateModified}{character; required: FALSE; Timestamp when the entity was last updated. Coded in the ISO 8601 standard extended format, where date, time and time zone information needs to be provided (check for example https://www.w3.org/TR/NOTE-datetime).}
+\item{dateModified}{character; required: FALSE; Timestamp when the entity was
+last updated. Coded in the ISO 8601 standard extended format, where date,
+time and time zone information needs to be provided (check for example
+https://www.w3.org/TR/NOTE-datetime).}
 
-\item{externalReferences}{data.frame; required: FALSE; A data.frame of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI. The \code{externalReferences} argument data.frame should contain the following columns:
+\item{externalReferences}{data.frame; required: FALSE; A data.frame of
+external reference ids. These are references to this piece of data in an
+external system. Could be a simple string or a URI. The \code{externalReferences}
+argument data.frame should contain the following columns:
 \itemize{
-\item \code{referenceID} character; required: TRUE; The external reference ID. Could be a simple string or a URI.
-\item \code{referenceSource} character; required: TRUE; An identifier for the source system or database of this reference.
+\item \code{referenceID} character; required: TRUE; The external reference ID. Could
+be a simple string or a URI.
+\item \code{referenceSource} character; required: TRUE; An identifier for the source
+system or database of this reference.
 }
 
-The Examples Section shows an example of how to construct the \code{externalReferences} argument as a data.frame.}
+The Examples Section shows an example of how to construct the \code{externalReferences}
+argument as a data.frame.}
 
 \item{listDescription}{character; required: FALSE; Description of a List.}
 
 \item{listName}{character; required: FALSE; Human readable name of a List.}
 
-\item{listOwnerName}{character; required: FALSE; Human readable name of a List Owner (usually a user or person).}
+\item{listOwnerName}{character; required: FALSE; Human readable name of a List
+Owner (usually a user or person).}
 
-\item{listOwnerPersonDbId}{character; required: FALSE; The unique identifier for a List Owner (usually a user or person).}
+\item{listOwnerPersonDbId}{character; required: FALSE; The unique identifier
+for a List Owner (usually a user or person).}
 
 \item{listSize}{integer; required: FALSE; The number of elements in a List.}
 
-\item{listSource}{character; required: FALSE; The description of where a List originated from.}
+\item{listSource}{character; required: FALSE; The description of where a List
+originated from.}
 
-\item{listType}{character; required: FALSE; default: "", other possible values: "germplasm"|"markers"|"observations"|"observationUnits"|"observationVariables"|"programs"|"samples"|"studies"|"trials"}
+\item{listType}{character; required: FALSE; default: "", other
+possible values: "germplasm"|"markers"|"observations
+"|"observationUnits"|"observationVariables"|"
+programs"|"samples"|"studies"|"trials"}
 }
 \value{
 data.frame
@@ -77,7 +101,8 @@ externalReferences <-
              referenceSource = c("DOI",
                                  "OBO Library",
                                  "Remote Data Collection Upload Tool"))
-listDescription <- "This is a list of germplasm I would like to investigate next summer season"
+listDescription <-
+ "This is a list of germplasm I would like to investigate next summer season"
 listName <- "WURgermplasm_Apr_2021"
 listOwnerName <- "Bob Robertson"
 listOwnerPersonDbId <- "person1"
@@ -101,7 +126,7 @@ brapi_post_lists(con = con,
 
 }
 \references{
-\href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI/2.0#/Lists/post_lists }{BrAPI SwaggerHub}
+\href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Lists/post_lists }{BrAPI SwaggerHub}
 }
 \seealso{
 Other brapi-core: 
@@ -127,12 +152,14 @@ Other brapi-core:
 \code{\link{brapi_get_studies}()},
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
-\code{\link{brapi_get_trials}()}
+\code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()}
 
 Other Lists: 
 \code{\link{brapi_get_lists_listDbId}()},
 \code{\link{brapi_get_lists}()},
-\code{\link{brapi_get_search_lists_searchResultsDbId}()}
+\code{\link{brapi_get_search_lists_searchResultsDbId}()},
+\code{\link{brapi_post_lists_listDbId_items}()}
 }
 \author{
 Maikel Verouden

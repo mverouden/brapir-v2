@@ -5,9 +5,11 @@
 #' Get a breeding Program by Id
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param programDbId character; required: TRUE; Filter by the common crop name. Exact match.
+#' @param programDbId character; required: TRUE; Filter by the common crop name.
+#'    Exact match.
 #'
-#' @details Get a single breeding Program by Id. This can be used to quickly get the details of a Program when you have the Id from another entity.
+#' @details Get a single breeding Program by Id. This can be used to quickly get
+#'    the details of a Program when you have the Id from another entity.
 #'
 #' @return data.frame
 #'
@@ -21,11 +23,13 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_programs_programDbId(con = con, programDbId = "program1")
+#' brapi_get_programs_programDbId(con = con,
+#'                                programDbId = "program1")
 #' }
 #'
 #' @export
-brapi_get_programs_programDbId <- function(con = NULL, programDbId = '') {
+brapi_get_programs_programDbId <- function(con = NULL,
+                                           programDbId = '') {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

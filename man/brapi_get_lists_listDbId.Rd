@@ -23,7 +23,8 @@ Get a specific generic lists
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_lists_listDbId(con = con, listDbId = "list1")
+brapi_get_lists_listDbId(con = con,
+                         listDbId = "list1")
 }
 
 }
@@ -54,11 +55,13 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Lists: 
 \code{\link{brapi_get_lists}()},
 \code{\link{brapi_get_search_lists_searchResultsDbId}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 }
 \author{

@@ -9,7 +9,12 @@ brapi_get_serverinfo(con = NULL, dataType = "")
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{dataType}{character; required: FALSE; The data format supported by the call.; default: "", other possible values: "application/json"|"text/csv"|"text/tsv"|"application/flapjack"}
+\item{dataType}{character; required: FALSE; The data format supported by the
+call.; default: "", other possible values:
+"application/json"|
+"text/csv"|
+"text/tsv"|
+"application/flapjack"}
 }
 \value{
 data.frame
@@ -23,10 +28,15 @@ string of each call is very important for teams to be able to connect and
 find errors. Read more on Github.Here are the rules for the path of each
 call that should be returned:
 \itemize{
-\item Every word in the call path should match the documentation exactly, both in spelling and capitalization. Note that path strings are all lower case, but path parameters are camel case.
-\item Each path should start relative to "/" and therefore should not include "/"
+\item Every word in the call path should match the documentation exactly, both in
+spelling and capitalization. Note that path strings are all lower case, but
+path parameters are camel case.
+\item Each path should start relative to "/" and therefore should not
+include "/"
 \item No leading or trailing slashes ("/")
-\item Path parameters are wrapped in curly braces ("\{\}"). The name of the path parameter should be spelled exactly as it is specified in the documentation.
+\item Path parameters are wrapped in curly braces ("\{\}"). The name of
+the path parameter should be spelled exactly as it is specified in the
+documentation.
 }
 
 Examples:
@@ -73,6 +83,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 }
 \author{

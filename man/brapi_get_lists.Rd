@@ -19,21 +19,34 @@ brapi_get_lists(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{listType}{character; required: FALSE; The type of objects contained by this generic list; default: "", other possible values: "germplasm"|"markers"|"observations"|"observationUnits"|"observationVariables"|"programs"|"samples"|"studies"|"trials"}
+\item{listType}{character; required: FALSE; The type of objects contained by
+this generic list; default: "", other possible values: "
+germplasm"|"markers"|"observations"|"
+observationUnits"|"observationVariables"|"programs
+"|"samples"|"studies"|"trials"}
 
-\item{listName}{character; required: FALSE; The human readable name of this generic list}
+\item{listName}{character; required: FALSE; The human readable name of this
+generic list}
 
-\item{listDbId}{character; required: FALSE; The unique ID of this generic list}
+\item{listDbId}{character; required: FALSE; The unique ID of this generic list.}
 
-\item{listSource}{character; required: FALSE; The source tag of this generic list}
+\item{listSource}{character; required: FALSE; The source tag of this generic
+list}
 
-\item{externalReferenceID}{character; required: FALSE; An external reference ID. Could be a simple string or a URI. (use with \code{externalReferenceSource} parameter)}
+\item{externalReferenceID}{character; required: FALSE; An external reference
+ID. Could be a simple string or a URI. (use with \code{externalReferenceSource}
+parameter)}
 
-\item{externalReferenceSource}{character; required: FALSE; An identifier for the source system or database of an external reference (use with \code{externalReferenceID} parameter)}
+\item{externalReferenceSource}{character; required: FALSE; An identifier for
+the source system or database of an external reference (use with
+\code{externalReferenceID} parameter)}
 
-\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
+\item{page}{integer; required: FALSE; Used to request a specific page of data
+to be returned. The page indexing starts at 0 (the first page is 'page'= 0).
+Default is \code{0}.}
 
-\item{pageSize}{integer; required: FALSE; The size of the pages to be returned. Default is \code{1000}.}
+\item{pageSize}{integer; required: FALSE; The size of the pages to be returned.
+Default is \code{1000}.}
 }
 \value{
 data.frame
@@ -78,11 +91,13 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Lists: 
 \code{\link{brapi_get_lists_listDbId}()},
 \code{\link{brapi_get_search_lists_searchResultsDbId}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 }
 \author{

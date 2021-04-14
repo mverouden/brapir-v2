@@ -5,14 +5,27 @@
 #' Get filtered set of generic lists
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param listType character; required: FALSE; The type of objects contained by this generic list; default: &quot;&quot;, other possible values: &quot;germplasm&quot;|&quot;markers&quot;|&quot;observations&quot;|&quot;observationUnits&quot;|&quot;observationVariables&quot;|&quot;programs&quot;|&quot;samples&quot;|&quot;studies&quot;|&quot;trials&quot;
-#' @param listName character; required: FALSE; The human readable name of this generic list
-#' @param listDbId character; required: FALSE; The unique ID of this generic list
-#' @param listSource character; required: FALSE; The source tag of this generic list
-#' @param externalReferenceID character; required: FALSE; An external reference ID. Could be a simple string or a URI. (use with `externalReferenceSource` parameter)
-#' @param externalReferenceSource character; required: FALSE; An identifier for the source system or database of an external reference (use with `externalReferenceID` parameter)
-#' @param page integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
-#' @param pageSize integer; required: FALSE; The size of the pages to be returned. Default is `1000`.
+#' @param listType character; required: FALSE; The type of objects contained by
+#'    this generic list; default: &quot;&quot;, other possible values: &quot;
+#'    germplasm&quot;|&quot;markers&quot;|&quot;observations&quot;|&quot;
+#'    observationUnits&quot;|&quot;observationVariables&quot;|&quot;programs
+#'    &quot;|&quot;samples&quot;|&quot;studies&quot;|&quot;trials&quot;
+#' @param listName character; required: FALSE; The human readable name of this
+#'    generic list
+#' @param listDbId character; required: FALSE; The unique ID of this generic list.
+#' @param listSource character; required: FALSE; The source tag of this generic
+#'    list
+#' @param externalReferenceID character; required: FALSE; An external reference
+#'    ID. Could be a simple string or a URI. (use with `externalReferenceSource`
+#'    parameter)
+#' @param externalReferenceSource character; required: FALSE; An identifier for
+#'    the source system or database of an external reference (use with
+#'    `externalReferenceID` parameter)
+#' @param page integer; required: FALSE; Used to request a specific page of data
+#'    to be returned. The page indexing starts at 0 (the first page is 'page'= 0).
+#'    Default is `0`.
+#' @param pageSize integer; required: FALSE; The size of the pages to be returned.
+#'    Default is `1000`.
 #'
 #' @details Get filtered set of generic lists
 #'
@@ -32,7 +45,15 @@
 #' }
 #'
 #' @export
-brapi_get_lists <- function(con = NULL, listType = '', listName = '', listDbId = '', listSource = '', externalReferenceID = '', externalReferenceSource = '', page = 0, pageSize = 1000) {
+brapi_get_lists <- function(con = NULL,
+                            listType = '',
+                            listName = '',
+                            listDbId = '',
+                            listSource = '',
+                            externalReferenceID = '',
+                            externalReferenceSource = '',
+                            page = 0,
+                            pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

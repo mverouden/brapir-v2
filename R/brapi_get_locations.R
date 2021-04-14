@@ -5,12 +5,20 @@
 #' Get a filtered list of Locations
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param locationType character; required: FALSE; Filter by location type specified.
+#' @param locationType character; required: FALSE; Filter by location type
+#'    specified.
 #' @param locationDbId character; required: FALSE; Filter by location DbId
-#' @param externalReferenceID character; required: FALSE; An external reference ID. Could be a simple string or a URI. (use with `externalReferenceSource` parameter)
-#' @param externalReferenceSource character; required: FALSE; An identifier for the source system or database of an external reference (use with `externalReferenceID` parameter)
-#' @param page integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
-#' @param pageSize integer; required: FALSE; The size of the pages to be returned. Default is `1000`.
+#' @param externalReferenceID character; required: FALSE; An external reference
+#'    ID. Could be a simple string or a URI. (use with `externalReferenceSource`
+#'    parameter)
+#' @param externalReferenceSource character; required: FALSE; An identifier for
+#'    the source system or database of an external reference (use with
+#'    `externalReferenceID` parameter)
+#' @param page integer; required: FALSE; Used to request a specific page of data
+#'    to be returned. The page indexing starts at 0 (the first page is 'page'= 0)
+#'    . Default is `0`.
+#' @param pageSize integer; required: FALSE; The size of the pages to be
+#'    returned. Default is `1000`.
 #'
 #' @details Get a list of locations.
 #' * The `countryCode` is as per [ISO_3166-1_alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) spec.
@@ -33,7 +41,13 @@
 #' }
 #'
 #' @export
-brapi_get_locations <- function(con = NULL, locationType = '', locationDbId = '', externalReferenceID = '', externalReferenceSource = '', page = 0, pageSize = 1000) {
+brapi_get_locations <- function(con = NULL,
+                                locationType = '',
+                                locationDbId = '',
+                                externalReferenceID = '',
+                                externalReferenceSource = '',
+                                page = 0,
+                                pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

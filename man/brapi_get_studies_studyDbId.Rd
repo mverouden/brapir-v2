@@ -9,7 +9,8 @@ brapi_get_studies_studyDbId(con = NULL, studyDbId = "")
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{studyDbId}{character; required: TRUE; Identifier of the study. Usually a number, could be alphanumeric.}
+\item{studyDbId}{character; required: TRUE; Identifier of the study. Usually
+a number, could be alphanumeric.}
 }
 \value{
 data.frame
@@ -18,14 +19,17 @@ data.frame
 Get the details for a specific Study
 }
 \details{
-Retrieve the information of the study required for field data collection
+Retrieve the information of the study required for field data
+collection
 
-An additionalInfo field was added to provide a controlled vocabulary for less common data fields.
+An additionalInfo field was added to provide a controlled vocabulary for less
+common data fields.
 }
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_studies_studyDbId(con = con, studyDbId = "study1")
+brapi_get_studies_studyDbId(con = con,
+                            studyDbId = "study1")
 }
 
 }
@@ -56,6 +60,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Studies: 

@@ -25,7 +25,8 @@
 #' }
 #'
 #' @export
-brapi_get_trials_trialDbId <- function(con = NULL, trialDbId = '') {
+brapi_get_trials_trialDbId <- function(con = NULL,
+                                       trialDbId = '') {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

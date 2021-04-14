@@ -30,11 +30,14 @@ brapi_get_studies(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{commonCropName}{character; required: FALSE; Common name for the crop associated with this study}
+\item{commonCropName}{character; required: FALSE; Common name for the crop
+associated with this study}
 
-\item{studyType}{character; required: FALSE; Filter based on study type unique identifier}
+\item{studyType}{character; required: FALSE; Filter based on study type
+unique identifier}
 
-\item{programDbId}{character; required: FALSE; Program filter to only return studies associated with given program id.}
+\item{programDbId}{character; required: FALSE; Program filter to only return
+studies associated with given program id.}
 
 \item{locationDbId}{character; required: FALSE; Filter by location}
 
@@ -52,21 +55,32 @@ brapi_get_studies(
 
 \item{germplasmDbId}{character; required: FALSE; Filter by germplasm DbId}
 
-\item{observationVariableDbId}{character; required: FALSE; Filter by observation variable DbId}
+\item{observationVariableDbId}{character; required: FALSE; Filter by
+observation variable DbId}
 
-\item{active}{logical; required: FALSE; Filter active status true/false.; default: NA, other possible values: TRUE | FALSE}
+\item{active}{logical; required: FALSE; Filter active status true/false.
+Default: NA, other possible values: TRUE | FALSE}
 
 \item{sortBy}{character; required: FALSE; Name of the field to sort by.}
 
-\item{sortOrder}{character; required: FALSE; Sort order direction. Ascending/Descending.; default: "", other possible values: "asc"|"ASC"|"desc"|"DESC"}
+\item{sortOrder}{character; required: FALSE; Sort order direction.
+Ascending/Descending.; default: "", other possible values:
+"asc"|"ASC"|"desc"|"DESC"}
 
-\item{externalReferenceID}{character; required: FALSE; An external reference ID. Could be a simple string or a URI. (use with \code{externalReferenceSource} parameter)}
+\item{externalReferenceID}{character; required: FALSE; An external reference
+ID. Could be a simple string or a URI. (use with \code{externalReferenceSource}
+parameter)}
 
-\item{externalReferenceSource}{character; required: FALSE; An identifier for the source system or database of an external reference (use with \code{externalReferenceID} parameter)}
+\item{externalReferenceSource}{character; required: FALSE; An identifier for
+the source system or database of an external reference (use with
+\code{externalReferenceID} parameter)}
 
-\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
+\item{page}{integer; required: FALSE; Used to request a specific page of data
+to be returned. The page indexing starts at 0 (the first page is 'page'= 0
+). Default is \code{0}.}
 
-\item{pageSize}{integer; required: FALSE; The size of the pages to be returned. Default is \code{1000}.}
+\item{pageSize}{integer; required: FALSE; The size of the pages to be
+returned. Default is \code{1000}.}
 }
 \value{
 data.frame
@@ -75,7 +89,8 @@ data.frame
 Get a filtered list of Studies
 }
 \details{
-Get list of studies, where StartDate and endDate should be ISO-8601 format for dates.
+Get list of studies, where StartDate and endDate should be ISO-8601
+format for dates.
 }
 \examples{
 \dontrun{
@@ -111,6 +126,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Studies: 

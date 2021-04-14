@@ -9,9 +9,12 @@ brapi_get_studytypes(con = NULL, page = 0, pageSize = 1000)
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
+\item{page}{integer; required: FALSE; Used to request a specific page of data
+to be returned. The page indexing starts at 0 (the first page is 'page'= 0
+). Default is \code{0}.}
 
-\item{pageSize}{integer; required: FALSE; The size of the pages to be returned. Default is \code{1000}.}
+\item{pageSize}{integer; required: FALSE; The size of the pages to be
+returned. Default is \code{1000}.}
 }
 \value{
 data.frame
@@ -56,6 +59,7 @@ Other brapi-core:
 \code{\link{brapi_get_studies}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Studies: 

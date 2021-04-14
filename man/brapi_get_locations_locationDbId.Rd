@@ -9,7 +9,8 @@ brapi_get_locations_locationDbId(con = NULL, locationDbId = "")
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{locationDbId}{character; required: TRUE; The internal DB id for a location}
+\item{locationDbId}{character; required: TRUE; The internal DB id for a
+location}
 }
 \value{
 data.frame
@@ -20,7 +21,9 @@ Get the details of a specific Location
 \details{
 Get details for a location.
 \itemize{
-\item The \code{countryCode} is as per \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}{ISO_3166-1_alpha-3} spec.
+\item The \code{countryCode} is as per
+\href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}{ISO_3166-1_alpha-3}
+specification.
 \item coordinates are specified as longitude, latitude (in this specific order).
 \item \code{altitude} (optional third parameter to coordinates) is in meters.
 }
@@ -28,7 +31,8 @@ Get details for a location.
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_locations_locationDbId(con = con, locationDbId = "location_01")
+brapi_get_locations_locationDbId(con = con,
+                                 locationDbId = "location_01")
 }
 
 }
@@ -59,6 +63,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Locations: 

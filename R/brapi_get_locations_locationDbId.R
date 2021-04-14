@@ -5,10 +5,13 @@
 #' Get the details of a specific Location
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param locationDbId character; required: TRUE; The internal DB id for a location
+#' @param locationDbId character; required: TRUE; The internal DB id for a
+#'    location
 #'
 #' @details Get details for a location.
-#' * The `countryCode` is as per [ISO_3166-1_alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) spec.
+#' * The `countryCode` is as per
+#'   [ISO_3166-1_alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+#'   specification.
 #' * coordinates are specified as longitude, latitude (in this specific order).
 #' * `altitude` (optional third parameter to coordinates) is in meters.
 #'
@@ -24,11 +27,13 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_locations_locationDbId(con = con, locationDbId = "location_01")
+#' brapi_get_locations_locationDbId(con = con,
+#'                                  locationDbId = "location_01")
 #' }
 #'
 #' @export
-brapi_get_locations_locationDbId <- function(con = NULL, locationDbId = '') {
+brapi_get_locations_locationDbId <- function(con = NULL,
+                                             locationDbId = '') {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

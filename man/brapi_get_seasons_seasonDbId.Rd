@@ -9,7 +9,9 @@ brapi_get_seasons_seasonDbId(con = NULL, seasonDbId = "")
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{seasonDbId}{character; required: TRUE; The unique identifier for a season. For backward compatibility it can be a string like '2012', '1957-2004'}
+\item{seasonDbId}{character; required: TRUE; The unique identifier for a
+season. For backward compatibility it can be a string like '2012',
+'1957-2004'}
 }
 \value{
 data.frame
@@ -23,7 +25,8 @@ Get the a single Season
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_seasons_seasonDbId(con = con, seasonDbId = "winter_2012")
+brapi_get_seasons_seasonDbId(con = con,
+                             seasonDbId = "winter_2012")
 }
 
 }
@@ -54,6 +57,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Seasons: 

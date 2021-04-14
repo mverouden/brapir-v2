@@ -5,9 +5,13 @@
 #' Get the results of a Trials search request
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param searchResultsDbId character; required: TRUE; Unique identifier which references the search results
-#' @param page integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is `0`.
-#' @param pageSize integer; required: FALSE; The size of the pages to be returned. Default is `1000`.
+#' @param searchResultsDbId character; required: TRUE; Unique identifier which
+#'    references the search results
+#' @param page integer; required: FALSE; Used to request a specific page of data
+#'    to be returned. The page indexing starts at 0 (the first page is
+#'    'page'= 0). Default is `0`.
+#' @param pageSize integer; required: FALSE; The size of the pages to be
+#'    returned. Default is `1000`.
 #'
 #' @details Advanced searching for the trials resource.
 #' See Search Services for additional implementation details.
@@ -24,11 +28,15 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_search_trials_searchResultsDbId(con = con, searchResultsDbId = "")
+#' brapi_get_search_trials_searchResultsDbId(con = con,
+#'                                           searchResultsDbId = "")
 #' }
 #'
 #' @export
-brapi_get_search_trials_searchResultsDbId <- function(con = NULL, searchResultsDbId = '', page = 0, pageSize = 1000) {
+brapi_get_search_trials_searchResultsDbId <- function(con = NULL,
+                                                      searchResultsDbId = '',
+                                                      page = 0,
+                                                      pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

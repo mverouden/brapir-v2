@@ -5,17 +5,27 @@
 #' Get the list of implemented Calls
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param dataType character; required: FALSE; The data format supported by the call.; default: &quot;&quot;, other possible values: &quot;application/json&quot;|&quot;text/csv&quot;|&quot;text/tsv&quot;|&quot;application/flapjack&quot;
+#' @param dataType character; required: FALSE; The data format supported by the
+#'    call.; default: &quot;&quot;, other possible values:
+#'    &quot;application/json&quot;|
+#'    &quot;text/csv&quot;|
+#'    &quot;text/tsv&quot;|
+#'    &quot;application/flapjack&quot;
 #'
 #' @details Implementation Notes: Having a consistent structure for the path
 #'  string of each call is very important for teams to be able to connect and
 #'  find errors. Read more on Github.Here are the rules for the path of each
 #'  call that should be returned:
 #'
-#' * Every word in the call path should match the documentation exactly, both in spelling and capitalization. Note that path strings are all lower case, but path parameters are camel case.
-#' * Each path should start relative to &quot;/&quot; and therefore should not include &quot;/&quot;
+#' * Every word in the call path should match the documentation exactly, both in
+#'   spelling and capitalization. Note that path strings are all lower case, but
+#'   path parameters are camel case.
+#' * Each path should start relative to &quot;/&quot; and therefore should not
+#'   include &quot;/&quot;
 #' * No leading or trailing slashes (&quot;/&quot;)
-#' * Path parameters are wrapped in curly braces (&quot;\{\}&quot;). The name of the path parameter should be spelled exactly as it is specified in the documentation.
+#' * Path parameters are wrapped in curly braces (&quot;\{\}&quot;). The name of
+#'   the path parameter should be spelled exactly as it is specified in the
+#'   documentation.
 #'
 #' Examples:
 #'
@@ -42,7 +52,8 @@
 #' }
 #'
 #' @export
-brapi_get_serverinfo <- function(con = NULL, dataType = '') {
+brapi_get_serverinfo <- function(con = NULL,
+                                 dataType = '') {
   ## Create a list of used arguments
   usedArgs <- brapir:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details

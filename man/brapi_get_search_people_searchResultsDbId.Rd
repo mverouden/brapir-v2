@@ -14,11 +14,15 @@ brapi_get_search_people_searchResultsDbId(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{searchResultsDbId}{character; required: TRUE; Unique identifier which references the search results}
+\item{searchResultsDbId}{character; required: TRUE; Unique identifier which
+references the search results}
 
-\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
+\item{page}{integer; required: FALSE; Used to request a specific page of data
+to be returned. The page indexing starts at 0 (the first page is
+'page'= 0). Default is \code{0}.}
 
-\item{pageSize}{integer; required: FALSE; The size of the pages to be returned. Default is \code{1000}.}
+\item{pageSize}{integer; required: FALSE; The size of the pages to be
+returned. Default is \code{1000}.}
 }
 \value{
 data.frame
@@ -33,7 +37,8 @@ See Search Services for additional implementation details.
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_search_people_searchResultsDbId(con = con, searchResultsDbId = "")
+brapi_get_search_people_searchResultsDbId(con = con,
+                                          searchResultsDbId = "")
 }
 
 }
@@ -64,6 +69,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other People: 

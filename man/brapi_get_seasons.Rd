@@ -16,15 +16,23 @@ brapi_get_seasons(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{seasonDbId}{character; required: FALSE; The unique identifier for a season. For backward compatibility it can be a string like '2012', '1957-2004'}
+\item{seasonDbId}{character; required: FALSE; The unique identifier for a
+season. For backward compatibility it can be a string like '2012',
+'1957-2004'}
 
-\item{season}{character; required: FALSE; The term to describe a given season. Example "Spring" OR "May" OR "Planting_Time_7".}
+\item{season}{character; required: FALSE; The term to describe a given
+season. Example "Spring" OR "May" OR "
+Planting_Time_7".}
 
-\item{year}{integer; required: FALSE; The 4 digit year of a season. Example "2017"}
+\item{year}{integer; required: FALSE; The 4 digit year of a season. Example
+"2017"}
 
-\item{page}{integer; required: FALSE; Used to request a specific page of data to be returned. The page indexing starts at 0 (the first page is 'page'= 0). Default is \code{0}.}
+\item{page}{integer; required: FALSE; Used to request a specific page of data
+to be returned. The page indexing starts at 0 (the first page is
+'page'= 0). Default is \code{0}.}
 
-\item{pageSize}{integer; required: FALSE; The size of the pages to be returned. Default is \code{1000}.}
+\item{pageSize}{integer; required: FALSE; The size of the pages to be
+returned. Default is \code{1000}.}
 }
 \value{
 data.frame
@@ -35,10 +43,12 @@ Get the Seasons
 \details{
 Call to retrieve all seasons in the database.
 
-A season is made of 2 parts; the primary year and a term which defines a segment of the year.
-This could be a traditional season, like "Spring" or "Summer" or this could be a month, like
-"May" or "June" or this could be an arbitrary season name which is meaningful to the breeding
-program like "PlantingTime_3" or "Season E"
+A season is made of 2 parts; the primary year and a term which defines
+a segment of the year.
+This could be a traditional season, like "Spring" or "Summer
+" or this could be a month, like "May" or "June"
+or this could be an arbitrary season name which is meaningful to the
+breeding program like "PlantingTime_3" or "Season E"
 }
 \examples{
 \dontrun{
@@ -74,6 +84,7 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()}
 
 Other Seasons: 
