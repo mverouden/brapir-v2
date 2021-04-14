@@ -96,6 +96,9 @@ brapi_post_lists <- function(con = NULL, data = '', additionalInfo = list(), dat
   ## Build the Body
   callbody <- brapir:::brapi_POST_callBody(usedArgs = usedArgs,
                                            reqArgs = "")
+  ## Adaptation for v2.0 where json body is wrapped in []
+  callbody <- list(callbody)
+
   try({
     ## Make the call and receive the response
     resp <- brapir:::brapi_POST(url = callurl, body = callbody, usedArgs = usedArgs)
