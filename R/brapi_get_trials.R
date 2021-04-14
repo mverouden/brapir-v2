@@ -18,8 +18,7 @@
 #'    overlapping search date range. `searchDateRangeStart` must be before
 #'    `searchDateRangeEnd`.
 #'
-#'     Return a Trial entity if any of the following cases are true
-#'
+#' Return a Trial entity if any of the following cases are true:
 #' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
 #'    is null
 #' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
@@ -32,8 +31,7 @@
 #'    overlapping search date range. `searchDateRangeStart` must be before
 #'    `searchDateRangeEnd`.
 #'
-#'   Return a Trial entity if any of the following cases are true
-#'
+#' Return a Trial entity if any of the following cases are true:
 #' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
 #'    is null
 #' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
