@@ -149,7 +149,8 @@ Other brapi-core:
 \code{\link{brapi_get_studytypes}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_post_lists_listDbId_items}()},
-\code{\link{brapi_post_lists}()}
+\code{\link{brapi_post_lists}()},
+\code{\link{brapi_post_locations}()}
 
 Other Trials: 
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
