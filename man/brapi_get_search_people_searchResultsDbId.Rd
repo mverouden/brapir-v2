@@ -71,11 +71,13 @@ Other brapi-core:
 \code{\link{brapi_get_trials}()},
 \code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()},
-\code{\link{brapi_post_locations}()}
+\code{\link{brapi_post_locations}()},
+\code{\link{brapi_post_people}()}
 
 Other People: 
 \code{\link{brapi_get_people_personDbId}()},
-\code{\link{brapi_get_people}()}
+\code{\link{brapi_get_people}()},
+\code{\link{brapi_post_people}()}
 }
 \author{
 Maikel Verouden

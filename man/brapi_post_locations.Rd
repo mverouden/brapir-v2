@@ -263,7 +263,8 @@ Other brapi-core:
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
 \code{\link{brapi_post_lists_listDbId_items}()},
-\code{\link{brapi_post_lists}()}
+\code{\link{brapi_post_lists}()},
+\code{\link{brapi_post_people}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations_locationDbId}()},
