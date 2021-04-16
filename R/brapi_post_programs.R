@@ -29,7 +29,7 @@
 #'    The Examples Section shows an example of how to construct the
 #'    `externalReferences` argument as a data.frame.
 #' @param leadPersonDbId character; required: FALSE; The unique identifier of
-#'    the program leader.
+#'    the program leader. Needs to be an existing `personDbId`.
 #' @param leadPersonName character; required: FALSE; The name of the program
 #'    leader.
 #' @param objective character; required: FALSE; The primary objective of the

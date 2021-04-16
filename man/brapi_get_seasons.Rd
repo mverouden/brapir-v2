@@ -8,7 +8,7 @@ brapi_get_seasons(
   con = NULL,
   seasonDbId = "",
   season = "",
-  year = "",
+  year = as.integer(NA),
   page = 0,
   pageSize = 1000
 )
@@ -88,10 +88,12 @@ Other brapi-core:
 \code{\link{brapi_post_lists}()},
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_people}()},
-\code{\link{brapi_post_programs}()}
+\code{\link{brapi_post_programs}()},
+\code{\link{brapi_post_seasons}()}
 
 Other Seasons: 
-\code{\link{brapi_get_seasons_seasonDbId}()}
+\code{\link{brapi_get_seasons_seasonDbId}()},
+\code{\link{brapi_post_seasons}()}
 }
 \author{
 Maikel Verouden

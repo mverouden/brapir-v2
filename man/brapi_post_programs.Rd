@@ -50,7 +50,7 @@ The Examples Section shows an example of how to construct the
 \code{externalReferences} argument as a data.frame.}
 
 \item{leadPersonDbId}{character; required: FALSE; The unique identifier of
-the program leader.}
+the program leader. Needs to be an existing \code{personDbId}.}
 
 \item{leadPersonName}{character; required: FALSE; The name of the program
 leader.}
@@ -138,7 +138,8 @@ Other brapi-core:
 \code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()},
 \code{\link{brapi_post_locations}()},
-\code{\link{brapi_post_people}()}
+\code{\link{brapi_post_people}()},
+\code{\link{brapi_post_seasons}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs_programDbId}()},

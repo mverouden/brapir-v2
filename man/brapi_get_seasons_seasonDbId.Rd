@@ -61,10 +61,12 @@ Other brapi-core:
 \code{\link{brapi_post_lists}()},
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_people}()},
-\code{\link{brapi_post_programs}()}
+\code{\link{brapi_post_programs}()},
+\code{\link{brapi_post_seasons}()}
 
 Other Seasons: 
-\code{\link{brapi_get_seasons}()}
+\code{\link{brapi_get_seasons}()},
+\code{\link{brapi_post_seasons}()}
 }
 \author{
 Maikel Verouden

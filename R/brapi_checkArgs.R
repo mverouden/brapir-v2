@@ -109,7 +109,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
     ## Checking used arguments
     for (i in names(usedArgs)) {
       ## Check for arguments which are of type integer
-      if (i %in% c("decimalPlaces", "listSize", "numberOfSamples","page", "pageSize", "plateIndex") || grepl(pattern = "(max)|(min)|(imageFileSize)|(imageHeight)|(imageWidth)", x = i)) {
+      if (i %in% c("decimalPlaces", "listSize", "numberOfSamples","page", "pageSize", "plateIndex", "year") || grepl(pattern = "(max)|(min)|(imageFileSize)|(imageHeight)|(imageWidth)", x = i)) {
         if (!is.numeric(usedArgs[[i]])) {
           stop('Argument: "', i, '" should be of type integer.')
         }

@@ -47,7 +47,7 @@
 brapi_get_seasons <- function(con = NULL,
                               seasonDbId = '',
                               season = '',
-                              year = '',
+                              year = as.integer(NA),
                               page = 0,
                               pageSize = 1000) {
   ## Create a list of used arguments
