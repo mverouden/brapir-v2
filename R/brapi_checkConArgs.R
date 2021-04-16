@@ -15,7 +15,7 @@ brapi_checkConArgs <- function(secure = FALSE,
                                password = "",
                                token = "",
                                granttype = "password",
-                               clientid = "brapir",
+                               clientid = "brapirv2",
                                bms = FALSE) {
   ## Check function arguments
   if (!is.logical(secure)) {

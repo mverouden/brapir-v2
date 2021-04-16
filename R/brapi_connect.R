@@ -17,7 +17,7 @@
 #' @param password character; Password to be used for the specified user, when logging in is required. Default is "".
 #' @param token character; Token to be used for authorization, will be passed with every call in the header. Default is ""
 #' @param granttype character; Grant type. Default is "password".
-#' @param clientid character; Client identification string. Default is "brapir".
+#' @param clientid character; Client identification string. Default is "brapirv2".
 #' @param bms logical; Whether (TRUE) of not (FALSE) the database used is from the Breeding Management System (Integrated Breeding Platform). Default is FALSE, other possible value is TRUE.
 #'
 #'
@@ -43,7 +43,7 @@ brapi_connect <- function(brapiDb = NULL,
                           password = "",
                           token = "",
                           granttype = "password",
-                          clientid = "brapir",
+                          clientid = "brapirv2",
                           bms = FALSE) {
   brapi <- NULL
   if (!is.null(brapiDb)) {
@@ -55,19 +55,19 @@ brapi_connect <- function(brapiDb = NULL,
   } else {
     # check for net connectivity
     brapi_canInternet()
-    brapir:::brapi_checkConArgs(secure = secure,
-                                protocol = protocol,
-                                db = db,
-                                port = port,
-                                apipath = apipath,
-                                multicrop = multicrop,
-                                commoncropname = commoncropname,
-                                user = user,
-                                password = password,
-                                token = token,
-                                granttype = granttype,
-                                clientid = clientid,
-                                bms = bms)
+    brapirv2:::brapi_checkConArgs(secure = secure,
+                                  protocol = protocol,
+                                  db = db,
+                                  port = port,
+                                  apipath = apipath,
+                                  multicrop = multicrop,
+                                  commoncropname = commoncropname,
+                                  user = user,
+                                  password = password,
+                                  token = token,
+                                  granttype = granttype,
+                                  clientid = clientid,
+                                  bms = bms)
     # bms == TRUE, then always multicrop == TRUE
     if (bms == TRUE) {
       multicrop <- TRUE

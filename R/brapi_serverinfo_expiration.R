@@ -9,7 +9,7 @@
 #' @author Maikel Verouden
 #'
 #' @examples
-#' library(brapir)
+#' library(brapirv2)
 #'
 #' if (interactive()) {
 #'   con <- brapi_db()$testserver
@@ -20,9 +20,9 @@
 brapi_serverinfo_expiration <- function(con) {
   if ("expires_in" %in% names(con)) {
     tokenExpires <- as.POSIXct(con$expires_in/1000, origin = "1970-01-01")
-    brapir:::brapi_message(msg = paste0("Database connection expires: ",
+    brapirv2:::brapi_message(msg = paste0("Database connection expires: ",
                                tokenExpires))
   } else {
-    brapir:::brapi_message(msg = paste0("Database connection expiration time unknown."))
+    brapirv2:::brapi_message(msg = paste0("Database connection expiration time unknown."))
   }
 }

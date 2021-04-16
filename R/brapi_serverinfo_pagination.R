@@ -15,7 +15,7 @@ brapi_serverinfo_pagination <- function(cont) {
   } else {
     pagination <- contList[["metadata"]][["pagination"]]
     if (!is.null(pagination)) {
-      brapir:::brapi_message(msg = paste0("Returning page ",
+      brapirv2:::brapi_message(msg = paste0("Returning page ",
                                           pagination[["currentPage"]],
                                           " (max. ",
                                           ifelse(as.integer(pagination[["totalPages"]]) == 0,

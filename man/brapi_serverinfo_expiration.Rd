@@ -13,7 +13,7 @@ brapi_serverinfo_expiration(con)
 Display the expiration date and time of token if available.
 }
 \examples{
-library(brapir)
+library(brapirv2)
 
 if (interactive()) {
   con <- brapi_db()$testserver

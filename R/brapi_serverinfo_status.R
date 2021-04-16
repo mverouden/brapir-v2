@@ -6,11 +6,11 @@
 #' @keywords internal
 brapi_serverinfo_status <- function(out) {
   show_message <- function(msg_type, msg_Title, msg_color) {
-    brapir:::brapi_message(msg = msg_color(paste0("\n", msg_Title,":")))
+    brapirv2:::brapi_message(msg = msg_color(paste0("\n", msg_Title,":")))
     sapply(out[names(out) == msg_type] %>% unlist, msg_color) %>%
       as.character %>%
       paste0("\n") %>%
-      brapir:::brapi_message()
+      brapirv2:::brapi_message()
   }
 
   if (!getOption("brapi_info", default = FALSE)) {

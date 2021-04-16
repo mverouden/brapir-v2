@@ -5,5 +5,5 @@
 #' @noRd
 #' @keywords internal
 brapi_serverinfo_metadata <- function(cont) {
-  brapir:::brapi_serverinfo_pagination(cont)
+  brapirv2:::brapi_serverinfo_pagination(cont)
 }

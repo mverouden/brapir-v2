@@ -16,7 +16,7 @@
 #' @param password character; Password to be used for the specified user, when logging in is required. Default is "".
 #' @param token character; Token to be used for authorization, will be passed with every call in the header. Default is ""
 #' @param granttype character; Grant type. Default is "password".
-#' @param clientid character; Client identification string. Default is "brapir".
+#' @param clientid character; Client identification string. Default is "brapirv2".
 #' @param bms logical; Whether (TRUE) of not (FALSE) the database used is from the Breeding Management System (Integrated Breeding Platform). Default is FALSE, other possible value is TRUE.
 #'
 #' @return An BrAPI compliant database connection object of class brapi_db.
@@ -37,9 +37,9 @@ as.brapi_db <- function(secure = FALSE,
                         password = "",
                         token = "",
                         granttype = "password",
-                        clientid = "brapir",
+                        clientid = "brapirv2",
                         bms = FALSE) {
-  brapir:::brapi_checkConArgs(secure = secure,
+  brapirv2:::brapi_checkConArgs(secure = secure,
                               protocol = protocol,
                               db = db,
                               port = port,

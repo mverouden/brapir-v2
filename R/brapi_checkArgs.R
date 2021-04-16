@@ -47,20 +47,20 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
     for (i in reqMatch) {
       switch(i,
              "dataType" = {
-               brapir:::brapi_matchArg(arg = usedArgs[[i]],
+               brapirv2:::brapi_matchArg(arg = usedArgs[[i]],
                                        choices =  c("",
                                                     "application/json",
                                                     "text/csv",
                                                     "text/tsv",
                                                     "application/flapjack"))},
              "format" = {
-               brapir:::brapi_matchArg(arg = usedArgs[[i]],
+               brapirv2:::brapi_matchArg(arg = usedArgs[[i]],
                                        choices =  c(as.character(NA),
                                                     "csv",
                                                     "tsv",
                                                     "flapjack"))},
              "listType" = {
-               brapir:::brapi_matchArg(arg = usedArgs[[i]],
+               brapirv2:::brapi_matchArg(arg = usedArgs[[i]],
                                        choices =  c("",
                                                     "germplasm",
                                                     "markers",
@@ -72,13 +72,13 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
                                                     "studies",
                                                     "trials"))},
              "sampleType" = {
-               brapir:::brapi_matchArg(arg = usedArgs[[i]],
+               brapirv2:::brapi_matchArg(arg = usedArgs[[i]],
                                        choices = c("",
                                                    "DNA",
                                                    "RNA",
                                                    "Tissue"))},
              "sortBy" = {
-               brapir:::brapi_matchArg(arg = usedArgs[[i]],
+               brapirv2:::brapi_matchArg(arg = usedArgs[[i]],
                                        choices =  c("",
                                                     "endDate",
                                                     "locationDbId",
@@ -93,7 +93,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
                                                     "trialDbId",
                                                     "trialName"))},
              "sortOrder" = {
-               brapir:::brapi_matchArg(arg = usedArgs[[i]],
+               brapirv2:::brapi_matchArg(arg = usedArgs[[i]],
                                        choices =  c("",
                                                     "asc",
                                                     "ASC",

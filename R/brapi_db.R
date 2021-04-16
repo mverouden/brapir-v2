@@ -83,7 +83,7 @@ brapi_db <- function() {
                               user = "",
                               password = "",
                               granttype = "password",
-                              clientid = "brapir",
+                              clientid = "brapirv2",
                               bms = TRUE)
   mgis <- as.brapi_db(secure = TRUE,
                       protocol = "https://",

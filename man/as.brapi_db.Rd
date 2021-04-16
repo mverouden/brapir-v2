@@ -16,7 +16,7 @@ as.brapi_db(
   password = "",
   token = "",
   granttype = "password",
-  clientid = "brapir",
+  clientid = "brapirv2",
   bms = FALSE
 )
 }
@@ -43,7 +43,7 @@ as.brapi_db(
 
 \item{granttype}{character; Grant type. Default is "password".}
 
-\item{clientid}{character; Client identification string. Default is "brapir".}
+\item{clientid}{character; Client identification string. Default is "brapirv2".}
 
 \item{bms}{logical; Whether (TRUE) of not (FALSE) the database used is from the Breeding Management System (Integrated Breeding Platform). Default is FALSE, other possible value is TRUE.}
 }
