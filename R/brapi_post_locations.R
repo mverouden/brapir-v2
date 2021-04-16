@@ -19,7 +19,7 @@
 #' @param coordinateUncertainty character; required: FALSE; Uncertainty
 #'    associated with the coordinates in meters. Leave the value empty if
 #'    the uncertainty is unknown.
-#' @param coordinates list(); required: FALSE; One geometry as defined by
+#' @param coordinates list; required: FALSE; One geometry as defined by
 #'    GeoJSON (RFC 7946). All coordinates are decimal values on the WGS84
 #'    geographic coordinate reference system. A coordinate position MUST be two
 #'    or more elements. The first two elements are longitude and latitude, or
@@ -29,22 +29,25 @@
 #'
 #'    The `coordinates` list MUST contain the following two elements:
 #'
-#'    * `geometry` list; required: TRUE; A geometry as defined by GeoJSON
+#'    * `geometry` as a list; required: TRUE; A geometry as defined by GeoJSON
 #'      (RFC 7946). In this context, only Point or Polygon geometry are allowed
-#'      .The Point geometry is described by exactly two elements:
-#'        + `coordinates` vector of type character; required: TRUE; A point
+#'      .
+#'
+#'      The Point geometry is described by exactly two elements:
+#'        + `coordinates` as a vector of type character; required: TRUE; A point
 #'          position containing two or more elements. The first two elements
 #'          are longitude and latitude, or easting and northing, precisely in
 #'          that order and using decimal numbers. Altitude or elevation MAY be
 #'          included as an optional third element.
-#'        + `type` character; required: TRUE; Literally specified as "Point"
+#'        + `type` as a character; required: TRUE; Literally specified as "Point"
+#'
 #'      The Polygon geometry is described by exactly two elements:
-#'        + `coordinates` list; required : TRUE; List of linear rings, where
+#'        + `coordinates` as a list; required : TRUE; List of linear rings, where
 #'          each linear ring is a list of at least four positions with the first
 #'          equal to the last. The first linear ring specifies the exterior
 #'          ring, and each subsequent ring an interior ring.
-#'        + `type` character; required: TRUE; Literally specified as "Polygon".
-#'    * `type` character; required: TRUE; Literally specified as "Feature".
+#'        + `type` as a character; required: TRUE; Literally specified as "Polygon".
+#'    * `type` as a character; required: TRUE; Literally specified as "Feature".
 #'
 #'    The easiest way in R to construct the `coordinates` list is to use the
 #'    **geojsonR** package. The Examples Section shows how to create a

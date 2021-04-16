@@ -47,7 +47,7 @@ meters, etc)}
 associated with the coordinates in meters. Leave the value empty if
 the uncertainty is unknown.}
 
-\item{coordinates}{list(); required: FALSE; One geometry as defined by
+\item{coordinates}{list; required: FALSE; One geometry as defined by
 GeoJSON (RFC 7946). All coordinates are decimal values on the WGS84
 geographic coordinate reference system. A coordinate position MUST be two
 or more elements. The first two elements are longitude and latitude, or
@@ -57,24 +57,29 @@ specified in meters.
 
 The \code{coordinates} list MUST contain the following two elements:
 \itemize{
-\item \code{geometry} list; required: TRUE; A geometry as defined by GeoJSON
+\item \code{geometry} as a list; required: TRUE; A geometry as defined by GeoJSON
 (RFC 7946). In this context, only Point or Polygon geometry are allowed
-.The Point geometry is described by exactly two elements:
+.
+
+The Point geometry is described by exactly two elements:
 \itemize{
-\item \code{coordinates} vector of type character; required: TRUE; A point
+\item \code{coordinates} as a vector of type character; required: TRUE; A point
 position containing two or more elements. The first two elements
 are longitude and latitude, or easting and northing, precisely in
 that order and using decimal numbers. Altitude or elevation MAY be
 included as an optional third element.
-\item \code{type} character; required: TRUE; Literally specified as "Point"
+\item \code{type} as a character; required: TRUE; Literally specified as "Point"
+}
+
 The Polygon geometry is described by exactly two elements:
-\item \code{coordinates} list; required : TRUE; List of linear rings, where
+\itemize{
+\item \code{coordinates} as a list; required : TRUE; List of linear rings, where
 each linear ring is a list of at least four positions with the first
 equal to the last. The first linear ring specifies the exterior
 ring, and each subsequent ring an interior ring.
-\item \code{type} character; required: TRUE; Literally specified as "Polygon".
+\item \code{type} as a character; required: TRUE; Literally specified as "Polygon".
 }
-\item \code{type} character; required: TRUE; Literally specified as "Feature".
+\item \code{type} as a character; required: TRUE; Literally specified as "Feature".
 }
 
 The easiest way in R to construct the \code{coordinates} list is to use the
