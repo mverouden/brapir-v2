@@ -1,4 +1,4 @@
-Package: brapir
+Package: brapirv2
 Type: Package
 Title: Client to Access BrAPI Compliant Plant Breeding Databases
 Version: 2.0.0
