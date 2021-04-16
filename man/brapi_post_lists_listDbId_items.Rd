@@ -96,7 +96,8 @@ Other brapi-core:
 \code{\link{brapi_get_trials}()},
 \code{\link{brapi_post_lists}()},
 \code{\link{brapi_post_locations}()},
-\code{\link{brapi_post_people}()}
+\code{\link{brapi_post_people}()},
+\code{\link{brapi_post_programs}()}
 
 Other Lists: 
 \code{\link{brapi_get_lists_listDbId}()},

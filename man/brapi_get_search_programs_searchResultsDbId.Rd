@@ -72,11 +72,13 @@ Other brapi-core:
 \code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()},
 \code{\link{brapi_post_locations}()},
-\code{\link{brapi_post_people}()}
+\code{\link{brapi_post_people}()},
+\code{\link{brapi_post_programs}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs_programDbId}()},
-\code{\link{brapi_get_programs}()}
+\code{\link{brapi_get_programs}()},
+\code{\link{brapi_post_programs}()}
 }
 \author{
 Maikel Verouden

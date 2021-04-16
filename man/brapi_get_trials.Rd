@@ -151,7 +151,8 @@ Other brapi-core:
 \code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()},
 \code{\link{brapi_post_locations}()},
-\code{\link{brapi_post_people}()}
+\code{\link{brapi_post_people}()},
+\code{\link{brapi_post_programs}()}
 
 Other Trials: 
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
