@@ -26,13 +26,13 @@ brapi_POST_callBody <- function(usedArgs, reqArgs) {
     if (all(bodyArgs[[i]] != "") || inherits(x = bodyArgs[[i]], what = c("data.frame", "list"))) {
       if (inherits(x = bodyArgs[[i]], what = "character") &&
           length(bodyArgs[[i]]) == 1 &&
-          grepl(pattern = "(Classes)|(Genus)|(Ids)|(Links)|(Names)|(Numbers)|(PUIs)|(Species)|(synonyms)|(Terms)|(tions)|(Xrefs)|(ypes)|(markerDbId)|(markerProfileDbId)|(matrixDbId)|(objectives)",
+          grepl(pattern = "(Classes)|(Genus)|(Ids)|(Links)|(Names)|(Numbers)|(PUIs)|(seasons)|(Species)|(synonyms)|(Terms)|(tions)|(Xrefs)|(ypes)|(markerDbId)|(markerProfileDbId)|(matrixDbId)|(objectives)",
                 x = names(bodyArgs[i]))) {
         bodyList[[j]] <- as.array(bodyArgs[[i]])
       } else if (inherits(x = bodyArgs[[i]], what = "character") && length(bodyArgs[[i]]) > 1) {
         bodyList[[j]] <- as.array(bodyArgs[[i]])
       } else if (is.logical(bodyArgs[[i]])) {
-        bodyList[[j]] <- tolower(bodyArgs[[i]])
+        bodyList[[j]] <- bodyArgs[[i]]
       } else if (names(bodyArgs)[i] == "validValues" && bodyArgs[[i]][["categories"]] == "") {
         bodyArgs[[i]][["categories"]] <- as.array(bodyArgs[[i]][["categories"]])
         bodyList[[j]] <- bodyArgs[[i]]

@@ -32,8 +32,8 @@ brapi_PUT_callBody <- function(usedArgs, reqArgs) {
       } else if (inherits(x = bodyArgs[[i]], what = "character") && length(bodyArgs[[i]]) > 1) {
         bodyList[[j]] <- as.array(bodyArgs[[i]])
       } else if (is.logical(bodyArgs[[i]])) {
-        bodyList[[j]] <- tolower(bodyArgs[[i]])
-      } else if (names(bodyArgs)[i] == "validValues" && bodyArgs[[i]][["categories"]] == "" ) {
+        bodyList[[j]] <- bodyArgs[[i]]
+      } else if (names(bodyArgs)[i] == "validValues" && bodyArgs[[i]][["categories"]] == "") {
         bodyArgs[[i]][["categories"]] <- as.array(bodyArgs[[i]][["categories"]])
         bodyList[[j]] <- bodyArgs[[i]]
       } else {
