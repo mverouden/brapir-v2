@@ -86,12 +86,6 @@
 #'    `dataLinks` argument as a data.frame.
 #' @param documentationURL character; required: FALSE; A URL to the human
 #'    readable documentation of this object.
-#' @param startDate character; required: FALSE; The date the study will start or
-#'    started. Coded in the ISO 8601 standard extended format, where date, time
-#'    and time zone information needs to be provided (check for example
-#'    [https://www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime)
-#'    ). MIAPPE V1.1 (DM-14) Start date of study - Date and, if relevant, time
-#'    when the experiment started.
 #' @param endDate character; required: FALSE; The date the study will end or
 #'    ended. Coded in the ISO 8601 standard extended format, where date,
 #'    time and time zone information needs to be provided (check for example
@@ -205,9 +199,15 @@
 #' @param observationUnitsDescription character; required: FALSE; MIAPPE V1.1
 #' (DM-25) Observation unit description - General description of the observation
 #' units in the study.
-#' @param seasons vector of type character; required: FALSE; seasonsDbId value(s)
+#' @param seasons vector of type character; required: FALSE; seasonDbId value(s)
 #'    over which this study was performed.; default: &quot;&quot;, when using
 #'    multiple values supply as c(&quot;value1&quot;, &quot;value2&quot;).
+#' @param startDate character; required: FALSE; The date the study will start or
+#'    started. Coded in the ISO 8601 standard extended format, where date, time
+#'    and time zone information needs to be provided (check for example
+#'    [https://www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime)
+#'    ). MIAPPE V1.1 (DM-14) Start date of study - Date and, if relevant, time
+#'    when the experiment started.
 #' @param studyCode character; required: FALSE; A short human readable code for
 #'    a study.
 #' @param studyDescription character; required: FALSE; The description of this
@@ -218,7 +218,7 @@
 #'    the study.
 #' @param studyPUI character; required: FALSE; A permanent unique identifier
 #'    associated with this study data. For example, a URI or DOI.
-#' @param studyName character; required: FALSE; The type of study being
+#' @param studyType character; required: FALSE; The type of study being
 #'    performed. ex. "Yield Trial", *etc.*
 #' @param trialDbId character; required: FALSE; The ID which uniquely identifies
 #'    a trial.
@@ -264,7 +264,6 @@
 #'                         url = "https://brapi.org/image-archive.zip",
 #'                         version = "1.0.3")
 #' documentationURL <- "https://wiki.brapi.org"
-#' startDate <- "2021-04-19T12:34:13.494Z"
 #' endDate <- "2021-04-19T12:34:13.494Z"
 #' environmentParameters <- data.frame(description = "the soil type was clay",
 #'                                     parameterName =  "soil type",
@@ -303,6 +302,7 @@
 #'                                 plants at a density of approximately six
 #'                                 plants per square meter."
 #' seasons <- c("spring_2012", "summer_2012")
+#' startDate <- "2021-04-19T12:34:13.494Z"
 #' studyCode <- "Tomatillo_Yield_Spring_2012"
 #' studyDescription <- "This is a yield study for Spring 2012"
 #' studyName <- "INRA's Tomatillo Genetic Resources Observation at Peru"
@@ -319,7 +319,6 @@
 #'                    culturalPractices = culturalPractices,
 #'                    dataLinks = dataLinks,
 #'                    documentationURL = documentationURL,
-#'                    startDate = startDate,
 #'                    endDate = endDate,
 #'                    environmentParameters = environmentParameters,
 #'                    experimentalDesign = experimentalDesign,
@@ -332,6 +331,7 @@
 #'                    observationLevels = observationLevels,
 #'                    observationUnitsDescription = observationUnitsDescription,
 #'                    seasons = seasons,
+#'                    startDate = startDate,
 #'                    studyCode = studyCode,
 #'                    studyDescription = studyDescription,
 #'                    studyName = studyName,
@@ -350,7 +350,6 @@ brapi_post_studies <- function(con = NULL,
                                culturalPractices = '',
                                dataLinks = '',
                                documentationURL = '',
-                               startDate = '',
                                endDate = '',
                                environmentParameters = '',
                                experimentalDesign = list(),
@@ -363,6 +362,7 @@ brapi_post_studies <- function(con = NULL,
                                observationLevels = '',
                                observationUnitsDescription = '',
                                seasons = '',
+                               startDate = '',
                                studyCode = '',
                                studyDescription = '',
                                studyName = '',

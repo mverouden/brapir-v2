@@ -19,7 +19,7 @@ references the search results}
 
 \item{page}{integer; required: FALSE; Used to request a specific page of data
 to be returned. The page indexing starts at 0 (the first page is
-'page'= 0). Default is \code{0}.}
+\code{page = 0}). Default is \code{0}.}
 
 \item{pageSize}{integer; required: FALSE; The size of the pages to be
 returned. Default is \code{1000}.}
@@ -31,8 +31,10 @@ data.frame
 Get the results of a Studies search request
 }
 \details{
-Get list of studies, where StartDate and endDate should be ISO-8601 format for dates.
-See Search Services for additional implementation details.
+Returns the result of the advanced searching for the studies
+resource.
+
+See \href{https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md}{Search Services for additional implementation details}.
 }
 \examples{
 \dontrun{

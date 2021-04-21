@@ -9,12 +9,14 @@
 #'    references the search results
 #' @param page integer; required: FALSE; Used to request a specific page of data
 #'    to be returned. The page indexing starts at 0 (the first page is
-#'    'page'= 0). Default is `0`.
-#' @param pageSize integer; required: FALSE; The size of the pages to be returned.
-#'    Default is `1000`.
+#'    `page = 0`). Default is `0`.
+#' @param pageSize integer; required: FALSE; The size of the pages to be
+#'    returned. Default is `1000`.
 #'
-#' @details Advanced searching for the locations resource.
-#' See Search Services for additional implementation details.
+#' @details Returns the result of the advanced searching for the locations
+#'    resource.
+#'
+#' See [Search Services for additional implementation details](https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md).
 #'
 #' @return data.frame
 #'

@@ -13,7 +13,6 @@ brapi_post_studies(
   culturalPractices = "",
   dataLinks = "",
   documentationURL = "",
-  startDate = "",
   endDate = "",
   environmentParameters = "",
   experimentalDesign = list(),
@@ -26,6 +25,7 @@ brapi_post_studies(
   observationLevels = "",
   observationUnitsDescription = "",
   seasons = "",
+  startDate = "",
   studyCode = "",
   studyDescription = "",
   studyName = "",
@@ -127,13 +127,6 @@ The Examples Section shows an example of how to construct the
 
 \item{documentationURL}{character; required: FALSE; A URL to the human
 readable documentation of this object.}
-
-\item{startDate}{character; required: FALSE; The date the study will start or
-started. Coded in the ISO 8601 standard extended format, where date, time
-and time zone information needs to be provided (check for example
-\url{https://www.w3.org/TR/NOTE-datetime}
-). MIAPPE V1.1 (DM-14) Start date of study - Date and, if relevant, time
-when the experiment started.}
 
 \item{endDate}{character; required: FALSE; The date the study will end or
 ended. Coded in the ISO 8601 standard extended format, where date,
@@ -265,9 +258,16 @@ The Examples Section shows an example of how to construct the
 (DM-25) Observation unit description - General description of the observation
 units in the study.}
 
-\item{seasons}{vector of type character; required: FALSE; seasonsDbId value(s)
+\item{seasons}{vector of type character; required: FALSE; seasonDbId value(s)
 over which this study was performed.; default: "", when using
 multiple values supply as c("value1", "value2").}
+
+\item{startDate}{character; required: FALSE; The date the study will start or
+started. Coded in the ISO 8601 standard extended format, where date, time
+and time zone information needs to be provided (check for example
+\url{https://www.w3.org/TR/NOTE-datetime}
+). MIAPPE V1.1 (DM-14) Start date of study - Date and, if relevant, time
+when the experiment started.}
 
 \item{studyCode}{character; required: FALSE; A short human readable code for
 a study.}
@@ -276,11 +276,15 @@ a study.}
 study. MIAPPE V1.1 (DM-13) Study description - Human-readable text
 describing the study.}
 
-\item{studyName}{character; required: FALSE; The type of study being
-performed. ex. "Yield Trial", \emph{etc.}}
+\item{studyName}{character; required: FALSE; The human readable name for a
+study. MIAPPE V1.1 (DM-12) Study title - Human-readable text summarizing
+the study.}
 
 \item{studyPUI}{character; required: FALSE; A permanent unique identifier
 associated with this study data. For example, a URI or DOI.}
+
+\item{studyType}{character; required: FALSE; The type of study being
+performed. ex. "Yield Trial", \emph{etc.}}
 
 \item{trialDbId}{character; required: FALSE; The ID which uniquely identifies
 a trial.}
@@ -325,7 +329,6 @@ dataLinks <- data.frame(dataFormat = "Image Archive",
                         url = "https://brapi.org/image-archive.zip",
                         version = "1.0.3")
 documentationURL <- "https://wiki.brapi.org"
-startDate <- "2021-04-19T12:34:13.494Z"
 endDate <- "2021-04-19T12:34:13.494Z"
 environmentParameters <- data.frame(description = "the soil type was clay",
                                     parameterName =  "soil type",
@@ -364,6 +367,7 @@ observationUnitsDescription <- "Observation units consisted in individual
                                 plants at a density of approximately six
                                 plants per square meter."
 seasons <- c("spring_2012", "summer_2012")
+startDate <- "2021-04-19T12:34:13.494Z"
 studyCode <- "Tomatillo_Yield_Spring_2012"
 studyDescription <- "This is a yield study for Spring 2012"
 studyName <- "INRA's Tomatillo Genetic Resources Observation at Peru"
@@ -380,7 +384,6 @@ brapi_post_studies(con = con,
                    culturalPractices = culturalPractices,
                    dataLinks = dataLinks,
                    documentationURL = documentationURL,
-                   startDate = startDate,
                    endDate = endDate,
                    environmentParameters = environmentParameters,
                    experimentalDesign = experimentalDesign,
@@ -393,6 +396,7 @@ brapi_post_studies(con = con,
                    observationLevels = observationLevels,
                    observationUnitsDescription = observationUnitsDescription,
                    seasons = seasons,
+                   startDate = startDate,
                    studyCode = studyCode,
                    studyDescription = studyDescription,
                    studyName = studyName,

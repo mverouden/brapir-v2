@@ -125,7 +125,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
         if (grepl(pattern = "(min)|(max)", x = tolower(i)) && ifelse(is.na(usedArgs[[i]]), FALSE, usedArgs[[i]] < 0)) {
           stop('Argument: "', i, '" should be >= 0.')
         }
-        if (i %in% c("decimalPlaces", "listSize", "numberOfSamples", "page", "pageSize", "plateIndex")) {
+        if (i %in% c("decimalPlaces", "listSize", "numberOfSamples", "page", "pageSize", "plateIndex", "year")) {
           usedArgs[[i]] <- NULL
         }
         next()
@@ -139,9 +139,20 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
         next()
       }
       ## Check for arguments which are of type list
-      if (i %in% c("additionalInfo", "coordinates", "imageLocation", "ontologyReference", "requiredServiceInfo", "validValues")) {
+      if (i %in% c("additionalInfo", "coordinates", "experimentalDesign",
+                   "growthFacility", "imageLocation", "lastUpdate",
+                   "ontologyReference", "requiredServiceInfo", "validValues")) {
         if (!is.list(usedArgs[[i]])) {
-          stop('Argument: "', i, '" should be provided as a list.')
+          stop('Argument: "', i, '" should be provided as a list, see the help page on how the list should be constructed.')
+        }
+        usedArgs[[i]] <- NULL
+        next()
+      }
+      ## Check for arguments which are of type data.frame or supplied as empty character vector of length 1
+      if (i %in% c("contacts", "dataLinks", "environmentParameters",
+                   "externalReferences", "observationLevels")) {
+        if (!(is.character(usedArgs[[i]]) && usedArgs[[i]] == "" || is.data.frame(usedArgs[[i]]))) {
+          stop('Argument: "', i, '" should be supplied as an empty character or as a data.frame, see the help page on how the data.frame should be constructed.')
         }
         usedArgs[[i]] <- NULL
         next()

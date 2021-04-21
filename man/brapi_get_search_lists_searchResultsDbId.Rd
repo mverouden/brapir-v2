@@ -18,8 +18,8 @@ brapi_get_search_lists_searchResultsDbId(
 references the search results}
 
 \item{page}{integer; required: FALSE; Used to request a specific page of data
-to be returned. The page indexing starts at 0 (the first page is 'page'= 0)
-. Default is \code{0}.}
+to be returned. The page indexing starts at 0 (the first page is
+\verb{page'= 0}). Default is \code{0}.}
 
 \item{pageSize}{integer; required: FALSE; The size of the pages to be
 returned. Default is \code{1000}.}
@@ -31,8 +31,9 @@ data.frame
 Get the results of a List search request
 }
 \details{
-Advanced searching for the list resource.
-See Search Services for additional implementation details.
+Returns the result of the advanced searching for the list resource.
+
+See \href{https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md}{Search Services for additional implementation details}.
 }
 \examples{
 \dontrun{

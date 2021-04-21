@@ -17,21 +17,12 @@
 #' @param searchDateRangeStart character; required: FALSE; The start of the
 #'    overlapping search date range. `searchDateRangeStart` must be before
 #'    `searchDateRangeEnd`.
-#'
-#' Return a Trial entity if any of the following cases are true:
-#' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
-#'    is null
-#' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
-#'    is after `trial.startDate`
-#' - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart`
-#'    is null
-#' - `searchDateRangeEnd` is after `trial.startDate` AND `searchDateRangeStart`
-#'    is before `trial.endDate`
 #' @param searchDateRangeEnd character; required: FALSE; The start of the
 #'    overlapping search date range. `searchDateRangeStart` must be before
 #'    `searchDateRangeEnd`.
 #'
 #' Return a Trial entity if any of the following cases are true:
+#'
 #' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`
 #'    is null
 #' - `searchDateRangeStart` is before `trial.endDate` AND `searchDateRangeEnd`

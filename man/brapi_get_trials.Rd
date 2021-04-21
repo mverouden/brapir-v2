@@ -44,19 +44,7 @@ trials associated with given program id.}
 
 \item{searchDateRangeStart}{character; required: FALSE; The start of the
 overlapping search date range. \code{searchDateRangeStart} must be before
-\code{searchDateRangeEnd}.
-
-Return a Trial entity if any of the following cases are true:
-\itemize{
-\item \code{searchDateRangeStart} is before \code{trial.endDate} AND \code{searchDateRangeEnd}
-is null
-\item \code{searchDateRangeStart} is before \code{trial.endDate} AND \code{searchDateRangeEnd}
-is after \code{trial.startDate}
-\item \code{searchDateRangeEnd} is after \code{trial.startDate} AND \code{searchDateRangeStart}
-is null
-\item \code{searchDateRangeEnd} is after \code{trial.startDate} AND \code{searchDateRangeStart}
-is before \code{trial.endDate}
-}}
+\code{searchDateRangeEnd}.}
 
 \item{searchDateRangeEnd}{character; required: FALSE; The start of the
 overlapping search date range. \code{searchDateRangeStart} must be before

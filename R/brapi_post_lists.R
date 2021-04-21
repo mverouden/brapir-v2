@@ -114,21 +114,16 @@ brapi_post_lists <- function(con = NULL,
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
-  ## Check if usedArgs[["externalReferences"]] is supplied as empty character vector or data.frame
-  if (!(inherits(usedArgs[["externalReferences"]], what = "character") && usedArgs[["externalReferences"]] == "" || inherits(usedArgs[["externalReferences"]], what = "data.frame"))) {
-    stop('Argument: "externalReferences" should be supplied as an empty character or as a data.frame, see the help page on how the data.frame should be constructed.')
-  }
-  externalReferences <- usedArgs[["externalReferences"]]
-  usedArgs[["externalReferences"]] <- NULL
   ## Check validity of used and required arguments
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
-  ## Put externalReferences back into usedArgs
-  usedArgs[["externalReferences"]] <- externalReferences
   ## Checks for data and listSize arguments
   if (usedArgs[["data"]] == "" && usedArgs[["listSize"]] != 0) {
     usedArgs[["listSize"]] <- 0
   } else if (all(usedArgs[["data"]] != "") && usedArgs[["listSize"]] != length(usedArgs[["data"]])) {
     usedArgs[["listSize"]] <- length(usedArgs[["data"]])
+  }
+  if (length(usedArgs[["data"]]) == 1) {
+    usedArgs[["data"]] <- array(usedArgs[["data"]])
   }
   ## Obtain the call url
   callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
