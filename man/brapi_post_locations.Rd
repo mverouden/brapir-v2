@@ -34,9 +34,10 @@ represents this location}
 
 \item{additionalInfo}{list; required: FALSE; Additional arbitrary information.
 If provided use the following construct list(additionalProp1 = "string",
-additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-Section shows an example on how to construct the \code{additionalInfo} argument
-as a list.}
+additionalProp2 =  "string", additionalProp3 = "string").
+
+The Examples section shows an example on how to construct the
+\code{additionalInfo} argument as a list.}
 
 \item{coordinateDescription}{character; required: FALSE; Describes the
 precision and landmarks of the coordinate values used for this location.
@@ -83,7 +84,7 @@ ring, and each subsequent ring an interior ring.
 }
 
 The easiest way in R to construct the \code{coordinates} list is to use the
-\strong{geojsonR} package. The Examples Section shows how to create a
+\strong{geojsonR} package. The Examples section shows how to create a
 \code{coordinates} list object for a point and a polygon geometry.}
 
 \item{countryCode}{character; required: FALSE; \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}{ISO_3166-1_alpha-3}
@@ -116,7 +117,7 @@ be a simple string or a URI.
 system or database of this reference.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{externalReferences} argument as a data.frame.}
 
 \item{instituteAddress}{character; required: FALSE; The street address of the
@@ -267,7 +268,8 @@ Other brapi-core:
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_seasons}()},
-\code{\link{brapi_post_studies}()}
+\code{\link{brapi_post_studies}()},
+\code{\link{brapi_post_trials}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations_locationDbId}()},

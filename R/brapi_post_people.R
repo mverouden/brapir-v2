@@ -7,9 +7,10 @@
 #' @param con list; required: TRUE; BrAPI connection object
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
-#'    additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-#'    Section shows an example on how to construct the `additionalInfo` argument
-#'    as a list.
+#'    additionalProp2 =  "string", additionalProp3 = "string").
+#'
+#'    The Examples section shows an example on how to construct the
+#'    `additionalInfo` argument as a list.
 #' @param description character; required: FALSE; A description of this person.
 #' @param emailAddress character; required: FALSE; An email address for this
 #'    person.
@@ -23,7 +24,7 @@
 #'    * `referenceSource` character; required: TRUE; An identifier for the source
 #'      system or database of this reference.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `externalReferences` argument as a data.frame.
 #' @param firstName character; required: FALSE; Persons first name.
 #' @param middleName character; required: FALSE; Persons middle name.

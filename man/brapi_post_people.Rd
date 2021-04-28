@@ -23,9 +23,10 @@ brapi_post_people(
 
 \item{additionalInfo}{list; required: FALSE; Additional arbitrary information.
 If provided use the following construct list(additionalProp1 = "string",
-additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-Section shows an example on how to construct the \code{additionalInfo} argument
-as a list.}
+additionalProp2 =  "string", additionalProp3 = "string").
+
+The Examples section shows an example on how to construct the
+\code{additionalInfo} argument as a list.}
 
 \item{description}{character; required: FALSE; A description of this person.}
 
@@ -43,7 +44,7 @@ be a simple string or a URI.
 system or database of this reference.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{externalReferences} argument as a data.frame.}
 
 \item{firstName}{character; required: FALSE; Persons first name.}
@@ -140,7 +141,8 @@ Other brapi-core:
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_seasons}()},
-\code{\link{brapi_post_studies}()}
+\code{\link{brapi_post_studies}()},
+\code{\link{brapi_post_trials}()}
 
 Other People: 
 \code{\link{brapi_get_people_personDbId}()},

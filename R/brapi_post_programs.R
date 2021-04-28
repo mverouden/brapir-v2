@@ -9,9 +9,10 @@
 #'    represents this program.
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
-#'    additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-#'    Section shows an example on how to construct the `additionalInfo` argument
-#'    as a list.
+#'    additionalProp2 =  "string", additionalProp3 = "string").
+#'
+#'    The Examples section shows an example on how to construct the
+#'    `additionalInfo` argument as a list.
 #' @param commonCropName character; required: FALSE; Common name for the crop,
 #'    which this program is for.
 #' @param documentationURL character; required: FALSE; A URL to the human
@@ -26,7 +27,7 @@
 #'    * `referenceSource` character; required: TRUE; An identifier for the source
 #'      system or database of this reference.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `externalReferences` argument as a data.frame.
 #' @param leadPersonDbId character; required: FALSE; The unique identifier of
 #'    the program leader. Needs to be an existing `personDbId`.

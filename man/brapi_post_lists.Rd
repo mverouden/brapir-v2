@@ -29,9 +29,10 @@ supply as c("value1", "value2").}
 
 \item{additionalInfo}{list; required: FALSE; Additional arbitrary information.
 If provided use the following construct list(additionalProp1 = "string",
-additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-Section shows an example on how to construct the \code{additionalInfo} argument
-as a list.}
+additionalProp2 =  "string", additionalProp3 = "string").
+
+The Examples section shows an example on how to construct the
+\code{additionalInfo} argument as a list.}
 
 \item{dateCreated}{character; required: FALSE; Timestamp when the entity was
 first created. Coded in the ISO 8601 standard extended format, where date,
@@ -158,7 +159,8 @@ Other brapi-core:
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_seasons}()},
-\code{\link{brapi_post_studies}()}
+\code{\link{brapi_post_studies}()},
+\code{\link{brapi_post_trials}()}
 
 Other Lists: 
 \code{\link{brapi_get_lists_listDbId}()},

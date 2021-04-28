@@ -63,7 +63,8 @@ Other brapi-core:
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_seasons}()},
-\code{\link{brapi_post_studies}()}
+\code{\link{brapi_post_studies}()},
+\code{\link{brapi_post_trials}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs}()},

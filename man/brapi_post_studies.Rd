@@ -43,12 +43,13 @@ default: NA, other possible values: TRUE | FALSE}
 
 \item{additionalInfo}{list; required: FALSE; Additional arbitrary information.
 If provided use the following construct list(additionalProp1 = "string",
-additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-Section shows an example on how to construct the \code{additionalInfo} argument
-as a list.}
+additionalProp2 =  "string", additionalProp3 = "string").
+
+The Examples section shows an example on how to construct the
+\code{additionalInfo} argument as a list.}
 
 \item{commonCropName}{character; required: FALSE; Common name for the crop
-associated with this study}
+associated with this study.}
 
 \item{contacts}{data.frame; required: FALSE; A data.frame of contact entities
 associated with this study. The \code{contacts} argument data.frame should or
@@ -75,7 +76,7 @@ represents (ex: Coordinator, Scientist, PI, etc.). MIAPPE V1.1 (DM-34)
 Person role - Type of contribution of the person to the investigation.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{contacts} argument as a data.frame.}
 
 \item{culturalPractices}{character; required: FALSE; MIAPPE V1.1 (DM-28)
@@ -122,7 +123,7 @@ MIAPPE V1.1 (DM-39) Data file version - The version of the data set (the
 actual data).
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{dataLinks} argument as a data.frame.}
 
 \item{documentationURL}{character; required: FALSE; A URL to the human
@@ -162,7 +163,7 @@ environment parameter (defined above) constant within the experiment.
 for the parameter value.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{environmentParameters} argument as a data.frame.}
 
 \item{experimentalDesign}{list; required: FALSE; The experimental and
@@ -180,7 +181,7 @@ legacy datasets or data computed from several studies, the experimental
 design can be "unknown"/"NA", "aggregated/reduced data", or simply 'none'.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{experimentalDesign} argument as a list.}
 
 \item{externalReferences}{data.frame; required: FALSE; A data.frame of
@@ -194,7 +195,7 @@ be a simple string or a URI.
 system or database of this reference.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{externalReferences} argument as a data.frame.}
 
 \item{growthFacility}{list; required: FALSE; Short description of the
@@ -209,7 +210,7 @@ of growth facility - Short description of the facility in which the
 study was carried out.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{growthFacility} argument as a list.}
 
 \item{lastUpdate}{list; required: FALSE; The date and time when this study
@@ -225,7 +226,7 @@ provided (check for example
 update.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{lastUpdate} argument as a list.}
 
 \item{license}{character; required: FALSE; The usage license associated with
@@ -251,7 +252,7 @@ are at the top of the hierarchy (i.e. field -> 1) and higher numbers are
 at the bottom of the hierarchy (i.e. plant -> 9).
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{observationLevels} argument as a data.frame.}
 
 \item{observationUnitsDescription}{character; required: FALSE; MIAPPE V1.1
@@ -440,7 +441,8 @@ Other brapi-core:
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
-\code{\link{brapi_post_seasons}()}
+\code{\link{brapi_post_seasons}()},
+\code{\link{brapi_post_trials}()}
 
 Other Studies: 
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},

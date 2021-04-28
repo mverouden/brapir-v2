@@ -9,11 +9,12 @@
 #'     default: NA, other possible values: TRUE | FALSE
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
-#'    additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-#'    Section shows an example on how to construct the `additionalInfo` argument
-#'    as a list.
+#'    additionalProp2 =  "string", additionalProp3 = "string").
+#'
+#'    The Examples section shows an example on how to construct the
+#'    `additionalInfo` argument as a list.
 #' @param commonCropName character; required: FALSE; Common name for the crop
-#'    associated with this study
+#'    associated with this study.
 #' @param contacts data.frame; required: FALSE; A data.frame of contact entities
 #'    associated with this study. The `contacts` argument data.frame should or
 #'    can contain the following columns:
@@ -38,7 +39,7 @@
 #'      represents (ex: Coordinator, Scientist, PI, etc.). MIAPPE V1.1 (DM-34)
 #'      Person role - Type of contribution of the person to the investigation.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `contacts` argument as a data.frame.
 #' @param culturalPractices character; required: FALSE; MIAPPE V1.1 (DM-28)
 #'    Cultural practices - General description of the cultural practices of the
@@ -82,7 +83,7 @@
 #'      MIAPPE V1.1 (DM-39) Data file version - The version of the data set (the
 #'      actual data).
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `dataLinks` argument as a data.frame.
 #' @param documentationURL character; required: FALSE; A URL to the human
 #'    readable documentation of this object.
@@ -118,7 +119,7 @@
 #'    - `valuePUI` character; required: FALSE; URI pointing to an ontology class
 #'      for the parameter value.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `environmentParameters` argument as a data.frame.
 #' @param experimentalDesign list; required: FALSE; The experimental and
 #'    statistical design full description plus a category PUI taken from crop
@@ -134,7 +135,7 @@
 #'      legacy datasets or data computed from several studies, the experimental
 #'      design can be "unknown"/"NA", "aggregated/reduced data", or simply 'none'.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `experimentalDesign` argument as a list.
 #' @param externalReferences data.frame; required: FALSE; A data.frame of
 #'    external reference ids. These are references to this piece of data in an
@@ -146,7 +147,7 @@
 #'    * `referenceSource` character; required: TRUE; An identifier for the source
 #'      system or database of this reference.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `externalReferences` argument as a data.frame.
 #' @param growthFacility list; required: FALSE; Short description of the
 #'    facility in which the study was carried out. The `growthFacility` list
@@ -159,7 +160,7 @@
 #'      of growth facility - Short description of the facility in which the
 #'      study was carried out.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `growthFacility` argument as a list.
 #' @param lastUpdate list; required: FALSE; The date and time when this study
 #'    was last modified. The `lastUpdate` list argument can contain the
@@ -173,7 +174,7 @@
 #'    - `version` character; required: FALSE; Version number specifying the last
 #'      update.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `lastUpdate` argument as a list.
 #' @param license character; required: FALSE; The usage license associated with
 #'    the study data.
@@ -194,7 +195,7 @@
 #'      are at the top of the hierarchy (i.e. field -> 1) and higher numbers are
 #'      at the bottom of the hierarchy (i.e. plant -> 9).
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `observationLevels` argument as a data.frame.
 #' @param observationUnitsDescription character; required: FALSE; MIAPPE V1.1
 #' (DM-25) Observation unit description - General description of the observation

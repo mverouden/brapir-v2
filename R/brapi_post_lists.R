@@ -10,9 +10,10 @@
 #'    supply as c(&quot;value1&quot;, &quot;value2&quot;).
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
-#'    additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-#'    Section shows an example on how to construct the `additionalInfo` argument
-#'    as a list.
+#'    additionalProp2 =  "string", additionalProp3 = "string").
+#'
+#'    The Examples section shows an example on how to construct the
+#'    `additionalInfo` argument as a list.
 #' @param dateCreated character; required: FALSE; Timestamp when the entity was
 #'    first created. Coded in the ISO 8601 standard extended format, where date,
 #'    time and time zone information needs to be provided (check for example

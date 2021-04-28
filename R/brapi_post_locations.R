@@ -9,9 +9,10 @@
 #'    represents this location
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
-#'    additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-#'    Section shows an example on how to construct the `additionalInfo` argument
-#'    as a list.
+#'    additionalProp2 =  "string", additionalProp3 = "string").
+#'
+#'    The Examples section shows an example on how to construct the
+#'    `additionalInfo` argument as a list.
 #' @param coordinateDescription character; required: FALSE; Describes the
 #'    precision and landmarks of the coordinate values used for this location.
 #'    (ex. the site, the nearest town, a 10 kilometers radius circle, +/- 20
@@ -50,7 +51,7 @@
 #'    * `type` as a character; required: TRUE; Literally specified as "Feature".
 #'
 #'    The easiest way in R to construct the `coordinates` list is to use the
-#'    **geojsonR** package. The Examples Section shows how to create a
+#'    **geojsonR** package. The Examples section shows how to create a
 #'    `coordinates` list object for a point and a polygon geometry.
 #' @param countryCode character; required: FALSE; [ISO_3166-1_alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
 #'    specification MIAPPE V1.1 (DM-17) Geographic location (country) - The
@@ -76,7 +77,7 @@
 #'    * `referenceSource` character; required: TRUE; An identifier for the source
 #'      system or database of this reference.
 #'
-#'    The Examples Section shows an example of how to construct the
+#'    The Examples section shows an example of how to construct the
 #'    `externalReferences` argument as a data.frame.
 #' @param instituteAddress character; required: FALSE; The street address of the
 #'    institute representing this location. MIAPPE V1.1 (DM-16) Contact

@@ -25,9 +25,10 @@ represents this program.}
 
 \item{additionalInfo}{list; required: FALSE; Additional arbitrary information.
 If provided use the following construct list(additionalProp1 = "string",
-additionalProp2 =  "string", additionalProp3 = "string"). The Examples
-Section shows an example on how to construct the \code{additionalInfo} argument
-as a list.}
+additionalProp2 =  "string", additionalProp3 = "string").
+
+The Examples section shows an example on how to construct the
+\code{additionalInfo} argument as a list.}
 
 \item{commonCropName}{character; required: FALSE; Common name for the crop,
 which this program is for.}
@@ -46,7 +47,7 @@ be a simple string or a URI.
 system or database of this reference.
 }
 
-The Examples Section shows an example of how to construct the
+The Examples section shows an example of how to construct the
 \code{externalReferences} argument as a data.frame.}
 
 \item{leadPersonDbId}{character; required: FALSE; The unique identifier of
@@ -140,7 +141,8 @@ Other brapi-core:
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_seasons}()},
-\code{\link{brapi_post_studies}()}
+\code{\link{brapi_post_studies}()},
+\code{\link{brapi_post_trials}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs_programDbId}()},
