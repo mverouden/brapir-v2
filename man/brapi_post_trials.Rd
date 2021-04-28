@@ -209,22 +209,22 @@ trialDescription <- "General drought resistance trial initiated in Peru before d
 trialName <- "Peru Yield Trial 1"
 trialPUI <- "https://doi.org/101093190"
 
-brapi_post_trials <- function(con = con,
-                              active = active,
-                              additionalInfo = additionalInfo,
-                              commonCropName = commonCropName,
-                              contacts = contacts,
-                              datasetAuthorships = datasetAuthorships,
-                              documentationURL = documentationURL,
-                              endDate = endDate,
-                              externalReferences = externalReferences,
-                              programDbId = programDbId,
-                              programName = programName,
-                              publications = publications,
-                              startDate = startDate,
-                              trialDescription = trialDescription,
-                              trialName = trialName,
-                              trialPUI = trialPUI)
+brapi_post_trials(con = con,
+                  active = active,
+                  additionalInfo = additionalInfo,
+                  commonCropName = commonCropName,
+                  contacts = contacts,
+                  datasetAuthorships = datasetAuthorships,
+                  documentationURL = documentationURL,
+                  endDate = endDate,
+                  externalReferences = externalReferences,
+                  programDbId = programDbId,
+                  programName = programName,
+                  publications = publications,
+                  startDate = startDate,
+                  trialDescription = trialDescription,
+                  trialName = trialName,
+                  trialPUI = trialPUI)
 }
 
 }
