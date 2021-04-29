@@ -27,8 +27,8 @@
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
-#' seasonDbId <- "Spring_2021"
-#' seasonName <- "Spring"
+#' seasonDbId <- "spring_2021"
+#' seasonName <- "spring"
 #' year <- 2021
 #'
 #' brapi_post_seasons(con = con,

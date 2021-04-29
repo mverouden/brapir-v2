@@ -125,7 +125,6 @@
 #' @family Trials
 #'
 #' @examples
-#' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"

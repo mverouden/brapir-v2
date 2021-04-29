@@ -70,17 +70,17 @@
 #' userID <- "bob-24"
 #'
 #' out <-
-#'   brapi_post_people(con = con,
-#'                     additionalInfo = additionalInfo,
-#'                     description = description,
-#'                     emailAddress = emailAddress,
-#'                     externalReferences = externalReferences,
-#'                     firstName = firstName,
-#'                     middleName = middleName,
-#'                     lastName = lastName,
-#'                     mailingAddress = mailingAddress,
-#'                     phoneNumber = phoneNumber,
-#'                     userID = userID)
+#'  brapi_post_people(con = con,
+#'                    additionalInfo = additionalInfo,
+#'                    description = description,
+#'                    emailAddress = emailAddress,
+#'                    externalReferences = externalReferences,
+#'                    firstName = firstName,
+#'                    middleName = middleName,
+#'                    lastName = lastName,
+#'                    mailingAddress = mailingAddress,
+#'                    phoneNumber = phoneNumber,
+#'                    userID = userID)
 #'
 #' additionalInfo <- list(dummyData = "True", example = "put_people_personDbId")
 #' description <- "Rob does not like pina coladas nor getting caught in the rain."

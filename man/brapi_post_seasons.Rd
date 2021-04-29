@@ -36,8 +36,8 @@ Add new season entries to the database
 \dontrun{
 con <- brapi_db()$testserver
 con[["token"]] <- "YYYY"
-seasonDbId <- "Spring_2021"
-seasonName <- "Spring"
+seasonDbId <- "spring_2021"
+seasonName <- "spring"
 year <- 2021
 
 brapi_post_seasons(con = con,
@@ -84,11 +84,14 @@ Other brapi-core:
 \code{\link{brapi_post_trials}()},
 \code{\link{brapi_put_lists_listDbId}()},
 \code{\link{brapi_put_locations_locationDbId}()},
-\code{\link{brapi_put_people_personDbId}()}
+\code{\link{brapi_put_people_personDbId}()},
+\code{\link{brapi_put_programs_programDbId}()},
+\code{\link{brapi_put_seasons_seasonDbId}()}
 
 Other Seasons: 
 \code{\link{brapi_get_seasons_seasonDbId}()},
-\code{\link{brapi_get_seasons}()}
+\code{\link{brapi_get_seasons}()},
+\code{\link{brapi_put_seasons_seasonDbId}()}
 }
 \author{
 Maikel Verouden

@@ -67,12 +67,15 @@ Other brapi-core:
 \code{\link{brapi_post_trials}()},
 \code{\link{brapi_put_lists_listDbId}()},
 \code{\link{brapi_put_locations_locationDbId}()},
-\code{\link{brapi_put_people_personDbId}()}
+\code{\link{brapi_put_people_personDbId}()},
+\code{\link{brapi_put_programs_programDbId}()},
+\code{\link{brapi_put_seasons_seasonDbId}()}
 
 Other Programs: 
 \code{\link{brapi_get_programs}()},
 \code{\link{brapi_get_search_programs_searchResultsDbId}()},
-\code{\link{brapi_post_programs}()}
+\code{\link{brapi_post_programs}()},
+\code{\link{brapi_put_programs_programDbId}()}
 }
 \author{
 Maikel Verouden
