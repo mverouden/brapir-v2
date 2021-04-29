@@ -275,7 +275,8 @@ Other brapi-core:
 \code{\link{brapi_put_people_personDbId}()},
 \code{\link{brapi_put_programs_programDbId}()},
 \code{\link{brapi_put_seasons_seasonDbId}()},
-\code{\link{brapi_put_studies_studyDbId}()}
+\code{\link{brapi_put_studies_studyDbId}()},
+\code{\link{brapi_put_trials_trialDbId}()}
 
 Other Locations: 
 \code{\link{brapi_get_locations_locationDbId}()},
