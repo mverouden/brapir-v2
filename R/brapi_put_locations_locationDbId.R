@@ -1,10 +1,12 @@
 #' @title
-#' post /locations
+#' put /locations/\{locationDbId\}
 #'
 #' @description
-#' Create new Locations
+#' Update the details for an existing Location
 #'
 #' @param con list; required: TRUE; BrAPI connection object
+#' @param locationDbId character; required: TRUE; The internal DB id for a
+#'    location
 #' @param abbreviation character; required: FALSE; An abbreviation which
 #'    represents this location
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
@@ -100,13 +102,13 @@
 #' @param topography character; required: FALSE; Describes the topography of the
 #'    land at the location. (ex. Plateau, Cirque, Hill, Valley, *etc.*)
 #'
-#' @details Add new locations to database
+#' @details Update the details for an existing location.
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Locations/post_locations }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Locations/put_locations__locationDbId_ }{BrAPI SwaggerHub}
 #'
 #' @family brapi-core
 #' @family Locations
@@ -115,9 +117,9 @@
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
-#' abbreviation <- "L1"
+#' abbreviation <- "NPEC"
 #' additionalInfo <- list(dummyData = "True", example = "post_locations")
-#' coordinateDescription <- "North East corner of greenhouse"
+#' coordinateDescription <- "NPEC"
 #' coordinateUncertainty <- "20"
 #' ## Load geojsonR package
 #' library(geojsonR)
@@ -125,31 +127,14 @@
 #' ## Point geometry
 #' init <- TO_GeoJson$new()
 #' pointGeometry <- list()
-#' pointData <- c(-76.506042, # longitude
-#'                 42.417373, # lattitude
-#'                       123) # altitude
+#' pointData <- c( 5.663288, # longitude
+#'                51.988720, # lattitude
+#'                      0) # altitude
 #' pointGeometry[["geometry"]] <- init$Point(data = pointData,
 #'                                           stringify = FALSE)
 #' pointGeometry[["type"]] <- "Feature"
-#' ##
-#' ## Polygon geometry with an exterior and one interior ring
-#' init <- TO_GeoJson$new()
-#' ## Individual polygon points are provided as c(longitude, latitude, altitude)
-#' polygonData <- list(list(c(-76.476949, 42.447274, 123), # exterior ring (rectangle)
-#'                          c(-76.474429, 42.447258, 123),
-#'                          c(-76.474428, 42.446193, 123),
-#'                          c(-76.476961, 42.446211, 123),
-#'                          c(-76.476949, 42.447274, 123)),
-#'                     list(c(-76.476733, 42.446916), # interior ring (triangle)
-#'                          c(-76.475810, 42.447154),
-#'                          c(-76.476306, 42.446281),
-#'                          c(-76.476733, 42.446916)))
-#' polygonGeometry <- list()
-#' polygonGeometry[["geometry"]] <- init$Polygon(data = polygonData,
-#'                                               stringify = FALSE)
-#' polygonGeometry[["type"]] <- "Feature"
-#' countryCode <- "PER"
-#' countryName <- "Peru"
+#' countryCode <- "NL"
+#' countryName <- "Netherlands"
 #' documentationURL <- "https://brapi.org"
 #' environmentType <- "Nursery"
 #' exposure <- "Structure, no exposure"
@@ -160,83 +145,102 @@
 #'              referenceSource = c("DOI",
 #'                                  "OBO Library",
 #'                                  "Remote Data Collection Upload Tool"))
-#' instituteAddress <- "71 Pilgrim Avenue Chevy Chase MD 20815"
-#' instituteName <- "Plant Science Institute"
-#' locationName <- "Location 1"
+#' instituteAddress <- ""
+#' instituteName <- "Netherlands Plant Eco-phenotyping Centre"
+#' locationName <- "NPEC Greehouse"
 #' locationType <- "Storage Location"
 #' siteStatus <- "Private"
 #' slope <- "0"
 #' topography <- "Valley"
 #'
-#' brapi_post_locations(con = con,
-#'                      abbreviation = abbreviation,
-#'                      additionalInfo = additionalInfo,
-#'                      coordinateDescription = coordinateDescription,
-#'                      coordinateUncertainty = coordinateUncertainty,
-#'                      coordinates = pointGeometry,
-#'                      countryCode = countryCode,
-#'                      countryName = countryName,
-#'                      documentationURL = documentationURL,
-#'                      environmentType = environmentType,
-#'                      exposure = exposure,
-#'                      externalReferences = externalReferences,
-#'                      instituteAddress = instituteAddress,
-#'                      instituteName = instituteName,
-#'                      locationName = locationName,
-#'                      locationType = locationType,
-#'                      siteStatus = siteStatus,
-#'                      slope = slope,
-#'                      topography = topography)
+#' out <-
+#'   brapi_post_locations(con = con,
+#'                        abbreviation = abbreviation,
+#'                        additionalInfo = additionalInfo,
+#'                        coordinateDescription = coordinateDescription,
+#'                        coordinateUncertainty = coordinateUncertainty,
+#'                        coordinates = pointGeometry,
+#'                        countryCode = countryCode,
+#'                        countryName = countryName,
+#'                        documentationURL = documentationURL,
+#'                        environmentType = environmentType,
+#'                        exposure = exposure,
+#'                        externalReferences = externalReferences,
+#'                        instituteAddress = instituteAddress,
+#'                        instituteName = instituteName,
+#'                        locationName = locationName,
+#'                        locationType = locationType,
+#'                        siteStatus = siteStatus,
+#'                        slope = slope,
+#'                        topography = topography)
+#'
+#' ## Polygon geometry with an exterior and one interior ring
+#' init <- TO_GeoJson$new()
+#' ## Individual polygon points are provided as c(longitude, latitude, altitude)
+#' polygonData <- list(list(c(5.663176, 51.988506, 0), # exterior ring (rectangle)
+#'                          c(5.663601, 51.988626, 0),
+#'                          c(5.663405, 51.988904, 0),
+#'                          c(5.662976, 51.988788, 0),
+#'                          c(5.663176, 51.988506, 0)))
+#' polygonGeometry <- list()
+#' polygonGeometry[["geometry"]] <- init$Polygon(data = polygonData,
+#'                                               stringify = FALSE)
+#' polygonGeometry[["type"]] <- "Feature"
+#' instituteAddress <- "Bornsesteeg 48, 6708 PE Wageningen, The Netherlands"
+#'
+#' brapi_put_locations_locationDbId(con = con,
+#'                                  locationDbId = unique(out$locationDbId),
+#'                                  coordinates = polygonGeometry,
+#'                                  instituteAddress = instituteAddress)
 #' }
 #'
 #' @export
-brapi_post_locations <- function(con = NULL,
-                                 abbreviation = '',
-                                 additionalInfo = list(),
-                                 coordinateDescription = '',
-                                 coordinateUncertainty = '',
-                                 coordinates = list(),
-                                 countryCode = '',
-                                 countryName = '',
-                                 documentationURL = '',
-                                 environmentType = '',
-                                 exposure = '',
-                                 externalReferences = '',
-                                 instituteAddress = '',
-                                 instituteName = '',
-                                 locationName = '',
-                                 locationType = '',
-                                 siteStatus = '',
-                                 slope = '',
-                                 topography = '') {
+brapi_put_locations_locationDbId <- function(con = NULL,
+                                             locationDbId = '',
+                                             abbreviation = '',
+                                             additionalInfo = list(),
+                                             coordinateDescription = '',
+                                             coordinateUncertainty = '',
+                                             coordinates = list(),
+                                             countryCode = '',
+                                             countryName = '',
+                                             documentationURL = '',
+                                             environmentType = '',
+                                             exposure = '',
+                                             externalReferences = '',
+                                             instituteAddress = '',
+                                             instituteName = '',
+                                             locationName = '',
+                                             locationType = '',
+                                             siteStatus = '',
+                                             slope = '',
+                                             topography = '') {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
   ## Check validity of used and required arguments
-  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
+  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "locationDbId")
   ## Obtain the call url
-  callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
-                                         callPath = "/locations",
-                                         reqArgs = "",
-                                         packageName = "BrAPI-Core",
-                                         callVersion = 2.0)
+  callurl <- brapirv2:::brapi_PUT_callURL(usedArgs = usedArgs,
+                                          callPath = "/locations/{locationDbId}",
+                                          reqArgs = "locationDbId",
+                                          packageName = "BrAPI-Core",
+                                          callVersion = 2.0)
   ## Build the Body
-  callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
-                                           reqArgs = "")
-  ## Adaptation for v2.0 where json body is wrapped in []
-  callbody <- list(callbody)
+  callbody <- brapirv2:::brapi_PUT_callBody(usedArgs = usedArgs,
+                                            reqArgs = "locationDbId")
 
   try({
     ## Make the call and receive the response
-    resp <- brapirv2:::brapi_POST(url = callurl, body = callbody, usedArgs = usedArgs)
+    resp <- brapirv2:::brapi_PUT(url = callurl, body = callbody, usedArgs = usedArgs)
     ## Extract the content from the response object in human readable form
     cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
     ## Convert the content object into a data.frame
     out <- brapirv2:::brapi_result2df(cont, usedArgs)
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_post_locations")
+  class(out) <- c(class(out), "brapi_put_locations_locationDbId")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)

@@ -263,7 +263,8 @@ Other brapi-core:
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
-\code{\link{brapi_put_lists_listDbId}()}
+\code{\link{brapi_put_lists_listDbId}()},
+\code{\link{brapi_put_locations_locationDbId}()}
 
 Other Trials: 
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},

@@ -443,7 +443,8 @@ Other brapi-core:
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_trials}()},
-\code{\link{brapi_put_lists_listDbId}()}
+\code{\link{brapi_put_lists_listDbId}()},
+\code{\link{brapi_put_locations_locationDbId}()}
 
 Other Studies: 
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},
