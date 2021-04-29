@@ -83,13 +83,15 @@ Other brapi-core:
 \code{\link{brapi_put_locations_locationDbId}()},
 \code{\link{brapi_put_people_personDbId}()},
 \code{\link{brapi_put_programs_programDbId}()},
-\code{\link{brapi_put_seasons_seasonDbId}()}
+\code{\link{brapi_put_seasons_seasonDbId}()},
+\code{\link{brapi_put_studies_studyDbId}()}
 
 Other Studies: 
 \code{\link{brapi_get_studies_studyDbId}()},
 \code{\link{brapi_get_studies}()},
 \code{\link{brapi_get_studytypes}()},
-\code{\link{brapi_post_studies}()}
+\code{\link{brapi_post_studies}()},
+\code{\link{brapi_put_studies_studyDbId}()}
 }
 \author{
 Maikel Verouden
