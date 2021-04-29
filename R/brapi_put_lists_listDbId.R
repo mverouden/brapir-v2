@@ -1,19 +1,20 @@
 #' @title
-#' post /lists
+#' put /lists/\{listDbId\}
 #'
 #' @description
-#' Create New List Objects
+#' Update an existing generic list
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param data vector of type character; required: FALSE; The list of DbIds
-#'    contained in this list; default: &quot;&quot;, when using multiple values
-#'    supply as c(&quot;value1&quot;, &quot;value2&quot;).
+#' @param listDbId character; required: TRUE; The unique ID of this generic list
 #' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
 #'    additionalProp2 =  "string", additionalProp3 = "string").
 #'
 #'    The Examples section shows an example on how to construct the
 #'    `additionalInfo` argument as a list.
+#' @param data vector of type character; required: FALSE; The list of DbIds
+#'    contained in this list; default: &quot;&quot;, when using multiple values
+#'    supply as c(&quot;value1&quot;, &quot;value2&quot;).
 #' @param dateCreated character; required: FALSE; Timestamp when the entity was
 #'    first created. Coded in the ISO 8601 standard extended format, where date,
 #'    time and time zone information needs to be provided (check for example
@@ -48,13 +49,13 @@
 #'    &quot;|&quot;observationUnits&quot;|&quot;observationVariables&quot;|&quot;
 #'    programs&quot;|&quot;samples&quot;|&quot;studies&quot;|&quot;trials&quot;
 #'
-#' @details Create new list objects in the database.
+#' @details Update an existing generic list
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Lists/post_lists }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Lists/put_lists__listDbId_ }{BrAPI SwaggerHub}
 #'
 #' @family brapi-core
 #' @family Lists
@@ -75,48 +76,52 @@
 #'                                  "OBO Library",
 #'                                  "Remote Data Collection Upload Tool"))
 #' listDescription <-
-#'  "This is a list of germplasm I would like to investigate next summer season"
+#'  "This is a list of germplasm I would like to investigate next spring season"
 #' listName <- "WURgermplasm_Apr_2021"
 #' listOwnerName <- "Bob Robertson"
 #' listOwnerPersonDbId <- "person1"
-#' listSize <- 3
+#' listSize <- 0
 #' listSource <- "WUR GeneBank"
 #' listType <- "germplasm"
-#' brapi_post_lists(con = con,
-#'                  data = data,
-#'                  additionalInfo = additionalInfo,
-#'                  dateCreated = dateCreated,
-#'                  dateModified = dateModified,
-#'                  externalReferences = externalReferences,
-#'                  listDescription = listDescription,
-#'                  listName = listName,
-#'                  listOwnerName = listOwnerName,
-#'                  listOwnerPersonDbId = listOwnerPersonDbId,
-#'                  listSize = listSize,
-#'                  listSource = listSource,
-#'                  listType = listType)
+#' out <- brapi_post_lists(con = con,
+#'                         data = data,
+#'                         additionalInfo = additionalInfo,
+#'                         dateCreated = dateCreated,
+#'                         dateModified = dateModified,
+#'                         externalReferences = externalReferences,
+#'                         listDescription = listDescription,
+#'                         listName = listName,
+#'                         listOwnerName = listOwnerName,
+#'                         listOwnerPersonDbId = listOwnerPersonDbId,
+#'                         listSize = listSize,
+#'                         listSource = listSource,
+#'                         listType = listType)
+#' brapi_put_lists_listDbId(con = con,
+#'                          listDbId = unique(out$listDbId),
+#'                          data = sample(data))
 #' }
 #'
 #' @export
-brapi_post_lists <- function(con = NULL,
-                             data = '',
-                             additionalInfo = list(),
-                             dateCreated = '',
-                             dateModified = '',
-                             externalReferences = '',
-                             listDescription = '',
-                             listName = '',
-                             listOwnerName = '',
-                             listOwnerPersonDbId = '',
-                             listSize = 0,
-                             listSource = '',
-                             listType = '') {
+brapi_put_lists_listDbId <- function(con = NULL,
+                                     listDbId = '',
+                                     additionalInfo = list(),
+                                     data = '',
+                                     dateCreated = '',
+                                     dateModified = '',
+                                     externalReferences = '',
+                                     listDescription = '',
+                                     listName = '',
+                                     listOwnerName = '',
+                                     listOwnerPersonDbId = '',
+                                     listSize = 0,
+                                     listSource = '',
+                                     listType = '') {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
   ## Check validity of used and required arguments
-  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
+  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "listDbId")
   ## Checks for data and listSize arguments
   if (usedArgs[["data"]] == "" && usedArgs[["listSize"]] != 0) {
     usedArgs[["listSize"]] <- 0
@@ -127,27 +132,25 @@ brapi_post_lists <- function(con = NULL,
     usedArgs[["data"]] <- array(usedArgs[["data"]])
   }
   ## Obtain the call url
-  callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
-                                         callPath = "/lists",
-                                         reqArgs = "",
-                                         packageName = "BrAPI-Core",
-                                         callVersion = 2.0)
+  callurl <- brapirv2:::brapi_PUT_callURL(usedArgs = usedArgs,
+                                          callPath = "/lists/{listDbId}",
+                                          reqArgs = "listDbId",
+                                          packageName = "BrAPI-Core",
+                                          callVersion = 2.0)
   ## Build the Body
-  callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
-                                           reqArgs = "")
-  ## Adaptation for v2.0 where json body is wrapped in []
-  callbody <- list(callbody)
+  callbody <- brapirv2:::brapi_PUT_callBody(usedArgs = usedArgs,
+                                            reqArgs = "listDbId")
 
   try({
     ## Make the call and receive the response
-    resp <- brapirv2:::brapi_POST(url = callurl, body = callbody, usedArgs = usedArgs)
+    resp <- brapirv2:::brapi_PUT(url = callurl, body = callbody, usedArgs = usedArgs)
     ## Extract the content from the response object in human readable form
     cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
     ## Convert the content object into a data.frame
     out <- brapirv2:::brapi_result2df(cont, usedArgs)
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_post_lists")
+  class(out) <- c(class(out), "brapi_put_lists_listDbId")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)
