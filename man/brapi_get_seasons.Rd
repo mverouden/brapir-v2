@@ -93,7 +93,8 @@ Other brapi-core:
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
 \code{\link{brapi_put_lists_listDbId}()},
-\code{\link{brapi_put_locations_locationDbId}()}
+\code{\link{brapi_put_locations_locationDbId}()},
+\code{\link{brapi_put_people_personDbId}()}
 
 Other Seasons: 
 \code{\link{brapi_get_seasons_seasonDbId}()},

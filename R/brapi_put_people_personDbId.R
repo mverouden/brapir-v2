@@ -1,11 +1,12 @@
 #' @title
-#' post /people
+#' put /people/\{personDbId\}
 #'
 #' @description
-#' Create new People
+#' Update an existing Person
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param additionalInfo list; required: FALSE; Additional arbitrary information.
+#' @param personDbId character; required: TRUE; The unique ID of a person
+##' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
 #'    additionalProp2 =  "string", additionalProp3 = "string").
 #'
@@ -36,13 +37,13 @@
 #'    this person. Different from `personDbId` because you could have a person,
 #'    who is not a user of the system.
 #'
-#' @details Create new People entities. `personDbId` is generated and managed by the server.
+#' @details Update an existing Person
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/People/post_people }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/People/put_people__personDbId_ }{BrAPI SwaggerHub}
 #'
 #' @family brapi-core
 #' @family People
@@ -51,9 +52,7 @@
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
-#' additionalInfo <- list(additionalProp1 = "string",
-#'                        additionalProp2 = "string",
-#'                        additionalProp3 = "string")
+#' additionalInfo <- list(dummyData = "True", example = "post_people")
 #' description <- "Bob likes pina coladas and getting caught in the rain."
 #' emailAddress <- "bob@bob.com"
 #' externalReferences <-
@@ -68,61 +67,79 @@
 #' lastName <- "Robertson"
 #' mailingAddress <- "123 Street Ave, City, State, Country"
 #' phoneNumber <- "+1-555-555-5555"
-#' userID <- "bob-23"
+#' userID <- "bob-24"
 #'
-#' brapi_post_people(con = con,
-#'                   additionalInfo = additionalInfo,
-#'                   description = description,
-#'                   emailAddress = emailAddress,
-#'                   externalReferences = externalReferences,
-#'                   firstName = firstName,
-#'                   middleName = middleName,
-#'                   lastName = lastName,
-#'                   mailingAddress = mailingAddress,
-#'                   phoneNumber = phoneNumber,
-#'                   userID = userID)
+#' out <-
+#'   brapi_post_people(con = con,
+#'                     additionalInfo = additionalInfo,
+#'                     description = description,
+#'                     emailAddress = emailAddress,
+#'                     externalReferences = externalReferences,
+#'                     firstName = firstName,
+#'                     middleName = middleName,
+#'                     lastName = lastName,
+#'                     mailingAddress = mailingAddress,
+#'                     phoneNumber = phoneNumber,
+#'                     userID = userID)
+#'
+#' additionalInfo <- list(dummyData = "True", example = "put_people_personDbId")
+#' description <- "Rob does not like pina coladas nor getting caught in the rain."
+#' emailAddress <- "rob@robetson.com"
+#' firstName <- "Rob"
+#' middleName <- "Safety"
+#' lastName <- "Robertson"
+#' userID <- "rob-01"
+#'
+#' brapi_put_people_personDbId(con = con,
+#'                             personDbId = unique(out$personDbId),
+#'                             additionalInfo = additionalInfo,
+#'                             description = description,
+#'                             emailAddress = emailAddress,
+#'                             firstName = firstName,
+#'                             lastName = lastName,
+#'                             middleName = middleName,
+#'                             userID = userID)
 #' }
 #'
 #' @export
-brapi_post_people <- function(con = NULL,
-                              additionalInfo = list(),
-                              description = '',
-                              emailAddress = '',
-                              externalReferences = '',
-                              firstName = '',
-                              middleName = '',
-                              lastName = '',
-                              mailingAddress = '',
-                              phoneNumber = '',
-                              userID = '') {
+brapi_put_people_personDbId <- function(con = NULL,
+                                        personDbId = '',
+                                        additionalInfo = list(),
+                                        description = '',
+                                        emailAddress = '',
+                                        externalReferences = '',
+                                        firstName = '',
+                                        lastName = '',
+                                        mailingAddress = '',
+                                        middleName = '',
+                                        phoneNumber = '',
+                                        userID = '') {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
   ## Check validity of used and required arguments
-  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
+  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "personDbId")
   ## Obtain the call url
-  callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
-                                         callPath = "/people",
-                                         reqArgs = "",
-                                         packageName = "BrAPI-Core",
-                                         callVersion = 2.0)
+  callurl <- brapirv2:::brapi_PUT_callURL(usedArgs = usedArgs,
+                                          callPath = "/people/{personDbId}",
+                                          reqArgs = "personDbId",
+                                          packageName = "BrAPI-Core",
+                                          callVersion = 2.0)
   ## Build the Body
-  callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
-                                           reqArgs = "")
-  ## Adaptation for v2.0 where json body is wrapped in []
-  callbody <- list(callbody)
+  callbody <- brapirv2:::brapi_PUT_callBody(usedArgs = usedArgs,
+                                            reqArgs = "personDbId")
 
   try({
     ## Make the call and receive the response
-    resp <- brapirv2:::brapi_POST(url = callurl, body = callbody, usedArgs = usedArgs)
+    resp <- brapirv2:::brapi_PUT(url = callurl, body = callbody, usedArgs = usedArgs)
     ## Extract the content from the response object in human readable form
     cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
     ## Convert the content object into a data.frame
     out <- brapirv2:::brapi_result2df(cont, usedArgs)
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_post_people")
+  class(out) <- c(class(out), "brapi_put_people_personDbId")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)
