@@ -39,7 +39,7 @@ con <- brapi_db()$testserver
 con[["token"]] <- "YYYY"
 
 TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
-Stil to be completed:
+Still to be completed:
 brapi_get_search_lists_searchResultsDbId(con = con,
                                          searchResultsDbId = "")
 }
