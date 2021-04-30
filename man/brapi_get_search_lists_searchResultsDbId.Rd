@@ -32,12 +32,14 @@ Get the results of a List search request
 }
 \details{
 Returns the result of the advanced searching for the list resource.
-
-See \href{https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md}{Search Services for additional implementation details}.
 }
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
+con[["token"]] <- "YYYY"
+
+TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
+Stil to be completed:
 brapi_get_search_lists_searchResultsDbId(con = con,
                                          searchResultsDbId = "")
 }
@@ -75,6 +77,7 @@ Other brapi-core:
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
+\code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -91,6 +94,7 @@ Other Lists:
 \code{\link{brapi_get_lists}()},
 \code{\link{brapi_post_lists_listDbId_items}()},
 \code{\link{brapi_post_lists}()},
+\code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_put_lists_listDbId}()}
 }
 \author{

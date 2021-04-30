@@ -98,6 +98,7 @@ Other brapi-core:
 \code{\link{brapi_post_locations}()},
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
+\code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -114,6 +115,7 @@ Other Lists:
 \code{\link{brapi_get_lists}()},
 \code{\link{brapi_get_search_lists_searchResultsDbId}()},
 \code{\link{brapi_post_lists}()},
+\code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_put_lists_listDbId}()}
 }
 \author{
