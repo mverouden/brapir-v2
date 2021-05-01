@@ -276,6 +276,7 @@ Other brapi-core:
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_search_lists}()},
+\code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -290,7 +291,8 @@ Other Locations:
 \code{\link{brapi_get_locations_locationDbId}()},
 \code{\link{brapi_get_locations}()},
 \code{\link{brapi_get_search_locations_searchResultsDbId}()},
-\code{\link{brapi_post_locations}()}
+\code{\link{brapi_post_locations}()},
+\code{\link{brapi_post_search_locations}()}
 }
 \author{
 Maikel Verouden

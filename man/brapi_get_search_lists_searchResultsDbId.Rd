@@ -19,7 +19,7 @@ references the search results}
 
 \item{page}{integer; required: FALSE; Used to request a specific page of data
 to be returned. The page indexing starts at 0 (the first page is
-\verb{page'= 0}). Default is \code{0}.}
+\code{page = 0}). Default is \code{0}.}
 
 \item{pageSize}{integer; required: FALSE; The size of the pages to be
 returned. Default is \code{1000}.}
@@ -78,6 +78,7 @@ Other brapi-core:
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_search_lists}()},
+\code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
