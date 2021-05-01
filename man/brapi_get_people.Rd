@@ -94,6 +94,7 @@ Other brapi-core:
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_post_search_locations}()},
+\code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -109,6 +110,7 @@ Other People:
 \code{\link{brapi_get_people_personDbId}()},
 \code{\link{brapi_get_search_people_searchResultsDbId}()},
 \code{\link{brapi_post_people}()},
+\code{\link{brapi_post_search_people}()},
 \code{\link{brapi_put_people_personDbId}()}
 }
 \author{

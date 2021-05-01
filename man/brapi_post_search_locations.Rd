@@ -76,17 +76,17 @@ values supply as c("value1", "value2").}
 name(s) to search for; default: "", when using multiple values
 supply as c("value1", "value2").}
 
-\item{externalReferenceIDs}{vector of type character; required: FALSE; List
-of external reference identifiers. Could be a simple strings or a URIs.
-(use with \code{externalReferenceSources} parameter); default: "",
-when using multiple values supply as c("value1",
+\item{externalReferenceIDs}{vector of type character; required: FALSE;
+External reference identifier(s) to search for. Could be a simple strings
+or a URIs (use with \code{externalReferenceSources} parameter).; default:
+"", when using multiple values supply as c("value1",
 "value2").}
 
 \item{externalReferenceSources}{vector of type character; required: FALSE;
-List of identifiers for the source system or database of an external
-reference (use with \code{externalReferenceIDs} parameter);
-default: "", when using multiple values supply as
-c("value1", "value2").}
+Source system or database identifier(s) of an external reference(s) to
+search for (use with \code{externalReferenceIDs} parameter); default:
+"", when using multiple values supply as c("value1",
+"value2").}
 
 \item{instituteAddresses}{vector of type character; required: FALSE; The institute
 street address(es) to search for; default: "", when using
@@ -122,7 +122,10 @@ data.frame
 Submit a search request for Locations
 }
 \details{
-Advanced searching for the locations resource.
+Advanced searching for the locations resource. Function will return
+either the search results (Status 200 for an immediate response) or a
+\code{searchResultsDbId} (Status 202 for both a saved and an asynchronous
+search).
 }
 \examples{
 \dontrun{
@@ -167,6 +170,7 @@ Other brapi-core:
 \code{\link{brapi_post_people}()},
 \code{\link{brapi_post_programs}()},
 \code{\link{brapi_post_search_lists}()},
+\code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},

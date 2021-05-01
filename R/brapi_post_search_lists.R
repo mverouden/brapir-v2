@@ -21,16 +21,16 @@
 #'    the search range, when the entity was last modified. Coded in the ISO 8601
 #'    standard extended format, where date, time and time zone information needs
 #'    to be provided (check for example https://www.w3.org/TR/NOTE-datetime).
-#' @param externalReferenceIDs vector of type character; required: FALSE; List
-#'    of external reference identifiers. Could be a simple strings or a URIs.
-#'    (use with `externalReferenceSources` parameter); default: &quot;&quot;,
-#'    when using multiple values supply as c(&quot;value1&quot;,
+#' @param externalReferenceIDs vector of type character; required: FALSE;
+#'    External reference identifier(s) to search for. Could be a simple strings
+#'    or a URIs (use with `externalReferenceSources` parameter).; default:
+#'    &quot;&quot;, when using multiple values supply as c(&quot;value1&quot;,
 #'    &quot;value2&quot;).
 #' @param externalReferenceSources vector of type character; required: FALSE;
-#'    List of identifiers for the source system or database of an external
-#'    reference (use with `externalReferenceIDs` parameter);
-#'    default: &quot;&quot;, when using multiple values supply as
-#'    c(&quot;value1&quot;, &quot;value2&quot;).
+#'    Source system or database identifier(s) of an external reference(s) to
+#'    search for (use with `externalReferenceIDs` parameter); default:
+#'    &quot;&quot;, when using multiple values supply as c(&quot;value1&quot;,
+#'    &quot;value2&quot;).
 #' @param listDbIds vector of type character; required: FALSE; Unique
 #'    identifiers of generic lists to searh for; default: &quot;&quot;, when
 #'    using multiple values supply as c(&quot;value1&quot;, &quot;value2&quot;).
@@ -59,7 +59,8 @@
 #'
 #' @details Advanced searching for the list resource. Function will return
 #'    either the search results (Status 200 for an immediate response) or a
-#'    searchResultsDbId (Status 202 for both a saved and an asynchronous search).
+#'    `searchResultsDbId` (Status 202 for both a saved and an asynchronous
+#'    search).
 #'
 #' @return data.frame
 #'

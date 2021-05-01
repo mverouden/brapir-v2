@@ -6,7 +6,7 @@
 #'
 #' @param con list; required: TRUE; BrAPI connection object
 #' @param personDbId character; required: TRUE; The unique ID of a person
-##' @param additionalInfo list; required: FALSE; Additional arbitrary information.
+#' @param additionalInfo list; required: FALSE; Additional arbitrary information.
 #'    If provided use the following construct list(additionalProp1 = "string",
 #'    additionalProp2 =  "string", additionalProp3 = "string").
 #'

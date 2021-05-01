@@ -46,16 +46,16 @@
 #' @param countryNames vector of type character; required: FALSE; Full country
 #'    name(s) to search for; default: &quot;&quot;, when using multiple values
 #'    supply as c(&quot;value1&quot;, &quot;value2&quot;).
-#' @param externalReferenceIDs vector of type character; required: FALSE; List
-#'    of external reference identifiers. Could be a simple strings or a URIs.
-#'    (use with `externalReferenceSources` parameter); default: &quot;&quot;,
-#'    when using multiple values supply as c(&quot;value1&quot;,
+#' @param externalReferenceIDs vector of type character; required: FALSE;
+#'    External reference identifier(s) to search for. Could be a simple strings
+#'    or a URIs (use with `externalReferenceSources` parameter).; default:
+#'    &quot;&quot;, when using multiple values supply as c(&quot;value1&quot;,
 #'    &quot;value2&quot;).
 #' @param externalReferenceSources vector of type character; required: FALSE;
-#'    List of identifiers for the source system or database of an external
-#'    reference (use with `externalReferenceIDs` parameter);
-#'    default: &quot;&quot;, when using multiple values supply as
-#'    c(&quot;value1&quot;, &quot;value2&quot;).
+#'    Source system or database identifier(s) of an external reference(s) to
+#'    search for (use with `externalReferenceIDs` parameter); default:
+#'    &quot;&quot;, when using multiple values supply as c(&quot;value1&quot;,
+#'    &quot;value2&quot;).
 #' @param instituteAddresses vector of type character; required: FALSE; The institute
 #'    street address(es) to search for; default: &quot;&quot;, when using
 #'    multiple values supply as c(&quot;value1&quot;, &quot;value2&quot;).
@@ -77,7 +77,10 @@
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details Advanced searching for the locations resource.
+#' @details Advanced searching for the locations resource. Function will return
+#'    either the search results (Status 200 for an immediate response) or a
+#'    `searchResultsDbId` (Status 202 for both a saved and an asynchronous
+#'    search).
 #'
 #' @return data.frame
 #'
