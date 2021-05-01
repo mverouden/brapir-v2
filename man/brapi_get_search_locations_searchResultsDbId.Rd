@@ -33,8 +33,6 @@ Get the results of a Locations search request
 \details{
 Returns the result of the advanced searching for the locations
 resource.
-
-See \href{https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md}{Search Services for additional implementation details}.
 }
 \examples{
 \dontrun{

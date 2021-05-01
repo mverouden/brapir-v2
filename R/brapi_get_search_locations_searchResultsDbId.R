@@ -16,8 +16,6 @@
 #' @details Returns the result of the advanced searching for the locations
 #'    resource.
 #'
-#' See [Search Services for additional implementation details](https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md).
-#'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
