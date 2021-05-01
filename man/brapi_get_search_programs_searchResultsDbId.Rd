@@ -33,12 +33,14 @@ Get the results of a Programs search request
 \details{
 Returns the result of the advanced searching for the programs
 resource.
-
-See \href{https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md}{Search Services for additional implementation details}.
 }
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
+con[["token"]] <- "YYYY"
+
+TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
+Still to be completed:
 brapi_get_search_programs_searchResultsDbId(con = con,
                                             searchResultsDbId = "")
 }
@@ -79,6 +81,7 @@ Other brapi-core:
 \code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_search_people}()},
+\code{\link{brapi_post_search_programs}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -94,6 +97,7 @@ Other Programs:
 \code{\link{brapi_get_programs_programDbId}()},
 \code{\link{brapi_get_programs}()},
 \code{\link{brapi_post_programs}()},
+\code{\link{brapi_post_search_programs}()},
 \code{\link{brapi_put_programs_programDbId}()}
 }
 \author{

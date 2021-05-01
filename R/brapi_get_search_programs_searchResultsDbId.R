@@ -16,8 +16,6 @@
 #' @details Returns the result of the advanced searching for the programs
 #'    resource.
 #'
-#' See [Search Services for additional implementation details](https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md).
-#'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
@@ -30,6 +28,10 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
+#' con[["token"]] <- "YYYY"
+#'
+#' TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
+#' Still to be completed:
 #' brapi_get_search_programs_searchResultsDbId(con = con,
 #'                                             searchResultsDbId = "")
 #' }
@@ -55,10 +57,23 @@ brapi_get_search_programs_searchResultsDbId <- function(con = NULL,
   try({
     ## Make the call and receive the response
     resp <- brapirv2:::brapi_GET(url = callurl, usedArgs = usedArgs)
-    ## Extract the content from the response object in human readable form
-    cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
-    ## Convert the content object into a data.frame
-    out <- brapirv2:::brapi_result2df(cont, usedArgs)
+    ## Check call status
+    while (httr::status_code(resp) == 202) {
+      Sys.sleep(5)
+      resp <- brapirv2:::brapi_GET(url = callurl, usedArgs = usedArgs)
+      status <- jsonlite::fromJSON(httr::content(x = resp,
+                                                 as = "text",
+                                                 encoding = "UTF-8"))[["metadata"]][["status"]]
+      if (length(status) != 0) {
+        brapirv2:::brapi_message(msg = paste0(status[["message"]], "\n"))
+      }
+    }
+    if (httr::status_code(resp) == 200) {
+      ## Extract the content from the response object in human readable form
+      cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
+      ## Convert the content object into a data.frame
+      out <- brapirv2:::brapi_result2df(cont, usedArgs)
+    }
   })
   ## Set class of output
   class(out) <- c(class(out), "brapi_get_search_programs_searchResultsDbId")
