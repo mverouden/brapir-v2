@@ -86,8 +86,8 @@ the source system or database of an external reference (use with
 \code{externalReferenceID} parameter)}
 
 \item{page}{integer; required: FALSE; Used to request a specific page of data
-to be returned. The page indexing starts at 0 (the first page is 'page'= 0
-). Default is \code{0}.}
+to be returned. The page indexing starts at 0 (the first page is
+\code{page = 0}). Default is \code{0}.}
 
 \item{pageSize}{integer; required: FALSE; The size of the pages to be
 returned. Default is \code{1000}.}
@@ -145,6 +145,8 @@ Other brapi-core:
 \code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_search_programs}()},
+\code{\link{brapi_post_search_studies}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -159,6 +161,7 @@ Other brapi-core:
 Other Trials: 
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
 \code{\link{brapi_get_trials_trialDbId}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_trials}()},
 \code{\link{brapi_put_trials_trialDbId}()}
 }

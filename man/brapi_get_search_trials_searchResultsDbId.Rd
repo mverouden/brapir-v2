@@ -33,14 +33,16 @@ Get the results of a Trials search request
 \details{
 Returns the result of the advanced searching for the trials
 resource.
-
-See \href{https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md}{Search Services for additional implementation details}.
 }
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
+con[["token"]] <- "YYYY"
+
+TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
+Still to be completed:
 brapi_get_search_trials_searchResultsDbId(con = con,
-                                          searchResultsDbId = "")
+                                            searchResultsDbId = "")
 }
 
 }
@@ -80,6 +82,8 @@ Other brapi-core:
 \code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_search_programs}()},
+\code{\link{brapi_post_search_studies}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -94,6 +98,7 @@ Other brapi-core:
 Other Trials: 
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_trials}()},
 \code{\link{brapi_put_trials_trialDbId}()}
 }

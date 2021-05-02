@@ -172,6 +172,8 @@ Other brapi-core:
 \code{\link{brapi_post_search_lists}()},
 \code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_search_programs}()},
+\code{\link{brapi_post_search_studies}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},

@@ -135,6 +135,8 @@ Other brapi-core:
 \code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_search_programs}()},
+\code{\link{brapi_post_search_studies}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -150,6 +152,7 @@ Other Studies:
 \code{\link{brapi_get_search_studies_searchResultsDbId}()},
 \code{\link{brapi_get_studies_studyDbId}()},
 \code{\link{brapi_get_studytypes}()},
+\code{\link{brapi_post_search_studies}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_put_studies_studyDbId}()}
 }

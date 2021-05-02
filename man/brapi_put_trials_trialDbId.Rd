@@ -278,6 +278,8 @@ Other brapi-core:
 \code{\link{brapi_post_search_locations}()},
 \code{\link{brapi_post_search_people}()},
 \code{\link{brapi_post_search_programs}()},
+\code{\link{brapi_post_search_studies}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_seasons}()},
 \code{\link{brapi_post_studies}()},
 \code{\link{brapi_post_trials}()},
@@ -292,6 +294,7 @@ Other Trials:
 \code{\link{brapi_get_search_trials_searchResultsDbId}()},
 \code{\link{brapi_get_trials_trialDbId}()},
 \code{\link{brapi_get_trials}()},
+\code{\link{brapi_post_search_trials}()},
 \code{\link{brapi_post_trials}()}
 }
 \author{
