@@ -110,7 +110,7 @@ brapi_post_programs <- function(con = NULL,
                                          callVersion = 2.0)
   ## Build the Body
   callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
-                                           reqArgs = "")
+                                             reqArgs = "")
   ## Adaptation for v2.0 where json body is wrapped in []
   callbody <- list(callbody)
 
