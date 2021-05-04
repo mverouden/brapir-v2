@@ -86,7 +86,17 @@ search).
 con <- brapi_db()$testserver
 con[["token"]] <- "YYYY"
 
-TO BE ADDED STILL
+# Immediate Response Example
+brapi_post_search_programs(con = con,
+                           commonCropNames = "Tomatillo")
+
+# Saved or Asynchronous Search Response Example
+brapi_post_search_programs(con = con,
+                           commonCropNames = c("Tomatillo", "Paw Paw"),
+                           abbreviations = c("P1", "P3"),
+                           leadPersonNames = "Bob Robertson",
+                           objectives = c("Global Population Improvement", "XYZ"),
+                           programDbIds = c("program1", "program3"))
 }
 
 }
