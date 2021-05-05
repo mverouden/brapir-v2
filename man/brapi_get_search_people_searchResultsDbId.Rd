@@ -37,11 +37,18 @@ Returns the result of the advanced searching for the people resource.
 \dontrun{
 con <- brapi_db()$testserver
 con[["token"]] <- "YYYY"
-
-TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
-Still to be completed:
+# Saved or Asynchronous Search Response Example
+out <-
+ brapi_post_search_people(con = con,
+                          emailAddresses = "bob@bob.com",
+                          firstNames = "Bob",
+                          middleNames = "Danger",
+                          lastNames = "Robertson",
+                          personDbIds = c("list_person_1",
+                                          "person1"))
+searchResultsDbId <- out$searchResultsDbId
 brapi_get_search_people_searchResultsDbId(con = con,
-                                          searchResultsDbId = "")
+                                          searchResultsDbId = searchResultsDbId)
 }
 
 }
