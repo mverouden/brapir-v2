@@ -151,7 +151,17 @@ search).
 con <- brapi_db()$testserver
 con[["token"]] <- "YYYY"
 
-TO BE ADDED STILL
+# Immediate Response Example
+brapi_post_search_studies(con = con,
+                         studyDbIds = "study1")
+
+# Saved or Asynchronous Search Response Example
+brapi_post_search_studies(con = con,
+                          active = TRUE,
+                          commonCropNames = "Tomatillo",
+                          locationDbIds = "location_02",
+                          studyDbIds = "study2",
+                          trialDbIds = "trial2")
 }
 
 }
