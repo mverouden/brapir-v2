@@ -38,11 +38,17 @@ resource.
 \dontrun{
 con <- brapi_db()$testserver
 con[["token"]] <- "YYYY"
-
-TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
-Still to be completed:
+# Saved or Asynchronous Search Response Example
+out <-
+ brapi_post_search_trials(con = con,
+                          active = TRUE,
+                          commonCropNames = c("Tomatillo", "Paw Paw"),
+                          contactDbIds = c("trial_contact_1", "trial_contact_3"),
+                          programDbIds = c("program1" , "program3"),
+                          trialDbIds = c("trial1", "trial3"))
+searchResultsDbId <- out$searchResultsDbId
 brapi_get_search_trials_searchResultsDbId(con = con,
-                                            searchResultsDbId = "")
+                                          searchResultsDbId = searchResultsDbId)
 }
 
 }

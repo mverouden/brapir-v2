@@ -93,7 +93,17 @@
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
 #'
-#' TO BE ADDED STILL
+#' # Immediate Response Example
+#' brapi_post_search_trials(con = con,
+#'                          commonCropNames = "Paw Paw")
+#'
+#' # Saved or Asynchronous Search Response Example
+#' brapi_post_search_trials(con = con,
+#'                          active = TRUE,
+#'                          commonCropNames = c("Tomatillo", "Paw Paw"),
+#'                          contactDbIds = c("trial_contact_1", "trial_contact_3"),
+#'                          programDbIds = c("program1" , "program3"),
+#'                          trialDbIds = c("trial1", "trial3"))
 #' }
 #'
 #' @export
