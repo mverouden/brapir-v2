@@ -76,7 +76,17 @@
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
 #'
-#' TO BE ADDED STILL
+#' # Immediate Response Example
+#' brapi_post_search_lists(con = con,
+#'                         listNames = "Example List 1")
+#'
+#' # Saved or Asynchronous Search Response Example
+#' brapi_post_search_lists(con = con,
+#'                         externalReferenceIDs = "https://brapi.org/specification",
+#'                         externalReferenceSources = "BrAPI Doc",
+#'                         listDbIds = "list2",
+#'                         listOwnerPersonDbIds = "list_person_1",
+#'                         listType = "germplasm")
 #' }
 #'
 #' @export
