@@ -128,10 +128,10 @@ brapi_post_lists <- function(con = NULL,
   }
   ## Obtain the call url
   callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
-                                         callPath = "/lists",
-                                         reqArgs = "",
-                                         packageName = "BrAPI-Core",
-                                         callVersion = 2.0)
+                                           callPath = "/lists",
+                                           reqArgs = "",
+                                           packageName = "BrAPI-Core",
+                                           callVersion = 2.0)
   ## Build the Body
   callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
                                            reqArgs = "")

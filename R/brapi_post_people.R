@@ -103,10 +103,10 @@ brapi_post_people <- function(con = NULL,
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
   ## Obtain the call url
   callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
-                                         callPath = "/people",
-                                         reqArgs = "",
-                                         packageName = "BrAPI-Core",
-                                         callVersion = 2.0)
+                                           callPath = "/people",
+                                           reqArgs = "",
+                                           packageName = "BrAPI-Core",
+                                           callVersion = 2.0)
   ## Build the Body
   callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
                                            reqArgs = "")

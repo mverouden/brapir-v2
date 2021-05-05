@@ -58,10 +58,10 @@ brapi_get_seasons <- function(con = NULL,
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
   ## Obtain the call url
   callurl <- brapirv2:::brapi_GET_callURL(usedArgs = usedArgs,
-                                        callPath = "/seasons",
-                                        reqArgs = "",
-                                        packageName = "BrAPI-Core",
-                                        callVersion = 2.0)
+                                          callPath = "/seasons",
+                                          reqArgs = "",
+                                          packageName = "BrAPI-Core",
+                                          callVersion = 2.0)
 
   try({
     ## Make the call and receive the response
