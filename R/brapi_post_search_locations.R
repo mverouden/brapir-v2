@@ -96,7 +96,17 @@
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
 #'
-#' TO BE ADDED STILL
+#' # Immediate Response Example
+#' brapi_post_search_locations(con = con,
+#'                             abbreviations = "L1")
+#'
+#' # Saved or Asynchronous Search Response Example
+#' brapi_post_search_locations(con = con,
+#'                             abbreviations = c("L1", "L2", "L3"),
+#'                             countryCodes = "PER",
+#'                             countryNames = "Peru",
+#'                             locationNames = c("Location 1", "Location 2"),
+#'                             locationTypes = "Breeding location")
 #' }
 #'
 #' @export
