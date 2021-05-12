@@ -65,7 +65,11 @@ brapi_get_variables(con = con)
 \seealso{
 Other brapi-phenotyping: 
 \code{\link{brapi_get_observations}()},
+\code{\link{brapi_get_variables_observationVariableDbId}()},
 \code{\link{brapi_post_observations}()}
+
+Other Observation Variables: 
+\code{\link{brapi_get_variables_observationVariableDbId}()}
 }
 \author{
 Maikel Verouden
