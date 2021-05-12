@@ -58,6 +58,7 @@ brapi_get_methods(con = con)
 }
 \seealso{
 Other brapi-phenotyping: 
+\code{\link{brapi_get_events}()},
 \code{\link{brapi_get_methods_methodDbId}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_ontologies}()},
