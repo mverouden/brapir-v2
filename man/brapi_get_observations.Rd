@@ -118,6 +118,13 @@ brapi_get_observations(con = con)
 \references{
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.0#/Observations/get_observations }{BrAPI SwaggerHub}
 }
+\seealso{
+Other brapi-phenotyping: 
+\code{\link{brapi_post_observations}()}
+
+Other Observations: 
+\code{\link{brapi_post_observations}()}
+}
 \author{
 Maikel Verouden
 }
