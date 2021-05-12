@@ -41,6 +41,8 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_methods}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_ontologies}()},
+\code{\link{brapi_get_scales_scaleDbId}()},
+\code{\link{brapi_get_scales}()},
 \code{\link{brapi_get_variables}()},
 \code{\link{brapi_post_observations}()}
 
