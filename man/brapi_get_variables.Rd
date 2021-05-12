@@ -72,6 +72,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_observationlevels}()},
 \code{\link{brapi_get_observations_observationDbId}()},
 \code{\link{brapi_get_observations}()},
+\code{\link{brapi_get_observationunits}()},
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
