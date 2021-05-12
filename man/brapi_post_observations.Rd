@@ -157,8 +157,11 @@ brapi_post_observations(con = con,
 \seealso{
 Other brapi-phenotyping: 
 \code{\link{brapi_get_events}()},
+\code{\link{brapi_get_images_imageDbId}()},
+\code{\link{brapi_get_images}()},
 \code{\link{brapi_get_methods_methodDbId}()},
 \code{\link{brapi_get_methods}()},
+\code{\link{brapi_get_observations_observationDbId}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
@@ -169,6 +172,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_variables}()}
 
 Other Observations: 
+\code{\link{brapi_get_observations_observationDbId}()},
 \code{\link{brapi_get_observations}()}
 }
 \author{
