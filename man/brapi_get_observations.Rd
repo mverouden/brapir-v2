@@ -120,6 +120,8 @@ brapi_get_observations(con = con)
 }
 \seealso{
 Other brapi-phenotyping: 
+\code{\link{brapi_get_methods_methodDbId}()},
+\code{\link{brapi_get_methods}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
 \code{\link{brapi_get_variables}()},
 \code{\link{brapi_post_observations}()}
