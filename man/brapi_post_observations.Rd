@@ -156,7 +156,8 @@ brapi_post_observations(con = con,
 }
 \seealso{
 Other brapi-phenotyping: 
-\code{\link{brapi_get_observations}()}
+\code{\link{brapi_get_observations}()},
+\code{\link{brapi_get_variables}()}
 
 Other Observations: 
 \code{\link{brapi_get_observations}()}

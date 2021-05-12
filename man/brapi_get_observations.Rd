@@ -92,8 +92,8 @@ the source system or database of an external reference (use with
 \code{externalReferenceID} parameter)}
 
 \item{page}{integer; required: FALSE; Used to request a specific page of data
-to be returned. The page indexing starts at 0 (the first page is 'page'= 0
-). Default is \code{0}.}
+to be returned. The page indexing starts at 0 (the first page is
+\code{page = 0}). Default is \code{0}.}
 
 \item{pageSize}{integer; required: FALSE; The size of the pages to be
 returned. Default is \code{1000}.}
@@ -120,6 +120,7 @@ brapi_get_observations(con = con)
 }
 \seealso{
 Other brapi-phenotyping: 
+\code{\link{brapi_get_variables}()},
 \code{\link{brapi_post_observations}()}
 
 Other Observations: 
