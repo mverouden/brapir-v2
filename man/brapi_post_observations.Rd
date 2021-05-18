@@ -175,9 +175,11 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_variables}()},
 \code{\link{brapi_post_methods}()},
 \code{\link{brapi_post_observationunits}()},
+\code{\link{brapi_post_traits}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
-\code{\link{brapi_put_observationunits_observationUnitDbId}()}
+\code{\link{brapi_put_observationunits_observationUnitDbId}()},
+\code{\link{brapi_put_traits_traitDbId}()}
 
 Other Observations: 
 \code{\link{brapi_get_observations_observationDbId}()},

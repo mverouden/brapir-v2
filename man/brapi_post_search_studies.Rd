@@ -170,7 +170,8 @@ brapi_post_search_studies(con = con,
 }
 \seealso{
 Other brapi_2.0: 
-\code{\link{brapi_post_methods}()}
+\code{\link{brapi_post_methods}()},
+\code{\link{brapi_post_traits}()}
 
 Other brapi-core: 
 \code{\link{brapi_get_commoncropnames}()},
