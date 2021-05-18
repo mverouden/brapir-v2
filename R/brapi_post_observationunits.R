@@ -263,6 +263,7 @@
 #'    modality = c("high fertilizer", "low water"))
 #' trialDbId <- "trial1"
 #' trialName <- "Peru Yield Trial 1"
+#' ## Make the POST /observationunits call
 #' brapi_post_observationunits(
 #'   con = con,
 #'   additionalInfo = additionalInfo,

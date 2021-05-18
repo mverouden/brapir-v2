@@ -311,6 +311,7 @@ treatments <- data.frame(
    modality = c("high fertilizer", "low water"))
 trialDbId <- "trial1"
 trialName <- "Peru Yield Trial 1"
+## POST /observationunits to add a new one
 out <- brapi_post_observationunits(
   con = con,
   additionalInfo = additionalInfo,
@@ -330,7 +331,9 @@ out <- brapi_post_observationunits(
   treatments = treatments,
   trialDbId = trialDbId,
   trialName = trialName)
+## Obtain the observationUnitDbId of the new observation unit
 observationUnitDbId <- unique(out$observationUnitDbId)
+## Update the information of the new observation unit
 brapi_put_observationunits_observationUnitDbId(
   con = con,
   observationUnitDbId = observationUnitDbId,
