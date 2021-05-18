@@ -81,7 +81,9 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
 \code{\link{brapi_post_observations}()},
-\code{\link{brapi_put_observations_observationDbId}()}
+\code{\link{brapi_post_observationunits}()},
+\code{\link{brapi_put_observations_observationDbId}()},
+\code{\link{brapi_put_observationunits_observationUnitDbId}()}
 
 Other Observation Variables: 
 \code{\link{brapi_get_variables_observationVariableDbId}()}

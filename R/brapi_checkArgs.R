@@ -142,8 +142,8 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
       ## Check for arguments which are of type list
       if (i %in% c("additionalInfo", "coordinates", "experimentalDesign",
                    "growthFacility", "imageLocation", "lastUpdate",
-                   "ontologyReference", "requiredServiceInfo", "season",
-                   "validValues")) {
+                   "observationUnitPosition", "ontologyReference",
+                   "requiredServiceInfo", "season", "validValues")) {
         if (!is.list(usedArgs[[i]])) {
           stop('Argument: "', i, '" should be provided as a list, see the help page on how the list should be constructed.')
         }
@@ -153,7 +153,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
       ## Check for arguments which are of type data.frame or supplied as empty character vector of length 1
       if (i %in% c("contacts", "dataLinks", "datasetAuthorships",
                    "environmentParameters", "externalReferences",
-                   "observationLevels", "publications")) {
+                   "observationLevels", "publications", "treatments")) {
         if (!(is.character(usedArgs[[i]]) && usedArgs[[i]] == "" || is.data.frame(usedArgs[[i]]))) {
           stop('Argument: "', i, '" should be supplied as an empty character or as a data.frame, see the help page on how the data.frame should be constructed.')
         }
