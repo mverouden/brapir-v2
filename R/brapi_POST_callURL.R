@@ -14,7 +14,7 @@ brapi_POST_callURL <- function(usedArgs, callPath, reqArgs, packageName, callVer
   if (usedArgs[["con"]][["secure"]]) {usedArgs[["con"]][["protocol"]] <- "https://"}
   ## Assign port
   port <- ifelse(usedArgs[["con"]][["port"]] == 80, "", paste0(":", usedArgs[["con"]][["port"]]))
-  ## Add apipath when not  NULL
+  ## Add apipath when not NULL
   if (!is.null(usedArgs[["con"]][["apipath"]])) {
     usedArgs[["con"]][["apipath"]] <- paste0("/", usedArgs[["con"]][["apipath"]])
   }
@@ -30,8 +30,13 @@ brapi_POST_callURL <- function(usedArgs, callPath, reqArgs, packageName, callVer
     usedArgs[["con"]][["multicrop"]] <- FALSE
   }
   ## Create pointbase callurl:
-  ## http(s)://db:port/{apipath}/{commoncropname}/brapi/v?
-  if (usedArgs[["con"]][["multicrop"]]) {
+  if (callPath == "/token") {
+    ## http(s)://db:port/{apipath}
+    callurl <- paste0(usedArgs[["con"]][["protocol"]],
+                      usedArgs[["con"]][["db"]],
+                      port, usedArgs[["con"]][["apipath"]])
+  } else if (usedArgs[["con"]][["multicrop"]]) {
+    ## http(s)://db:port/{apipath}/{commoncropname}/brapi/v?
     if (usedArgs[["con"]][["commoncropname"]] == "") {
       stop('In the connection object there needs to be a commoncropname for a multicrop system.')
     }
@@ -41,8 +46,9 @@ brapi_POST_callURL <- function(usedArgs, callPath, reqArgs, packageName, callVer
     callurl <- paste0(usedArgs[["con"]][["protocol"]],
                       usedArgs[["con"]][["db"]],
                       port, usedArgs[["con"]][["apipath"]],
-                        "/", usedArgs[["con"]][["commoncropname"]], brapiVersion)
+                      "/", usedArgs[["con"]][["commoncropname"]], brapiVersion)
   } else {
+    ## http(s)://db:port/{apipath}/brapi/v?
     callurl <- paste0(usedArgs[["con"]][["protocol"]],
                       usedArgs[["con"]][["db"]],
                       port, usedArgs[["con"]][["apipath"]],
