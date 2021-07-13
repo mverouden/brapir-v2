@@ -56,6 +56,7 @@ connection object.
 }
 \seealso{
 Other brapiutils: 
+\code{\link{brapi_bms_login}()},
 \code{\link{brapi_canInternet}()},
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_connect}()},

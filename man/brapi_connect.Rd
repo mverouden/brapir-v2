@@ -63,6 +63,7 @@ If the brapiDb argument is used to specify a connection object as created by the
 \seealso{
 Other brapiutils: 
 \code{\link{as.brapi_db}()},
+\code{\link{brapi_bms_login}()},
 \code{\link{brapi_canInternet}()},
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_db}()},

@@ -25,6 +25,7 @@ Raises errors when the connection to a BrAPI compliant database can not be made 
 \seealso{
 Other brapiutils: 
 \code{\link{as.brapi_db}()},
+\code{\link{brapi_bms_login}()},
 \code{\link{brapi_canInternet}()},
 \code{\link{brapi_connect}()},
 \code{\link{brapi_db}()},

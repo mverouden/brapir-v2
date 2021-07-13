@@ -26,6 +26,7 @@
 #' \dontrun{
 #' # Create a connection object for BMS
 #' con <- brapi_db()$bms_test
+#' class(con) <- c("list", "brapi", "brapi_con")
 #' # Add a username between the double quotes
 #' con[["user"]] <- ""
 #' # Add a password between the double quotes

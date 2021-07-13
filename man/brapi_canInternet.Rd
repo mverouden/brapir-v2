@@ -21,6 +21,7 @@ Check for internet connection.
 \seealso{
 Other brapiutils: 
 \code{\link{as.brapi_db}()},
+\code{\link{brapi_bms_login}()},
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_connect}()},
 \code{\link{brapi_db}()},

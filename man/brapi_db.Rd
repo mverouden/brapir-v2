@@ -21,6 +21,7 @@ sweetpotatobase, terraref, testserver, t3s, tto, ttw, yambase.
 \seealso{
 Other brapiutils: 
 \code{\link{as.brapi_db}()},
+\code{\link{brapi_bms_login}()},
 \code{\link{brapi_canInternet}()},
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_connect}()},

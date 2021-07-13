@@ -17,6 +17,7 @@ Print method for an object of class brapi_db.
 \seealso{
 Other brapiutils: 
 \code{\link{as.brapi_db}()},
+\code{\link{brapi_bms_login}()},
 \code{\link{brapi_canInternet}()},
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_connect}()},
