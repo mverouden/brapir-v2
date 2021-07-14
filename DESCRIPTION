@@ -3,10 +3,10 @@ Type: Package
 Title: Client to Access BrAPI Compliant Plant Breeding Databases
 Version: 2.0.0
 Authors@R: c(
-  person("Maikel", "Verouden", email = "Maikel.Verouden@wur.nl", role = c("aut", "cre", "ctb")),
+  person("Maikel", "Verouden", email = "Maikel.Verouden@gmail.com", role = c("aut", "cre", "ctb")),
   person("Reinhard", "Simon", email = "rsimon64@gmail.com", role = c("aut", "ctb"))
   )
-Maintainer: Maikel Verouden <maikel.verouden@wur.nl>
+Maintainer: Maikel Verouden <maikel.verouden@gmail.com>
 Description: Implements the Breeding API version 2.0 (www.brapi.org) within R.
 Depends:
     R (>= 3.5.0)
