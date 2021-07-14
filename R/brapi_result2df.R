@@ -16,7 +16,7 @@
 #'
 #' @noRd
 #' @keywords internal
-#' @importFrom utils as.relistable read.csv read.delim
+#' @importFrom utils as.relistable read.csv read.delim tail
 #' @importFrom plyr empty
 brapi_result2df <- function(cont, usedArgs) {
   ## Helper functions

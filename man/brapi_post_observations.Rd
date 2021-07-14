@@ -15,7 +15,7 @@ brapi_post_observations(
   observationUnitDbId = "",
   observationUnitName = "",
   observationVariableDbId = "",
-  observationVarialbleName = "",
+  observationVariableName = "",
   season = list(),
   studyDbId = "",
   uploadedBy = "",
@@ -69,6 +69,9 @@ for an observation unit.}
 \item{observationVariableDbId}{character; required: FALSE; The identifier,
 which uniquely identifies an observation variable.}
 
+\item{observationVariableName}{character; required: FALSE; A human readable
+name for an observation variable.}
+
 \item{season}{list; required: FALSE; Information about the season in which
 the observation was made. The list can or should contain the following
 elements:
@@ -93,9 +96,6 @@ user who uploaded the observation to the database system.}
 
 \item{value}{character; required: FALSE; The value of the data collected as
 an observation.}
-
-\item{observationVariableName}{character; required: FALSE; A human readable
-name for an observation variable.}
 }
 \value{
 data.frame
@@ -143,7 +143,7 @@ brapi_post_observations(con = con,
                         observationUnitDbId = observationUnitDbId,
                         observationUnitName = observationUnitName,
                         observationVariableDbId = observationVariableDbId,
-                        observationVarialbleName = observationVariableName,
+                        observationVariableName = observationVariableName,
                         season = season,
                         studyDbId = studyDbId,
                         uploadedBy = uploadedBy,
@@ -175,10 +175,12 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_variables}()},
 \code{\link{brapi_post_methods}()},
 \code{\link{brapi_post_observationunits}()},
+\code{\link{brapi_post_scales}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()},
+\code{\link{brapi_put_scales_scaleDbId}()},
 \code{\link{brapi_put_traits_traitDbId}()}
 
 Other Observations: 

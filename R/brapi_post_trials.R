@@ -157,9 +157,13 @@
 #' programName <- "The Fake Tomatillo Breeding Program"
 #' publications <-
 #'   data.frame(publicationPUI = "doi:10.15454/312953986E3",
-#'              publicationReference = "Selby, BrAPI - An application programming interface for plant breeding applications, Bioinformatics, https://doi.org/10.1093/bioinformatics/190")
+#'              publicationReference = "Selby, BrAPI - An application
+#'                                      programming interface for plant breeding
+#'                                      applications, Bioinformatics,
+#'                                      https://doi.org/10.1093/bioinformatics/190")
 #' startDate <- "2021-04-28T12:34:13.494Z"
-#' trialDescription <- "General drought resistance trial initiated in Peru before duplication in Africa"
+#' trialDescription <- "General drought resistance trial initiated in Peru
+#'                      before duplication in Africa"
 #' trialName <- "Peru Yield Trial 1"
 #' trialPUI <- "https://doi.org/101093190"
 #'

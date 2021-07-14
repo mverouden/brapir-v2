@@ -279,11 +279,7 @@ polygonData <- list(list(c(-76.476949, 42.447274, 123), # exterior ring (rectang
                          c(-76.474429, 42.447258, 123),
                          c(-76.474428, 42.446193, 123),
                          c(-76.476961, 42.446211, 123),
-                         c(-76.476949, 42.447274, 123)),
-                    list(c(-76.476733, 42.446916), # interior ring (triangle)
-                         c(-76.475810, 42.447154),
-                         c(-76.476306, 42.446281),
-                         c(-76.476733, 42.446916)))
+                         c(-76.476949, 42.447274, 123)))
 polygonGeometry <- list()
 polygonGeometry[["geometry"]] <- init$Polygon(data = polygonData,
                                               stringify = FALSE)
@@ -369,9 +365,11 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_methods}()},
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},
+\code{\link{brapi_post_scales}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
+\code{\link{brapi_put_scales_scaleDbId}()},
 \code{\link{brapi_put_traits_traitDbId}()}
 
 Other Observation Units: 
