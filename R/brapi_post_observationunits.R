@@ -209,22 +209,21 @@
 #' locationName <- "Location 1"
 #' observationUnitName <- "Plot 1"
 #' observationUnitPUI <- "doi:10.12345/plot/1a9afc14"
-#' ## Create the observationUnitPosition list object
-#' observationUnitPosition <- list()
-#' observationUnitPosition$entryType <- "TEST"
-#' ## Create a geoCoordinates list object
+#'
+#' ## Create a geoCoordinates list object as element for the
+#' ## observationUnitPosition list
 #' library(geojsonR)
 #' ## Point geometry
 #' init <- TO_GeoJson$new()
 #' pointGeometry <- list()
 #' pointData <- c(-76.46313, # longitude
-#'                 42.44423, # lattitude
+#'                 42.44423, # latitude
 #'                      123) # altitude
 #' pointGeometry[["geometry"]] <- init$Point(data = pointData,
 #'                                           stringify = FALSE)
 #' pointGeometry[["type"]] <- "Feature"
 #' ##
-#' ## Polygon geometry with an exterior and one interior ring
+#' ## Polygon geometry with an exterior ring only
 #' init <- TO_GeoJson$new()
 #' ## Individual polygon points are provided as c(longitude, latitude, altitude)
 #' polygonData <- list(list(c(-76.476949, 42.447274, 123), # exterior ring (rectangle)
@@ -236,29 +235,35 @@
 #' polygonGeometry[["geometry"]] <- init$Polygon(data = polygonData,
 #'                                               stringify = FALSE)
 #' polygonGeometry[["type"]] <- "Feature"
-#' observationUnitPosition$geoCoordinates <- pointGeometry
-#' observationUnitPosition$observationLevel <- list(
-#'    levelCode = "plot_1",
-#'    levelName = "plot",
-#'    levelOrder =  4)
-#' observationUnitPosition$observationLevelRelationships <- data.frame(
-#'    levelCode  = c("fieldA", "rep1", "block1"),
-#'    levelName  = c("field", "rep", "block"),
-#'    levelOrder = c(1, 2, 3))
-#' observationUnitPosition$positionCoordinateX <- "1"
-#' observationUnitPosition$positionCoordinateXType <- "PLANTED_ROW"
-#' observationUnitPosition$positionCoordinateY <- "1"
-#' observationUnitPosition$positionCoordinateYType <- "PLANTED_INDIVIDUAL"
+#'
+#' ## Create the observationUnitPosition list object
+#' observationUnitPosition <- list(
+#'   entryType = "TEST",
+#'   geoCoordinates = pointGeometry,
+#'   observationLevel = list(
+#'     levelCode = "plot_1",
+#'     levelName = "plot",
+#'     levelOrder =  4),
+#'   observationLevelRelationships = data.frame(
+#'     levelCode  = c("fieldA", "rep1", "block1"),
+#'     levelName  = c("field", "rep", "block"),
+#'     levelOrder = c(1, 2, 3)),
+#'   positionCoordinateX = "1",
+#'   positionCoordinateXType = "PLANTED_ROW",
+#'   positionCoordinateY = "1",
+#'   positionCoordinateYType = "PLANTED_INDIVIDUAL"
+#' )
 #' programDbId <- "program1"
 #' programName <- "The BrAPI Breeding Program"
 #' seedLotDbId <- "seed_lot2"
 #' studyDbId <- "study1"
 #' studyName <- "Paw paw 2013 yield trial"
 #' treatments <- data.frame(
-#'    factor   = c("fertilizer", "irrigation"),
-#'    modality = c("high fertilizer", "low water"))
+#'   factor   = c("fertilizer", "irrigation"),
+#'   modality = c("high fertilizer", "low water"))
 #' trialDbId <- "trial1"
 #' trialName <- "Peru Yield Trial 1"
+#'
 #' ## Make the POST /observationunits call
 #' brapi_post_observationunits(
 #'   con = con,
@@ -279,6 +284,7 @@
 #'   treatments = treatments,
 #'   trialDbId = trialDbId,
 #'   trialName = trialName)
+#'
 #' }
 #'
 #' @export
