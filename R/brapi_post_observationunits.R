@@ -149,6 +149,8 @@
 #'      + `MEASURED_ROW` - The distance in meters from a defined 0-th row
 #'      + `MEASURED_COL` - The distance in meters from a defined 0-th column
 #'
+#'    The Examples section shows an example of how to construct the
+#'    `observationUnitPosition` argument as a list.
 #' @param programDbId character; required: FALSE; The identifier, which uniquely
 #'    identifies a program.
 #' @param programName character; required: FALSE; The human readable name of a
