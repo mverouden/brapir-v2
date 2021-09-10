@@ -84,7 +84,11 @@ brapi_result2df <- function(cont, usedArgs) {
                         }
                       },
                       "list" = {
-                        if (!l1name %in% c("coordinates", "imageLocation")) {# a list other than coordinates
+                        if (!l1name %in% c("coordinates", "imageLocation")) {# a list which may contain GEOJSON coordinates
+                          if ("geoCoordinates" %in% names(resultList[[l1name]])) {
+                            geoCoordList <- resultList[[l1name]]$geoCoordinates
+                            resultList[[l1name]]$geoCoordinates <- NULL
+                          }
                           templist <- as.list(data.frame(t(as.matrix(unlist(as.relistable(resultList[[l1name]])))),
                                                          stringsAsFactors = FALSE))
                           names(templist) <- paste(l1name, names(templist), sep = ".")
@@ -134,6 +138,50 @@ brapi_result2df <- function(cont, usedArgs) {
                dat <- master
              } else {# master and tempmaster have values
                dat <- cbind(master, as.data.frame(tempmaster, stringsAsFactors = FALSE))
+             }
+             if (exists("geoCoordList")) {
+               dat[[paste("observationUnitPosition",
+                          "geoCoordinates",
+                          "geometry",
+                          "type",
+                          sep = ".")]] <-
+               geoCoordList$geometry$type
+             switch(class(geoCoordList$geometry$coordinates),
+                    ## Point geometry
+                    "numeric" = {
+                      dat[[paste("observationUnitPosition",
+                                 "geoCoordinates",
+                                 "geometry",
+                                 "coordinates",
+                                 sep = ".")]][[1]] <-
+                        geoCoordList$geometry$coordinates
+                    },
+                    ## Polygon geometry with only exterior ring
+                    "array" = {
+                      temparray <- geoCoordList$geometry$coordinates
+                      dat[[paste("observationUnitPosition",
+                                 "geoCoordinates",
+                                 "geometry",
+                                 "coordinates",
+                                 sep = ".")]][[1]] <-
+                        matrix(data = temparray,
+                               nrow = prod(dim(temparray)[1:2]),
+                               ncol = dim(temparray)[3])
+                    },
+                    ## Polygon geometry with exterior ring and possibly multiple interior rings
+                    "list" = {
+                      dat[[paste("observationUnitPosition",
+                                 "geoCoordinates",
+                                 "geometry",
+                                 "coordinates",
+                                 sep = ".")]][1] <-
+                        geoCoordList$geometry$coordinates
+                    })
+             dat[[paste("observationUnitPosition",
+                        "geoCoordinates ",
+                        "type",
+                        sep = ".")]] <-
+               geoCoordList$type
              }
            }
          },
