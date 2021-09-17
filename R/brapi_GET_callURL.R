@@ -68,12 +68,12 @@ brapi_GET_callURL <- function(usedArgs, callPath, reqArgs, packageName, callVers
     ### Add query parameters to call url
     if ("pageSize" %in% queryNames) {
       queryArgs[["pageSize"]] <- ifelse(queryArgs[["pageSize"]] == 1000,
-                                        "",
+                                        queryArgs[["pageSize"]], # "",
                                         queryArgs[["pageSize"]])
     }
     if ("page" %in% names(queryArgs)) {
       queryArgs[["page"]] <- ifelse(queryArgs[["page"]] == 0,
-                                    "",
+                                    queryArgs[["page"]], # "",
                                     queryArgs[["page"]])
     }
     queryParams <- list()
