@@ -131,7 +131,7 @@
 #' ontologyReference <- list(
 #'   documentationLinks = data.frame(
 #'     URL = c("http://purl.obolibrary.org/obo/ro.owl",
-#'             "https://en.wikipedia.org/wiki/Discriminant"),
+#'             "https://en.wikipedia.org/wiki/Scale"),
 #'     type = c("OBO",
 #'              "WEBPAGE")),
 #'   ontologyDbId = "ontology_attribute1",
