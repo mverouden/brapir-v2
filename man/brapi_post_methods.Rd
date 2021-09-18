@@ -145,10 +145,6 @@ brapi_post_methods(con = con,
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.0#/Methods/post_methods }{BrAPI SwaggerHub}
 }
 \seealso{
-Other brapi_2.0: 
-\code{\link{brapi_post_search_studies}()},
-\code{\link{brapi_post_traits}()}
-
 Other brapi-phenotyping: 
 \code{\link{brapi_get_events}()},
 \code{\link{brapi_get_images_imageDbId}()},
@@ -171,6 +167,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
 \code{\link{brapi_post_traits}()},
+\code{\link{brapi_post_variables}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()},
@@ -187,4 +184,3 @@ Maikel Verouden
 }
 \concept{Methods}
 \concept{brapi-phenotyping}
-\concept{brapi_2.0}

@@ -156,7 +156,7 @@ externalReferences <-
 ontologyReference <- list(
   documentationLinks = data.frame(
     URL = c("http://purl.obolibrary.org/obo/ro.owl",
-            "https://en.wikipedia.org/wiki/Discriminant"),
+            "https://en.wikipedia.org/wiki/Scale"),
     type = c("OBO",
              "WEBPAGE")),
   ontologyDbId = "ontology_attribute1",
@@ -230,6 +230,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
 \code{\link{brapi_post_traits}()},
+\code{\link{brapi_post_variables}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()},

@@ -169,10 +169,6 @@ brapi_post_search_studies(con = con,
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Studies/post_search_studies }{BrAPI SwaggerHub}
 }
 \seealso{
-Other brapi_2.0: 
-\code{\link{brapi_post_methods}()},
-\code{\link{brapi_post_traits}()}
-
 Other brapi-core: 
 \code{\link{brapi_get_commoncropnames}()},
 \code{\link{brapi_get_lists_listDbId}()},
@@ -231,4 +227,3 @@ Maikel Verouden
 }
 \concept{Studies}
 \concept{brapi-core}
-\concept{brapi_2.0}
