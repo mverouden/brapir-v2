@@ -77,7 +77,6 @@
 #'
 #' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.0#/Methods/post_methods }{BrAPI SwaggerHub}
 #'
-#' @family brapi_2.0
 #' @family brapi-phenotyping
 #' @family Methods
 #'

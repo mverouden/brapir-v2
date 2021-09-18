@@ -92,7 +92,6 @@
 #'
 #' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Studies/post_search_studies }{BrAPI SwaggerHub}
 #'
-#' @family brapi_2.0
 #' @family brapi-core
 #' @family Studies
 #'

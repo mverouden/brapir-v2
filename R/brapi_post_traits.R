@@ -92,7 +92,6 @@
 #'
 #' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.0#/Traits/post_traits }{BrAPI SwaggerHub}
 #'
-#' @family brapi_2.0
 #' @family brapi-phenotyping
 #' @family Traits
 #'
