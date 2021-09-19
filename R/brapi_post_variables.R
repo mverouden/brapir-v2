@@ -54,7 +54,7 @@
 #'        "string", additionalProp2 =  "string", additionalProp3 = "string").
 #'
 #'      The Examples section shows an example on how to construct the
-#'      `additionalInfo` argument as a list within the `method` argument.
+#'      `additionalInfo` element as a list within the `method` argument.
 #'
 #'    * `bibliographicalReference` character; required: FALSE; Bibliographical
 #'        reference describing the method. MIAPPE V1.1 (DM-91) Reference
@@ -75,7 +75,7 @@
 #'             source system or database of this reference.
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `externalReferences` argument as a data.frame within the `method`
+#'      `externalReferences` element as a data.frame within the `method`
 #'      argument.
 #'
 #'    * `formula` character; required: FALSE; For computational methods, i.e.
@@ -115,7 +115,7 @@
 #'            format).
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `ontologyReference` argument as a list within the `method` argument.
+#'      `ontologyReference` element as a list within the `method` argument.
 #' @param observationVariableName character; required: FALSE; Variable name
 #'    (usually a short name).
 #' @param ontologyReference list; required: FALSE; MIAPPE V1.1 (DM-85) Variable
@@ -162,7 +162,7 @@
 #'        "string", additionalProp2 =  "string", additionalProp3 = "string").
 #'
 #'      The Examples section shows an example on how to construct the
-#'      `additionalInfo` argument as a list within the `scale` argument.
+#'      `additionalInfo` element as a list within the `scale` argument.
 #'
 #'    * `dataType` character; required: FALSE; Class of the scale, entries can
 #'        be:
@@ -205,7 +205,7 @@
 #'             source system or database of this reference.
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `externalReferences` argument as a data.frame within the `scale`
+#'      `externalReferences` element as a data.frame within the `scale`
 #'      argument.
 #'
 #'    * `ontologyReference` list; required: FALSE; MIAPPE V1.1 (DM-85) Variable
@@ -237,7 +237,7 @@
 #'            format).
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `ontologyReference` argument as a list within the `scale` argument.
+#'      `ontologyReference` element as a list within the `scale` argument.
 #'
 #'    * `scaleName` character; required: FALSE; Name of the scale. MIAPPE V1.1
 #'        (DM-92) Scale Name of the scale associated with the variable.
@@ -257,7 +257,7 @@
 #'            capture control) for numerical and date scales.
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `validValues` argument as a list within the `scale` argument.
+#'      `validValues` element as a list within the `scale` argument.
 #' @param scientist character; required: FALSE; Name of scientist submitting the
 #'    variable.
 #' @param status character; required: FALSE; Variable status, examples:
@@ -283,7 +283,7 @@
 #'        "string", additionalProp2 =  "string", additionalProp3 = "string").
 #'
 #'      The Examples section shows an example on how to construct the
-#'      `additionalInfo` argument as a list within the `trait` argument.
+#'      `additionalInfo` element as a list within the `trait` argument.
 #'
 #'    * `alternativeAbbreviations` vector of type character; required: FALSE;
 #'        Other frequent abbreviations of the trait, if any. These abbreviations
@@ -309,7 +309,7 @@
 #'             source system or database of this reference.
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `externalReferences` argument as a data.frame within the `trait`
+#'      `externalReferences` element as a data.frame within the `trait`
 #'      argument.
 #'
 #'    * `mainAbbreviation` character; required: FALSE; Main abbreviation for
@@ -343,7 +343,7 @@
 #'            format).
 #'
 #'      The Examples section shows an example of how to construct the
-#'      `ontologyReference` argument as a list within the `trait` argument.
+#'      `ontologyReference` element as a list within the `trait` argument.
 #'
 #'    * `status` character; required: FALSE; Trait status, e.g.
 #'        &quot;recommended&quot;, &quot;obsolete&quot;, &quot;legacy&quot;,

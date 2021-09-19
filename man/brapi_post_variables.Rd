@@ -88,7 +88,7 @@ automatically):
 "string", additionalProp2 =  "string", additionalProp3 = "string").
 
 The Examples section shows an example on how to construct the
-\code{additionalInfo} argument as a list within the \code{method} argument.
+\code{additionalInfo} element as a list within the \code{method} argument.
 \item \code{bibliographicalReference} character; required: FALSE; Bibliographical
 reference describing the method. MIAPPE V1.1 (DM-91) Reference
 associated to the method - URI/DOI of reference describing the method.
@@ -109,7 +109,7 @@ source system or database of this reference.
 }
 
 The Examples section shows an example of how to construct the
-\code{externalReferences} argument as a data.frame within the \code{method}
+\code{externalReferences} element as a data.frame within the \code{method}
 argument.
 \item \code{formula} character; required: FALSE; For computational methods, i.e.
 when the method consists in assessing the trait by computing
@@ -149,7 +149,7 @@ format).
 }
 
 The Examples section shows an example of how to construct the
-\code{ontologyReference} argument as a list within the \code{method} argument.
+\code{ontologyReference} element as a list within the \code{method} argument.
 }}
 
 \item{observationVariableName}{character; required: FALSE; Variable name
@@ -202,7 +202,7 @@ automatically):
 "string", additionalProp2 =  "string", additionalProp3 = "string").
 
 The Examples section shows an example on how to construct the
-\code{additionalInfo} argument as a list within the \code{scale} argument.
+\code{additionalInfo} element as a list within the \code{scale} argument.
 \item \code{dataType} character; required: FALSE; Class of the scale, entries can
 be:
 \itemize{
@@ -246,7 +246,7 @@ source system or database of this reference.
 }
 
 The Examples section shows an example of how to construct the
-\code{externalReferences} argument as a data.frame within the \code{scale}
+\code{externalReferences} element as a data.frame within the \code{scale}
 argument.
 \item \code{ontologyReference} list; required: FALSE; MIAPPE V1.1 (DM-85) Variable
 accession number - Accession number of the variable in the Crop
@@ -278,7 +278,7 @@ format).
 }
 
 The Examples section shows an example of how to construct the
-\code{ontologyReference} argument as a list within the \code{scale} argument.
+\code{ontologyReference} element as a list within the \code{scale} argument.
 \item \code{scaleName} character; required: FALSE; Name of the scale. MIAPPE V1.1
 (DM-92) Scale Name of the scale associated with the variable.
 \item \code{validValues} list; required: FALSE; Valid values for the scale. The
@@ -298,7 +298,7 @@ capture control) for numerical and date scales.
 }
 
 The Examples section shows an example of how to construct the
-\code{validValues} argument as a list within the \code{scale} argument.
+\code{validValues} element as a list within the \code{scale} argument.
 }}
 
 \item{scientist}{character; required: FALSE; Name of scientist submitting the
@@ -328,7 +328,7 @@ automatically):
 "string", additionalProp2 =  "string", additionalProp3 = "string").
 
 The Examples section shows an example on how to construct the
-\code{additionalInfo} argument as a list within the \code{trait} argument.
+\code{additionalInfo} element as a list within the \code{trait} argument.
 \item \code{alternativeAbbreviations} vector of type character; required: FALSE;
 Other frequent abbreviations of the trait, if any. These abbreviations
 do not have to follow a convention; default: "", when using
@@ -354,7 +354,7 @@ source system or database of this reference.
 }
 
 The Examples section shows an example of how to construct the
-\code{externalReferences} argument as a data.frame within the \code{trait}
+\code{externalReferences} element as a data.frame within the \code{trait}
 argument.
 \item \code{mainAbbreviation} character; required: FALSE; Main abbreviation for
 trait name, e.g. "Carotenoid content" => "CC".
@@ -388,7 +388,7 @@ format).
 }
 
 The Examples section shows an example of how to construct the
-\code{ontologyReference} argument as a list within the \code{trait} argument.
+\code{ontologyReference} element as a list within the \code{trait} argument.
 \item \code{status} character; required: FALSE; Trait status, e.g.
 "recommended", "obsolete", "legacy",
 \emph{etc.}.
