@@ -191,7 +191,8 @@ Other brapi-phenotyping:
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()},
 \code{\link{brapi_put_scales_scaleDbId}()},
-\code{\link{brapi_put_traits_traitDbId}()}
+\code{\link{brapi_put_traits_traitDbId}()},
+\code{\link{brapi_put_variables_observationVariableDbId}()}
 
 Other Observations: 
 \code{\link{brapi_get_observations_observationDbId}()},

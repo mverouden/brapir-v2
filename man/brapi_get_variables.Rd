@@ -90,11 +90,13 @@ Other brapi-phenotyping:
 \code{\link{brapi_put_observations_observationDbId}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()},
 \code{\link{brapi_put_scales_scaleDbId}()},
-\code{\link{brapi_put_traits_traitDbId}()}
+\code{\link{brapi_put_traits_traitDbId}()},
+\code{\link{brapi_put_variables_observationVariableDbId}()}
 
 Other Observation Variables: 
 \code{\link{brapi_get_variables_observationVariableDbId}()},
-\code{\link{brapi_post_variables}()}
+\code{\link{brapi_post_variables}()},
+\code{\link{brapi_put_variables_observationVariableDbId}()}
 }
 \author{
 Maikel Verouden
