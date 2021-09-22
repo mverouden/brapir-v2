@@ -28,9 +28,9 @@
 #' con <- brapi_db()$bms_test
 #' class(con) <- c("list", "brapi", "brapi_con")
 #' # Add a username between the double quotes
-#' con[["user"]] <- ""
+#' con[["user"]] <- "" # put your username in between the double quotes
 #' # Add a password between the double quotes
-#' con[["password"]] <- ""
+#' con[["password"]] <- "" # put your password in between the double quotes
 #'
 #' # Login
 #' con <- brapi_bms_login(con = con)
