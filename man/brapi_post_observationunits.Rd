@@ -352,6 +352,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
+\code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
 \code{\link{brapi_get_traits_traitDbId}()},
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
@@ -373,6 +374,7 @@ Other Observation Units:
 \code{\link{brapi_get_observationlevels}()},
 \code{\link{brapi_get_observationunits_observationUnitDbId}()},
 \code{\link{brapi_get_observationunits}()},
+\code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
 \code{\link{brapi_post_search_observationunits}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()}
 }
