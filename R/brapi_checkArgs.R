@@ -154,7 +154,8 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
       ## Check for arguments which are of type data.frame or supplied as empty character vector of length 1
       if (i %in% c("contacts", "dataLinks", "datasetAuthorships",
                    "environmentParameters", "externalReferences",
-                   "observationLevels", "publications", "treatments")) {
+                   "observationLevelRelationships", "observationLevels",
+                   "publications", "treatments")) {
         if (!(is.character(usedArgs[[i]]) && usedArgs[[i]] == "" || is.data.frame(usedArgs[[i]]))) {
           stop('Argument: "', i, '" should be supplied as an empty character or as a data.frame, see the help page on how the data.frame should be constructed.')
         }
