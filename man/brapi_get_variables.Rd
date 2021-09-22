@@ -84,6 +84,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
+\code{\link{brapi_post_search_observationunits}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_post_variables}()},
 \code{\link{brapi_put_methods_methodDbId}()},
