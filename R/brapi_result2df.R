@@ -417,5 +417,10 @@ brapi_result2df <- function(cont, usedArgs) {
              }
            }
          })
+  if ("metadata" %in% names(contList)) {
+    if ("pagination" %in% names(contList[["metadata"]])) {
+      attr(dat, "pagination") <- contList[["metadata"]][["pagination"]]
+    }
+  }
   return(dat)
 }
