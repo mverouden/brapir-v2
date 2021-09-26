@@ -93,7 +93,7 @@
 #'    readable names of trials to search for; default: &quot;&quot;, when using
 #'    multiple values supply as c(&quot;value1&quot;, &quot;value2&quot;).
 #'
-#' @details Submit a search request for `ObservationUnits`.  Function will return
+#' @details Submit a search request for `ObservationUnits`. Function will return
 #'    either the search results (Status 200 for an immediate response) or a
 #'    `searchResultsDbId` (Status 202 for both a saved and an asynchronous
 #'    search).

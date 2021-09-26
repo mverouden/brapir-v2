@@ -146,7 +146,7 @@ data.frame
 Submit a search request for \code{ObservationUnits}
 }
 \details{
-Submit a search request for \code{ObservationUnits}.  Function will return
+Submit a search request for \code{ObservationUnits}. Function will return
 either the search results (Status 200 for an immediate response) or a
 \code{searchResultsDbId} (Status 202 for both a saved and an asynchronous
 search).
@@ -197,6 +197,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
 \code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
+\code{\link{brapi_get_search_variables_searchResultsDbId}()},
 \code{\link{brapi_get_traits_traitDbId}()},
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
@@ -205,6 +206,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
+\code{\link{brapi_post_search_variables}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_post_variables}()},
 \code{\link{brapi_put_methods_methodDbId}()},

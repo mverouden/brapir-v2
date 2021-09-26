@@ -1,8 +1,8 @@
 #' @title
-#' get /search/observationunits/\{searchResultsDbId\}
+#' get /search/variables/\{searchResultsDbId\}
 #'
 #' @description
-#' Get the results of a `ObservationUnits` search request
+#' Get the results of a Observation `variables` search request
 #'
 #' @param con list; required: TRUE; BrAPI connection object
 #' @param searchResultsDbId character; required: TRUE; Unique database
@@ -13,41 +13,45 @@
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details Returns the result of the advanced searching for the
-#'    `ObservationUnits` resource.
+#' @details Returns the result of the advanced searching for the observation
+#'    `variables` resource, submitted by the corresponding
+
+#' @details Get the results of a Observation `variables` search request
+#'    submitted with the `brapi_post_search_variables()` function.
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.0#/Observation%20Units/get_search_observationunits__searchResultsDbId_ }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.0#/Observation%20Variables/get_search_variables__searchResultsDbId_ }{BrAPI SwaggerHub}
 #'
 #' @family brapi-phenotyping
-#' @family Observation Units
+#' @family Observation Variables
 #'
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
 #' # Saved or Asynchronous Search Response Example
-#' out <- brapi_post_search_observationunits(
-#'   con = con,
-#'   externalReferenceIDs = "https://brapi.org/specification",
-#'   externalReferenceSources = "BrAPI Doc",
-#'   germplasmDbIds = c("germplasm1", "germplasm2"),
-#'   includeObservations = FALSE,
-#'   programDbIds = "program1")
+#' out <- brapi_post_search_variables(
+#'  con = con,
+#'  dataTypes = c("Numerical", "Text"),
+#'  externalReferenceIDs = "https://brapi.org/specification",
+#'  externalReferenceSources = "BrAPI Doc",
+#'  ontologyDbIds = "ontology_variable1",
+#'  page = 0,
+#'  pageSize = 1000)
 #' searchResultsDbId <- out$searchResultsDbId
-#' brapi_get_search_observationunits_searchResultsDbId(
-#'   con = con,
-#'   searchResultsDbId = searchResultsDbId)
+#' brapi_get_search_variables_searchResultsDbId(
+#'  con = con,
+#'  searchResultsDbId = searchResultsDbId)
 #' }
 #'
 #' @export
-brapi_get_search_observationunits_searchResultsDbId <- function(con = NULL,
-                                                                searchResultsDbId = '',
-                                                                page = 0,
-                                                                pageSize = 1000) {
+brapi_get_search_variables_searchResultsDbId <- function(con = NULL,
+                                                         searchResultsDbId = '',
+                                                         page = 0,
+                                                         pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details
@@ -56,7 +60,7 @@ brapi_get_search_observationunits_searchResultsDbId <- function(con = NULL,
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "searchResultsDbId")
   ## Obtain the call url
   callurl <- brapirv2:::brapi_GET_callURL(usedArgs = usedArgs,
-                                          callPath = "/search/observationunits/{searchResultsDbId}",
+                                          callPath = "/search/variables/{searchResultsDbId}",
                                           reqArgs = "searchResultsDbId",
                                           packageName = "BrAPI-Phenotyping",
                                           callVersion = 2.0)
@@ -83,7 +87,7 @@ brapi_get_search_observationunits_searchResultsDbId <- function(con = NULL,
     }
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_get_search_observationunits_searchResultsDbId")
+  class(out) <- c(class(out), "brapi_get_search_variables_searchResultsDbId")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)

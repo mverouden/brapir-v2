@@ -587,6 +587,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
 \code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
+\code{\link{brapi_get_search_variables_searchResultsDbId}()},
 \code{\link{brapi_get_traits_traitDbId}()},
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
@@ -596,6 +597,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
 \code{\link{brapi_post_search_observationunits}()},
+\code{\link{brapi_post_search_variables}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
@@ -605,8 +607,10 @@ Other brapi-phenotyping:
 \code{\link{brapi_put_variables_observationVariableDbId}()}
 
 Other Observation Variables: 
+\code{\link{brapi_get_search_variables_searchResultsDbId}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
 \code{\link{brapi_get_variables}()},
+\code{\link{brapi_post_search_variables}()},
 \code{\link{brapi_put_variables_observationVariableDbId}()}
 }
 \author{

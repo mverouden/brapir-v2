@@ -15,8 +15,8 @@ brapi_get_search_observationunits_searchResultsDbId(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{searchResultsDbId}{character; required: TRUE; Unique identifier which
-references the search results}
+\item{searchResultsDbId}{character; required: TRUE; Unique database
+identifier which references the search results}
 
 \item{page}{integer; required: FALSE; Used to request a specific page of data
 to be returned. The page indexing starts at 0 (the first page is
@@ -72,6 +72,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
+\code{\link{brapi_get_search_variables_searchResultsDbId}()},
 \code{\link{brapi_get_traits_traitDbId}()},
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
@@ -81,6 +82,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
 \code{\link{brapi_post_search_observationunits}()},
+\code{\link{brapi_post_search_variables}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_post_variables}()},
 \code{\link{brapi_put_methods_methodDbId}()},
