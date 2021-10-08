@@ -132,6 +132,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
+\code{\link{brapi_get_search_observations_searchResultsDbId}()},
 \code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
 \code{\link{brapi_get_search_variables_searchResultsDbId}()},
 \code{\link{brapi_get_traits_traitDbId}()},
@@ -142,6 +143,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
+\code{\link{brapi_post_search_observations}()},
 \code{\link{brapi_post_search_observationunits}()},
 \code{\link{brapi_post_search_variables}()},
 \code{\link{brapi_post_traits}()},
@@ -155,7 +157,9 @@ Other brapi-phenotyping:
 
 Other Observations: 
 \code{\link{brapi_get_observations_observationDbId}()},
+\code{\link{brapi_get_search_observations_searchResultsDbId}()},
 \code{\link{brapi_post_observations}()},
+\code{\link{brapi_post_search_observations}()},
 \code{\link{brapi_put_observations_observationDbId}()}
 }
 \author{
