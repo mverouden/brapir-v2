@@ -12,6 +12,13 @@ brapi_serverinfo_show(show = TRUE)
 \description{
 Show informative messages or not
 }
+\examples{
+\dontrun{
+## To show debugging output in the console
+brapi_serverinfo_show(show = TRUE)
+}
+
+}
 \seealso{
 Other brapiutils: 
 \code{\link{as.brapi_db}()},
@@ -20,6 +27,7 @@ Other brapiutils:
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_connect}()},
 \code{\link{brapi_db}()},
+\code{\link{brapi_serverinfo_expiration}()},
 \code{\link{is.brapi_con}()},
 \code{\link{print.brapi_con}()},
 \code{\link{print.brapi_db}()}

@@ -25,6 +25,7 @@ Other brapiutils:
 \code{\link{brapi_canInternet}()},
 \code{\link{brapi_checkCon}()},
 \code{\link{brapi_connect}()},
+\code{\link{brapi_serverinfo_expiration}()},
 \code{\link{brapi_serverinfo_show}()},
 \code{\link{is.brapi_con}()},
 \code{\link{print.brapi_con}()},

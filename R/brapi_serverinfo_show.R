@@ -10,6 +10,12 @@
 #'
 #' @family brapiutils
 #'
+#' @examples
+#' \dontrun{
+#' ## To show debugging output in the console
+#' brapi_serverinfo_show(show = TRUE)
+#' }
+#'
 #' @export
 brapi_serverinfo_show <- function(show = TRUE) {
   stopifnot(is.logical(show))

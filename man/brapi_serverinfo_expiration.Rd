@@ -13,14 +13,28 @@ brapi_serverinfo_expiration(con)
 Display the expiration date and time of token if available.
 }
 \examples{
-library(brapirv2)
-
+\dontrun{
 if (interactive()) {
   con <- brapi_db()$testserver
   brapi_serverinfo_expiration(con)
 }
+}
 
+}
+\seealso{
+Other brapiutils: 
+\code{\link{as.brapi_db}()},
+\code{\link{brapi_bms_login}()},
+\code{\link{brapi_canInternet}()},
+\code{\link{brapi_checkCon}()},
+\code{\link{brapi_connect}()},
+\code{\link{brapi_db}()},
+\code{\link{brapi_serverinfo_show}()},
+\code{\link{is.brapi_con}()},
+\code{\link{print.brapi_con}()},
+\code{\link{print.brapi_db}()}
 }
 \author{
 Maikel Verouden
 }
+\concept{brapiutils}

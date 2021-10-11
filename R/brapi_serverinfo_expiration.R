@@ -8,12 +8,14 @@
 #'
 #' @author Maikel Verouden
 #'
-#' @examples
-#' library(brapirv2)
+#' @family brapiutils
 #'
+#' @examples
+#' \dontrun{
 #' if (interactive()) {
 #'   con <- brapi_db()$testserver
 #'   brapi_serverinfo_expiration(con)
+#' }
 #' }
 #'
 #' @export
