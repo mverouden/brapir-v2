@@ -227,6 +227,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_search_variables}()},
 \code{\link{brapi_post_traits}()},
 \code{\link{brapi_post_variables}()},
+\code{\link{brapi_put_images_imageDbId}()},
 \code{\link{brapi_put_methods_methodDbId}()},
 \code{\link{brapi_put_observations_observationDbId}()},
 \code{\link{brapi_put_observationunits_observationUnitDbId}()},
@@ -238,7 +239,8 @@ Other Images:
 \code{\link{brapi_get_images_imageDbId}()},
 \code{\link{brapi_get_images}()},
 \code{\link{brapi_get_search_images_searchResultsDbId}()},
-\code{\link{brapi_post_images}()}
+\code{\link{brapi_post_images}()},
+\code{\link{brapi_put_images_imageDbId}()}
 }
 \author{
 Maikel Verouden
