@@ -140,6 +140,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
 \code{\link{brapi_get_variables}()},
+\code{\link{brapi_post_images}()},
 \code{\link{brapi_post_methods}()},
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},

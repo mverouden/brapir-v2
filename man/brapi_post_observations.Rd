@@ -60,8 +60,8 @@ when the observation was made. Coded in the ISO 8601 standard extended
 format, where date, time and time zone information needs to be provided
 (check for example https://www.w3.org/TR/NOTE-datetime).}
 
-\item{observationUnitDbId}{character; required: FALSE; The identifier, which
-uniquely identifies an observation unit.}
+\item{observationUnitDbId}{character; required: FALSE; The database
+identifier, which uniquely identifies an observation unit.}
 
 \item{observationUnitName}{character; required: FALSE; A human readable name
 for an observation unit.}
@@ -177,6 +177,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_traits}()},
 \code{\link{brapi_get_variables_observationVariableDbId}()},
 \code{\link{brapi_get_variables}()},
+\code{\link{brapi_post_images}()},
 \code{\link{brapi_post_methods}()},
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},

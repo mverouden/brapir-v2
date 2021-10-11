@@ -33,8 +33,8 @@
 #'    when the observation was made. Coded in the ISO 8601 standard extended
 #'    format, where date, time and time zone information needs to be provided
 #'    (check for example https://www.w3.org/TR/NOTE-datetime).
-#' @param observationUnitDbId character; required: FALSE; The identifier, which
-#'    uniquely identifies an observation unit.
+#' @param observationUnitDbId character; required: FALSE; The database
+#'    identifier, which uniquely identifies an observation unit.
 #' @param observationUnitName character; required: FALSE; A human readable name
 #'    for an observation unit.
 #' @param observationVariableDbId character; required: FALSE; The identifier,
