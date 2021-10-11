@@ -129,6 +129,7 @@
 #' \dontrun{
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
+#'
 #' ## Create function argument values
 #' additionalInfo <- list(dummyData = "TRUE",
 #'                        example = "post_images")
@@ -170,6 +171,7 @@
 #' observationDbIds <- c("observation1",
 #'                       "observation4")
 #' observationUnitDbId <- "observation_unit1"
+#'
 #' ## Add new image meta data
 #' out <- brapi_post_images(
 #'   con = con,
@@ -189,10 +191,13 @@
 #'   mimeType = mimeType,
 #'   observationDbIds = observationDbIds,
 #'   observationUnitDbId = observationUnitDbId)
+#'
 #' ## Obtain the imageDbId
 #' imageDbId <- unique(out$imageDbId)
+#'
 #' ## Retrieve information about the new image
 #' brapi_get_images_imageDbId(con = con, imageDbId = imageDbId)
+#'
 #' ## Update the image meta data
 #' additionalInfo <- list(dummyData = "TRUE",
 #'                        example = "put_images_imageDbId")
@@ -215,6 +220,7 @@
 #'   additionalInfo = additionalInfo,
 #'   imageLocation = imageLocation,
 #'   imageTimeStamp = imageTimeStamp)
+#'
 #' ## Check the changes
 #' brapi_get_images_imageDbId(con = con, imageDbId = imageDbId)
 #' }
