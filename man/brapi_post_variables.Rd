@@ -20,6 +20,7 @@ brapi_post_variables(
   ontologyReference = list(),
   scale = list(),
   scientist = "",
+  status = "",
   submissionTimestamp = "",
   synonyms = "",
   trait = list()
@@ -304,6 +305,9 @@ The Examples section shows an example of how to construct the
 \item{scientist}{character; required: FALSE; Name of scientist submitting the
 variable.}
 
+\item{status}{character; required: FALSE; Variable status, examples:
+"recommended", "obsolete", "legacy", \emph{etc.}}
+
 \item{submissionTimestamp}{character; required: FALSE; The date and time
 when the variable was added. Coded in the ISO 8601 standard extended
 format, where date, time and time zone information needs to be provided
@@ -407,9 +411,6 @@ trait.
 trait. MIAPPE V1.1 (DM-86) Trait - Name of the (plant or
 environmental) trait under observation.
 }}
-
-\item{status}{character; required: FALSE; Variable status, examples:
-"recommended", "obsolete", "legacy", \emph{etc.}}
 }
 \value{
 data.frame
@@ -562,6 +563,7 @@ brapi_post_variables(con = con,
                      ontologyReference = ontologyReference,
                      scale = scale,
                      scientist = scientist,
+                     status = status,
                      submissionTimestamp = submissionTimestamp,
                      synonyms = synonyms,
                      trait = trait)
@@ -586,6 +588,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
+\code{\link{brapi_get_search_images_searchResultsDbId}()},
 \code{\link{brapi_get_search_observations_searchResultsDbId}()},
 \code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
 \code{\link{brapi_get_search_variables_searchResultsDbId}()},
@@ -597,6 +600,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
+\code{\link{brapi_post_search_images}()},
 \code{\link{brapi_post_search_observations}()},
 \code{\link{brapi_post_search_observationunits}()},
 \code{\link{brapi_post_search_variables}()},

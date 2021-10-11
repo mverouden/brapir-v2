@@ -5,7 +5,8 @@
 #' Get the an image meta data summary
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param imageDbId character; required: TRUE; Unique identifier for an image.
+#' @param imageDbId character; required: TRUE; Unique database identifier for an
+#'    image.
 #'
 #' @details Get one image meta data object.
 #'

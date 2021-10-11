@@ -38,7 +38,7 @@ for.}
 
 \item{coordinates}{list; required: FALSE; A GeoJSON Polygon geometry, as
 defined by GeoJSON (RFC 7946), which describes an area to search for other
-GeoJSON object. All contained Points and intersecting Polygons are
+GeoJSON objects. All contained Points and intersecting Polygons are
 returned as search results. The coordinates are decimal values on the
 WGS84 geographic coordinate reference system. A coordinate position MUST
 be two or more elements. The first two elements are longitude and
@@ -65,7 +65,7 @@ ring, and each subsequent ring an interior ring.
 
 The easiest way in R to construct the \code{coordinates} list is to use the
 \strong{geojsonR} package. The Examples section shows how to create a
-\code{coordinates} list object for a point and a polygon geometry.}
+\code{coordinates} list object for a polygon geometry.}
 
 \item{countryCodes}{vector of type character; required: FALSE; Country
 code(s), specified in the \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3}{ISO_3166-1_alpha-3}

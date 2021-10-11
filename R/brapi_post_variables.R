@@ -516,6 +516,7 @@
 #'                      ontologyReference = ontologyReference,
 #'                      scale = scale,
 #'                      scientist = scientist,
+#'                      status = status,
 #'                      submissionTimestamp = submissionTimestamp,
 #'                      synonyms = synonyms,
 #'                      trait = trait)
@@ -537,6 +538,7 @@ brapi_post_variables <- function(con = NULL,
                                  ontologyReference = list(),
                                  scale = list(),
                                  scientist = '',
+                                 status = '',
                                  submissionTimestamp = '',
                                  synonyms = '',
                                  trait = list()) {

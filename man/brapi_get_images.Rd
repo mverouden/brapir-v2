@@ -83,6 +83,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
 \code{\link{brapi_get_scales}()},
+\code{\link{brapi_get_search_images_searchResultsDbId}()},
 \code{\link{brapi_get_search_observations_searchResultsDbId}()},
 \code{\link{brapi_get_search_observationunits_searchResultsDbId}()},
 \code{\link{brapi_get_search_variables_searchResultsDbId}()},
@@ -94,6 +95,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_post_observations}()},
 \code{\link{brapi_post_observationunits}()},
 \code{\link{brapi_post_scales}()},
+\code{\link{brapi_post_search_images}()},
 \code{\link{brapi_post_search_observations}()},
 \code{\link{brapi_post_search_observationunits}()},
 \code{\link{brapi_post_search_variables}()},
@@ -107,7 +109,9 @@ Other brapi-phenotyping:
 \code{\link{brapi_put_variables_observationVariableDbId}()}
 
 Other Images: 
-\code{\link{brapi_get_images_imageDbId}()}
+\code{\link{brapi_get_images_imageDbId}()},
+\code{\link{brapi_get_search_images_searchResultsDbId}()},
+\code{\link{brapi_post_search_images}()}
 }
 \author{
 Maikel Verouden
