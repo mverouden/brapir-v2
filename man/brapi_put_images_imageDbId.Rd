@@ -258,12 +258,14 @@ imageLocation[["geometry"]] <- init$Polygon(data = polygonData,
                                               stringify = FALSE)
 imageLocation[["type"]] <- "Feature"
 imageTimeStamp <- "2021-10-11T18:05:00.666Z"
+mimeType <- "image/jpg"
 brapi_put_images_imageDbId(
   con = con,
   imageDbId = imageDbId,
   additionalInfo = additionalInfo,
   imageLocation = imageLocation,
-  imageTimeStamp = imageTimeStamp)
+  imageTimeStamp = imageTimeStamp,
+  mimeType = mimeType)
 
 ## Check the changes
 brapi_get_images_imageDbId(con = con, imageDbId = imageDbId)
