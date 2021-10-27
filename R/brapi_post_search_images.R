@@ -47,8 +47,7 @@
 #'    The `coordinates` list MUST contain the following two elements:
 #'
 #'    * `geometry` as a list; required: TRUE; A geometry as defined by GeoJSON
-#'      (RFC 7946). In this context, only Polygon geometry is allowed
-#'      .
+#'      (RFC 7946). In this context, only Polygon geometry is allowed.
 #'
 #'      The Polygon geometry is described by exactly two elements:
 #'        + `coordinates` as a list; required : TRUE; List of linear rings, where
