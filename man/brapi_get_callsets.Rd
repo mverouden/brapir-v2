@@ -61,11 +61,15 @@ brapi_get_callsets(con = con)
 }
 \seealso{
 Other brapi-genotyping: 
+\code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_calls}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_post_search_calls}()}
+
+Other Call Sets: 
+\code{\link{brapi_get_callsets_callSetDbId}()}
 }
 \author{
 Maikel Verouden
