@@ -52,6 +52,7 @@ brapi_get_variants(con = con)
 }
 \seealso{
 Other brapi-genotyping: 
+\code{\link{brapi_get_calls}()},
 \code{\link{brapi_get_variantsets}()}
 }
 \author{
