@@ -37,8 +37,7 @@ data.frame
 Gets a filtered list of \code{Variants}.
 }
 \details{
-Gets a filtered list of \code{Variants}. \strong{THIS ENDPOINT USES TOKEN BASED
-PAGING!}
+Gets a filtered list of \code{Variants}.
 }
 \examples{
 \dontrun{

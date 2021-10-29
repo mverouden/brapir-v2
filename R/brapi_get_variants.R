@@ -17,8 +17,7 @@
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details Gets a filtered list of `Variants`. **THIS ENDPOINT USES TOKEN BASED
-#'  PAGING!**
+#' @details Gets a filtered list of `Variants`.
 #'
 #' @return data.frame
 #'
