@@ -72,11 +72,13 @@ brapi_get_calls(con = con)
 }
 \seealso{
 Other brapi-genotyping: 
+\code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_post_search_calls}()}
 
 Other Calls: 
+\code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_post_search_calls}()}
 }
 \author{

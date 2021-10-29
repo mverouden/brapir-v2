@@ -79,11 +79,14 @@ brapi_post_search_calls(con = con, pageSize = 1000)
 
 # Saved or Asynchronous Search Response Example
 brapi_post_search_calls(con = con,
-                        callSetDbIds = c("callSet12",
-                                         "callSet21"),
+                        callSetDbIds = c("callset12",
+                                         "callset21"),
                         expandHomozygotes = TRUE,
                         pageSize = 1000,
-                        variantDbIds = c("variant15",
+                        sepPhased = "~",
+                        sepUnphased = "|",
+                        unknownString = "-",
+                        variantDbIds = c("variant01",
                                          "variant23"))
 }
 
@@ -94,11 +97,13 @@ brapi_post_search_calls(con = con,
 \seealso{
 Other brapi-genotyping: 
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()}
 
 Other Calls: 
-\code{\link{brapi_get_calls}()}
+\code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_search_calls_searchResultsDbId}()}
 }
 \author{
 Maikel Verouden

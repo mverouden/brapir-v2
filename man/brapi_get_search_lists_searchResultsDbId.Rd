@@ -47,7 +47,7 @@ out <-
                          listType = "germplasm")
 searchResultsDbId <- out$searchResultsDbId
 brapi_get_search_lists_searchResultsDbId(con = con,
-                                           searchResultsDbId = searchResultsDbId)
+                                         searchResultsDbId = searchResultsDbId)
 }
 
 }

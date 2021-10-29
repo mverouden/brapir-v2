@@ -1,28 +1,30 @@
 #' @title
-#' get /search/lists/\{searchResultsDbId\}
+#' get /search/calls/\{searchResultsDbId\}
 #'
 #' @description
-#' Get the results of a List search request
+#' Get the results of a `Calls` search request
 #'
 #' @param con list; required: TRUE; BrAPI connection object
 #' @param searchResultsDbId character; required: TRUE; Unique identifier which
 #'    references the search results
-#' @param page integer; required: FALSE; Used to request a specific page of data
-#'    to be returned. The page indexing starts at 0 (the first page is
-#'    `page = 0`). Default is `0`.
+#' @param pageToken character; required: FALSE; Used to request a specific page
+#'    of data to be returned. Tokenized pages are for large data sets, which can
+#'    not be efficiently broken into indexed pages. Use the `nextPageToken` and
+#'    `prevPageToken` from a prior response to construct a query and move to the
+#'     next or previous page respectively.
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details Returns the result of the advanced searching for the list resource.
+#' @details Returns the result of the advanced searching for the calls resource.
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.0#/Lists/get_search_lists__searchResultsDbId_ }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping/2.0#/Calls/get_search_calls__searchResultsDbId_ }{BrAPI SwaggerHub}
 #'
-#' @family brapi-core
-#' @family Lists
+#' @family brapi-genotyping
+#' @family Calls
 #'
 #' @examples
 #' \dontrun{
@@ -30,21 +32,25 @@
 #' con[["token"]] <- "YYYY"
 #' # Saved or Asynchronous Search Response Example
 #' out <-
-#'  brapi_post_search_lists(con = con,
-#'                          externalReferenceIDs = "https://brapi.org/specification",
-#'                          externalReferenceSources = "BrAPI Doc",
-#'                          listDbIds = "list2",
-#'                          listOwnerPersonDbIds = "list_person_1",
-#'                          listType = "germplasm")
+#'  brapi_post_search_calls(con = con,
+#'                          callSetDbIds = c("callset12",
+#'                                           "callset21"),
+#'                          expandHomozygotes = TRUE,
+#'                          pageSize = 1000,
+#'                          sepPhased = "~",
+#'                          sepUnphased = "|",
+#'                          unknownString = "-",
+#'                          variantDbIds = c("variant01",
+#'                                           "variant23"))
 #' searchResultsDbId <- out$searchResultsDbId
-#' brapi_get_search_lists_searchResultsDbId(con = con,
+#' brapi_get_search_calls_searchResultsDbId(con = con,
 #'                                          searchResultsDbId = searchResultsDbId)
 #' }
 #'
 #' @export
-brapi_get_search_lists_searchResultsDbId <- function(con = NULL,
+brapi_get_search_calls_searchResultsDbId <- function(con = NULL,
                                                      searchResultsDbId = '',
-                                                     page = 0,
+                                                     pageToken = '',
                                                      pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
@@ -54,10 +60,10 @@ brapi_get_search_lists_searchResultsDbId <- function(con = NULL,
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "searchResultsDbId")
   ## Obtain the call url
   callurl <- brapirv2:::brapi_GET_callURL(usedArgs = usedArgs,
-                                        callPath = "/search/lists/{searchResultsDbId}",
-                                        reqArgs = "searchResultsDbId",
-                                        packageName = "BrAPI-Core",
-                                        callVersion = 2.0)
+                                          callPath = "/search/calls/{searchResultsDbId}",
+                                          reqArgs = "searchResultsDbId",
+                                          packageName = "BrAPI-Genotyping",
+                                          callVersion = 2.0)
 
   try({
     ## Make the call and receive the response
@@ -81,7 +87,7 @@ brapi_get_search_lists_searchResultsDbId <- function(con = NULL,
     }
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_get_search_lists_searchResultsDbId")
+  class(out) <- c(class(out), "brapi_get_search_calls_searchResultsDbId")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)

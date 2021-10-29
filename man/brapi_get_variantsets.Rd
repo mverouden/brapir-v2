@@ -61,6 +61,7 @@ brapi_get_variantsets(con = con)
 \seealso{
 Other brapi-genotyping: 
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_post_search_calls}()}
 }
