@@ -62,7 +62,7 @@
 #'                                          "callset21"),
 #'                         expandHomozygotes = TRUE,
 #'                         pageSize = 1000,
-#'                         sepPhased = "~",
+#'                         sepPhased = "/",
 #'                         sepUnphased = "|",
 #'                         unknownString = "-",
 #'                         variantDbIds = c("variant01",

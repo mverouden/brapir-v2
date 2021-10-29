@@ -83,7 +83,7 @@ brapi_post_search_calls(con = con,
                                          "callset21"),
                         expandHomozygotes = TRUE,
                         pageSize = 1000,
-                        sepPhased = "~",
+                        sepPhased = "/",
                         sepUnphased = "|",
                         unknownString = "-",
                         variantDbIds = c("variant01",
@@ -96,6 +96,7 @@ brapi_post_search_calls(con = con,
 }
 \seealso{
 Other brapi-genotyping: 
+\code{\link{brapi_get_callsets_callSetDbId_calls}()},
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
