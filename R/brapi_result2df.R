@@ -38,26 +38,46 @@ brapi_result2df <- function(cont, usedArgs) {
     return(df)
   }
 
-  ## Parse JSON content into a list that consists of a metadata and result
-  ## element
-  contList <- jsonlite::fromJSON(txt = cont)
-  ## Use only the result element from the content list (contList)
-  resultList <- contList[["result"]]
-  ## Solve Issue that get_serverinfo has "calls" instead of "data"
-  if ("calls" %in% names(resultList)) {
+  ## Process result to data.frame
+  if ("Accept" %in% names(usedArgs) && usedArgs[["Accept"]] != "application/json") {
+    ## three possibilities "application/csv", "application/tsv" and "application/flapjack"
+    switch(usedArgs[["Accept"]],
+           "application/csv" = {
+             dat <- read.csv(file = textConnection(cont),
+                             stringsAsFactors = FALSE)
+             colnames(dat) <- gsub(pattern = "\\.",
+                                   replacement = ":",# or "|",
+                                   x = colnames(dat))},
+           "application/tsv" = {
+             dat <- read.delim(file = textConnection(cont),
+                               stringsAsFactors = FALSE)
+             colnames(dat) <- gsub(pattern = "\\.",
+                                   replacement = ":",# or "|",
+                                   x = colnames(dat))},
+           "application/flapjack" = {
+             dat <- read.delim(file = textConnection(cont),
+                               stringsAsFactors = FALSE)})
+  } else {
+    ## Parse JSON content into a list that consists of a metadata and result
+    ## element
+    contList <- jsonlite::fromJSON(txt = cont)
+    ## Use only the result element from the content list (contList)
+    resultList <- contList[["result"]]
+    ## Solve Issue that get_serverinfo has "calls" instead of "data"
+    if ("calls" %in% names(resultList)) {
     names(resultList)[which(names(resultList) == "calls")] <- "data"
   }
-  ## Determine payload variable value
-  if ("data" %in% names(resultList)) {
+    ## Determine payload variable value
+    if ("data" %in% names(resultList)) {
     payload <- ifelse(test = length(resultList) == 1,
                       yes = "detail",
                       no =  "master/detail")
   } else {
     payload <- "master"
   }
-  ## Handle and process payload variable
-  switch(payload,
-         "master" = {
+    ## Handle and process payload variable
+    switch(payload,
+           "master" = {
            if (all(lengths(resultList) <= 1)) {
              ## use only lengths == 1
              master <- as.data.frame(resultList[lengths(resultList) == 1],
@@ -185,7 +205,7 @@ brapi_result2df <- function(cont, usedArgs) {
              }
            }
          },
-         "detail" = {
+           "detail" = {
            if (inherits(resultList[["data"]], what = "data.frame")) {
              detail <- as.data.frame(x = jsonlite::flatten(resultList[["data"]],
                                                            recursive = TRUE),
@@ -275,13 +295,13 @@ brapi_result2df <- function(cont, usedArgs) {
            }
            dat <- detail
          },
-         "master/detail" = {##headerRow! e.g. /search/observationtables/{searchResultsDbId}
+           "master/detail" = {##headerRow! e.g. /search/observationtables/{searchResultsDbId}
            ## Process master part
            masterList <- resultList[!names(resultList) %in% "data"]
-           if (all(c("headerRow", "observationVariableDbIds", "observationVariableNames") %in% names(masterList))) {
+           if (all(c("headerRow", "observationVariables") %in% names(masterList))) {
              headerRow <- c(masterList[["headerRow"]],
-                            paste(masterList[["observationVariableNames"]],
-                                  masterList[["observationVariableDbIds"]],
+                            paste(masterList[["observationVariables"]][["observationVariableDbId"]],
+                                  masterList[["observationVariables"]][["observationVariableName"]],
                                   sep = "|"))
            } else {
              if (!all(lengths(masterList) <= 1)) {# some masterList elements lengths > 1
@@ -417,6 +437,7 @@ brapi_result2df <- function(cont, usedArgs) {
              }
            }
          })
+  }
   if (("metadata" %in% names(contList)) && !is.null(contList[["metadata"]])) {
     if (("pagination" %in% names(contList[["metadata"]])) &&
         !is.null(contList[["metadata"]][["pagination"]])) {
