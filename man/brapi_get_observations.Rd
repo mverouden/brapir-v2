@@ -33,7 +33,7 @@ brapi_get_observations(
 identifier to filter on.}
 
 \item{observationUnitDbId}{character; required: FALSE; Unique observation
-unit data base identifier to filter on.}
+unit database identifier to filter on.}
 
 \item{germplasmDbId}{character; required: FALSE; Unique germplasm (accession)
 identifier to filter on}
@@ -129,6 +129,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_observations_observationDbId}()},
 \code{\link{brapi_get_observations_table}()},
 \code{\link{brapi_get_observationunits_observationUnitDbId}()},
+\code{\link{brapi_get_observationunits_table}()},
 \code{\link{brapi_get_observationunits}()},
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},

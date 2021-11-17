@@ -42,13 +42,13 @@ brapi_result2df <- function(cont, usedArgs) {
   if ("Accept" %in% names(usedArgs) && usedArgs[["Accept"]] != "application/json") {
     ## three possibilities "application/csv", "application/tsv" and "application/flapjack"
     switch(usedArgs[["Accept"]],
-           "application/csv" = {
+           "text/csv" = {
              dat <- read.csv(file = textConnection(cont),
                              stringsAsFactors = FALSE)
              colnames(dat) <- gsub(pattern = "\\.",
                                    replacement = ":",# or "|",
                                    x = colnames(dat))},
-           "application/tsv" = {
+           "text/tsv" = {
              dat <- read.delim(file = textConnection(cont),
                                stringsAsFactors = FALSE)
              colnames(dat) <- gsub(pattern = "\\.",
@@ -437,11 +437,11 @@ brapi_result2df <- function(cont, usedArgs) {
              }
            }
          })
-  }
-  if (("metadata" %in% names(contList)) && !is.null(contList[["metadata"]])) {
-    if (("pagination" %in% names(contList[["metadata"]])) &&
-        !is.null(contList[["metadata"]][["pagination"]])) {
-      attr(dat, "pagination") <- contList[["metadata"]][["pagination"]]
+    if (("metadata" %in% names(contList)) && !is.null(contList[["metadata"]])) {
+      if (("pagination" %in% names(contList[["metadata"]])) &&
+          !is.null(contList[["metadata"]][["pagination"]])) {
+        attr(dat, "pagination") <- contList[["metadata"]][["pagination"]]
+      }
     }
   }
   return(dat)

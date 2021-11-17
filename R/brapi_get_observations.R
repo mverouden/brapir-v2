@@ -8,7 +8,7 @@
 #' @param observationDbId character; required: FALSE; Unique observation
 #'    identifier to filter on.
 #' @param observationUnitDbId character; required: FALSE; Unique observation
-#'    unit data base identifier to filter on.
+#'    unit database identifier to filter on.
 #' @param germplasmDbId character; required: FALSE; Unique germplasm (accession)
 #'    identifier to filter on
 #' @param observationVariableDbId character; required: FALSE; Unique observation

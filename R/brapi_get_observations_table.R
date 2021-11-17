@@ -11,7 +11,6 @@
 #'
 #'    * "text/csv"
 #'    * "text/tsv"
-#'    * "application/flapjack"
 #'
 #' @param observationUnitDbId character; required: FALSE; Unique observation
 #'    unit data base identifier to filter on.

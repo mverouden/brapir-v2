@@ -30,7 +30,6 @@ other possible values:
 \itemize{
 \item "text/csv"
 \item "text/tsv"
-\item "application/flapjack"
 }}
 
 \item{observationUnitDbId}{character; required: FALSE; Unique observation
@@ -109,6 +108,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_observations_observationDbId}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_observationunits_observationUnitDbId}()},
+\code{\link{brapi_get_observationunits_table}()},
 \code{\link{brapi_get_observationunits}()},
 \code{\link{brapi_get_ontologies}()},
 \code{\link{brapi_get_scales_scaleDbId}()},
