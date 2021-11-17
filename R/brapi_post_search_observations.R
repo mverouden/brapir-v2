@@ -57,11 +57,11 @@
 #'
 #'    The Examples section shows an example of how to construct the
 #'    `observationLevels` argument as a data.frame.
-#' @param observationTimeStampRangeStart character; required: FALSE; Timestamp
+#' @param observationTimeStampRangeStart character; required: FALSE; Time stamp
 #'    to start the range for observations to filter on. Coded in the ISO 8601
 #'    standard extended format, where date, time and time zone information needs
 #'    to be provided (check for example https://www.w3.org/TR/NOTE-datetime).
-#' @param observationTimeStampRangeEnd character; required: FALSE; Timestamp
+#' @param observationTimeStampRangeEnd character; required: FALSE; Time stamp
 #'    to end the range for observations to filter on. Coded in the ISO 8601
 #'    standard extended format, where date, time and time zone information needs
 #'    to be provided (check for example https://www.w3.org/TR/NOTE-datetime).

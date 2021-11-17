@@ -40,6 +40,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_methods_methodDbId}()},
 \code{\link{brapi_get_methods}()},
 \code{\link{brapi_get_observationlevels}()},
+\code{\link{brapi_get_observations_table}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_observationunits_observationUnitDbId}()},
 \code{\link{brapi_get_observationunits}()},
@@ -75,6 +76,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_put_variables_observationVariableDbId}()}
 
 Other Observations: 
+\code{\link{brapi_get_observations_table}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_search_observations_searchResultsDbId}()},
 \code{\link{brapi_post_observations}()},

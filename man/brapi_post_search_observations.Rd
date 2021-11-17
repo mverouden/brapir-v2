@@ -96,12 +96,12 @@ at the bottom of the hierarchy (i.e. plant -> 9).
 The Examples section shows an example of how to construct the
 \code{observationLevels} argument as a data.frame.}
 
-\item{observationTimeStampRangeEnd}{character; required: FALSE; Timestamp
+\item{observationTimeStampRangeEnd}{character; required: FALSE; Time stamp
 to end the range for observations to filter on. Coded in the ISO 8601
 standard extended format, where date, time and time zone information needs
 to be provided (check for example https://www.w3.org/TR/NOTE-datetime).}
 
-\item{observationTimeStampRangeStart}{character; required: FALSE; Timestamp
+\item{observationTimeStampRangeStart}{character; required: FALSE; Time stamp
 to start the range for observations to filter on. Coded in the ISO 8601
 standard extended format, where date, time and time zone information needs
 to be provided (check for example https://www.w3.org/TR/NOTE-datetime).}
@@ -210,6 +210,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_methods}()},
 \code{\link{brapi_get_observationlevels}()},
 \code{\link{brapi_get_observations_observationDbId}()},
+\code{\link{brapi_get_observations_table}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_observationunits_observationUnitDbId}()},
 \code{\link{brapi_get_observationunits}()},
@@ -245,6 +246,7 @@ Other brapi-phenotyping:
 
 Other Observations: 
 \code{\link{brapi_get_observations_observationDbId}()},
+\code{\link{brapi_get_observations_table}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_search_observations_searchResultsDbId}()},
 \code{\link{brapi_post_observations}()},

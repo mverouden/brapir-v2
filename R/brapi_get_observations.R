@@ -8,7 +8,7 @@
 #' @param observationDbId character; required: FALSE; Unique observation
 #'    identifier to filter on.
 #' @param observationUnitDbId character; required: FALSE; Unique observation
-#'    unit identifier to filter on.
+#'    unit data base identifier to filter on.
 #' @param germplasmDbId character; required: FALSE; Unique germplasm (accession)
 #'    identifier to filter on
 #' @param observationVariableDbId character; required: FALSE; Unique observation
@@ -37,11 +37,11 @@
 #'    `observationUnitLevelName` or `observationUnitLevelOrder`. References
 #'    ObservationUnit-&gt;observationUnitPosition-&gt;observationLevel-&gt;
 #'    levelCode
-#' @param observationTimeStampRangeStart character; required: FALSE; Timestamp
+#' @param observationTimeStampRangeStart character; required: FALSE; Time stamp
 #'    to start the range for observations to filter on. Coded in the ISO 8601
 #'    standard extended format, where date, time and time zone information needs
 #'    to be provided (check for example https://www.w3.org/TR/NOTE-datetime).
-#' @param observationTimeStampRangeEnd character; required: FALSE; Timestamp
+#' @param observationTimeStampRangeEnd character; required: FALSE; Time stamp
 #'    to end the range for observations to filter on. Coded in the ISO 8601
 #'    standard extended format, where date, time and time zone information needs
 #'    to be provided (check for example https://www.w3.org/TR/NOTE-datetime).

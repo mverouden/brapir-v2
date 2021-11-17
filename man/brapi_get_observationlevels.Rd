@@ -59,6 +59,7 @@ Other brapi-phenotyping:
 \code{\link{brapi_get_methods_methodDbId}()},
 \code{\link{brapi_get_methods}()},
 \code{\link{brapi_get_observations_observationDbId}()},
+\code{\link{brapi_get_observations_table}()},
 \code{\link{brapi_get_observations}()},
 \code{\link{brapi_get_observationunits_observationUnitDbId}()},
 \code{\link{brapi_get_observationunits}()},
