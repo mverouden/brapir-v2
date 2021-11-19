@@ -58,6 +58,20 @@ brapi_get_calls <- function(con = NULL,
                             pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
+  if (exists(usedArgs[["sepPhased"]]) && usedArgs[["sepPhased"]] %in% c("|", "/")) {
+    usedArgs[["sepPhased"]] <- paste0("%",
+                                      toupper(charToRaw(usedArgs[["sepPhased"]])))
+  }
+  if (exists(usedArgs[["sepUnphased"]]) && usedArgs[["sepUnphased"]] %in% c("|", "/")) {
+    usedArgs[["sepUnphased"]] <- paste0("%",
+                                        toupper(charToRaw(usedArgs[["sepUnphased"]])))
+  }
+  if (exists(usedArgs[["unknownString"]]) && usedArgs[["unknownString"]] %in% c("|", "/")) {
+    usedArgs[["unknownString"]] <- paste0("%",
+                                          toupper(
+                                            charToRaw(
+                                              usedArgs[["unknownString"]])))
+  }
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
   ## Check validity of used and required arguments

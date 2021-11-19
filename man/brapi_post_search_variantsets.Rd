@@ -95,6 +95,10 @@ Other brapi-genotyping:
 \code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
 \code{\link{brapi_get_variants_variantDbId_calls}()},
 \code{\link{brapi_get_variants_variantDbId}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_callsets}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_calls}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_variants}()},
+\code{\link{brapi_get_variantsets_variantSetDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_post_search_callsets}()},
@@ -104,6 +108,10 @@ Other brapi-genotyping:
 
 Other Variant Sets: 
 \code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_callsets}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_calls}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_variants}()},
+\code{\link{brapi_get_variantsets_variantSetDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_post_variantsets_extract}()}
 }

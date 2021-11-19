@@ -1,12 +1,12 @@
 #' @title
-#' get /callsets/\{callSetDbId\}/calls
+#' get /variantsets/\{variantSetDbId\}/calls
 #'
 #' @description
-#' Gets a list of `Calls` associated with a `CallSet`.
+#' Gets a list of `Calls` associated with a `VariantSet`.
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param callSetDbId character; required: TRUE; The unique database identifier
-#'    of the `CallSet` to be retrieved.
+#' @param variantSetDbId character; required: TRUE; The unique database
+#'    identifier of the `variantSet` to be retrieved.
 #' @param expandHomozygotes logical; required: FALSE; Should homozygotes be
 #'    expanded (TRUE) or collapsed into a single occurrence (FALSE); default: NA
 #'    , other possible values: TRUE | FALSE
@@ -24,33 +24,38 @@
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details Retrieves `Calls` information associated with a `CallSet`.
+#' @details Gets a list of `Calls` associated with a `VariantSet`.
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping/2.0#/Call%20Sets/get_callsets__callSetDbId__calls }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping/2.0#/Variant%20Sets/get_variantsets__variantSetDbId__calls }{BrAPI SwaggerHub}
 #'
 #' @family brapi-genotyping
-#' @family Call Sets
+#' @family Variant Sets
 #'
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_callsets_callSetDbId_calls(con = con,
-#'                                      callSetDbId = "callset01")
+#' brapi_get_variantsets_variantSetDbId_calls(con = con,
+#'                                            variantSetDbId = "variantset1",
+#'                                            expandHomozygotes = TRUE,
+#'                                            unknownString = '-',
+#'                                            sepPhased = '/',
+#'                                            sepUnphased = '|',
+#'                                            pageSize = 1000)
 #' }
 #'
 #' @export
-brapi_get_callsets_callSetDbId_calls <- function(con = NULL,
-                                                 callSetDbId = '',
-                                                 expandHomozygotes = NA,
-                                                 sepPhased = '',
-                                                 sepUnphased = '',
-                                                 unknownString = '',
-                                                 pageToken = '',
-                                                 pageSize = 1000) {
+brapi_get_variantsets_variantSetDbId_calls <- function(con = NULL,
+                                                       variantSetDbId = '',
+                                                       expandHomozygotes = NA,
+                                                       unknownString = '',
+                                                       sepPhased = '',
+                                                       sepUnphased = '',
+                                                       pageToken = '',
+                                                       pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   if (exists(usedArgs[["sepPhased"]]) && usedArgs[["sepPhased"]] %in% c("|", "/")) {
@@ -59,7 +64,7 @@ brapi_get_callsets_callSetDbId_calls <- function(con = NULL,
   }
   if (exists(usedArgs[["sepUnphased"]]) && usedArgs[["sepUnphased"]] %in% c("|", "/")) {
     usedArgs[["sepUnphased"]] <- paste0("%",
-                                        toupper(charToRaw(usedArgs[["sepUnphased"]])))
+                                      toupper(charToRaw(usedArgs[["sepUnphased"]])))
   }
   if (exists(usedArgs[["unknownString"]]) && usedArgs[["unknownString"]] %in% c("|", "/")) {
     usedArgs[["unknownString"]] <- paste0("%",
@@ -70,11 +75,11 @@ brapi_get_callsets_callSetDbId_calls <- function(con = NULL,
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
   ## Check validity of used and required arguments
-  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "callSetDbId")
+  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "variantSetDbId")
   ## Obtain the call url
   callurl <- brapirv2:::brapi_GET_callURL(usedArgs = usedArgs,
-                                          callPath = "/callsets/{callSetDbId}/calls",
-                                          reqArgs = "callSetDbId",
+                                          callPath = "/variantsets/{variantSetDbId}/calls",
+                                          reqArgs = "variantSetDbId",
                                           packageName = "BrAPI-Genotyping",
                                           callVersion = 2.0)
 
@@ -87,7 +92,7 @@ brapi_get_callsets_callSetDbId_calls <- function(con = NULL,
     out <- brapirv2:::brapi_result2df(cont, usedArgs)
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_get_callsets_callSetDbId_calls")
+  class(out) <- c(class(out), "brapi_get_variantsets_variantSetDbId_calls")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)
