@@ -67,12 +67,14 @@ Other brapi-genotyping:
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
 \code{\link{brapi_get_search_variants_searchResultsDbId}()},
+\code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
 \code{\link{brapi_get_variants_variantDbId_calls}()},
 \code{\link{brapi_get_variants_variantDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
+\code{\link{brapi_post_search_variantsets}()},
 \code{\link{brapi_post_search_variants}()}
 
 Other Call Sets: 
