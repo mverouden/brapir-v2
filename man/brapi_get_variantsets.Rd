@@ -74,11 +74,13 @@ Other brapi-genotyping:
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
 \code{\link{brapi_post_search_variantsets}()},
-\code{\link{brapi_post_search_variants}()}
+\code{\link{brapi_post_search_variants}()},
+\code{\link{brapi_post_variantsets_extract}()}
 
 Other Variant Sets: 
 \code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
-\code{\link{brapi_post_search_variantsets}()}
+\code{\link{brapi_post_search_variantsets}()},
+\code{\link{brapi_post_variantsets_extract}()}
 }
 \author{
 Maikel Verouden

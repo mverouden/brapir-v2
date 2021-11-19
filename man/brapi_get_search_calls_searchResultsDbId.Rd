@@ -76,7 +76,8 @@ Other brapi-genotyping:
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
 \code{\link{brapi_post_search_variantsets}()},
-\code{\link{brapi_post_search_variants}()}
+\code{\link{brapi_post_search_variants}()},
+\code{\link{brapi_post_variantsets_extract}()}
 
 Other Calls: 
 \code{\link{brapi_get_calls}()},
