@@ -8,7 +8,8 @@
 #' @param sampleDbId character; required: TRUE; the unique internal database
 #'    identifier for a sample.
 #'
-#' @details Used to retrieve the details of a single Sample from a Sample Tracking system.
+#' @details Used to retrieve the details of a single Sample from a Sample
+#'    Tracking system.
 #'
 #' @return data.frame
 #'

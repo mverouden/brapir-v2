@@ -19,7 +19,8 @@ data.frame
 Get the details of a specific Sample
 }
 \details{
-Used to retrieve the details of a single Sample from a Sample Tracking system.
+Used to retrieve the details of a single Sample from a Sample
+Tracking system.
 }
 \examples{
 \dontrun{
