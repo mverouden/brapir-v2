@@ -57,7 +57,8 @@ data.frame
 Get the Samples
 }
 \details{
-Used to retrieve list of Samples from a Sample Tracking system based on some search criteria.
+Used to retrieve list of Samples from a Sample Tracking system based
+on some search criteria.
 }
 \examples{
 \dontrun{
@@ -75,6 +76,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
 \code{\link{brapi_get_search_variants_searchResultsDbId}()},
@@ -92,6 +94,9 @@ Other brapi-genotyping:
 \code{\link{brapi_post_search_variantsets}()},
 \code{\link{brapi_post_search_variants}()},
 \code{\link{brapi_post_variantsets_extract}()}
+
+Other Samples: 
+\code{\link{brapi_get_samples_sampleDbId}()}
 }
 \author{
 Maikel Verouden
