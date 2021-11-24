@@ -77,6 +77,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_references_referenceDbId}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
@@ -100,6 +101,9 @@ Other brapi-genotyping:
 \code{\link{brapi_post_search_variants}()},
 \code{\link{brapi_post_variantsets_extract}()},
 \code{\link{brapi_put_samples_sampleDbId}()}
+
+Other References: 
+\code{\link{brapi_get_references_referenceDbId}()}
 }
 \author{
 Maikel Verouden
