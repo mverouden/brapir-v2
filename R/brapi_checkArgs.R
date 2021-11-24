@@ -132,7 +132,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
       }
       ## Check for arguments which are of type logical
       if (i %in% c("active", "expandHomozygotes", "includeObservations",
-                   "includeSiblings", "includeSynonyms")) {
+                   "includeSiblings", "includeSynonyms", "isDerived")) {
         if (!is.logical(usedArgs[[i]])) {
           stop('Argument: "', i, '" should be of type logical e.g. NA, TRUE or FALSE.')
         }
