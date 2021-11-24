@@ -38,6 +38,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_references_referenceDbId_bases}()},
 \code{\link{brapi_get_references}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
@@ -64,6 +65,7 @@ Other brapi-genotyping:
 \code{\link{brapi_put_samples_sampleDbId}()}
 
 Other References: 
+\code{\link{brapi_get_references_referenceDbId_bases}()},
 \code{\link{brapi_get_references}()}
 }
 \author{
