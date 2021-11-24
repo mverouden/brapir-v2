@@ -76,11 +76,13 @@ Other brapi-genotyping:
 \code{\link{brapi_get_variantsets_variantSetDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
+\code{\link{brapi_post_samples}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
 \code{\link{brapi_post_search_variantsets}()},
 \code{\link{brapi_post_search_variants}()},
-\code{\link{brapi_post_variantsets_extract}()}
+\code{\link{brapi_post_variantsets_extract}()},
+\code{\link{brapi_put_samples_sampleDbId}()}
 
 Other Variant Sets: 
 \code{\link{brapi_get_variantsets_variantSetDbId_callsets}()},
