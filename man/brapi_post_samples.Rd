@@ -202,6 +202,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_samples}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
+\code{\link{brapi_get_search_samples_searchResultsDbId}()},
 \code{\link{brapi_get_search_variants_searchResultsDbId}()},
 \code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
 \code{\link{brapi_get_variants_variantDbId_calls}()},
@@ -214,6 +215,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
+\code{\link{brapi_post_search_samples}()},
 \code{\link{brapi_post_search_variantsets}()},
 \code{\link{brapi_post_search_variants}()},
 \code{\link{brapi_post_variantsets_extract}()},
@@ -222,6 +224,8 @@ Other brapi-genotyping:
 Other Samples: 
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
+\code{\link{brapi_get_search_samples_searchResultsDbId}()},
+\code{\link{brapi_post_search_samples}()},
 \code{\link{brapi_put_samples_sampleDbId}()}
 }
 \author{
