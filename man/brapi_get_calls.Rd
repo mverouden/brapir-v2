@@ -77,6 +77,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_references_referenceDbId_bases}()},
 \code{\link{brapi_get_references_referenceDbId}()},
+\code{\link{brapi_get_referencesets_referenceSetDbId}()},
 \code{\link{brapi_get_referencesets}()},
 \code{\link{brapi_get_references}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
