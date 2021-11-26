@@ -63,7 +63,8 @@ Get list of maps
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_maps(con = con)
+brapi_get_maps(con = con,
+               type = "Physical Map")
 }
 
 }
@@ -76,6 +77,8 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_maps_mapDbId_linkagegroups}()},
+\code{\link{brapi_get_maps_mapDbId}()},
 \code{\link{brapi_get_references_referenceDbId_bases}()},
 \code{\link{brapi_get_references_referenceDbId}()},
 \code{\link{brapi_get_referencesets_referenceSetDbId}()},
@@ -108,6 +111,10 @@ Other brapi-genotyping:
 \code{\link{brapi_post_search_variants}()},
 \code{\link{brapi_post_variantsets_extract}()},
 \code{\link{brapi_put_samples_sampleDbId}()}
+
+Other Genome Maps: 
+\code{\link{brapi_get_maps_mapDbId_linkagegroups}()},
+\code{\link{brapi_get_maps_mapDbId}()}
 }
 \author{
 Maikel Verouden

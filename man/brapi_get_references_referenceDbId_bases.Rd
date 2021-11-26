@@ -58,6 +58,8 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_maps_mapDbId_linkagegroups}()},
+\code{\link{brapi_get_maps_mapDbId}()},
 \code{\link{brapi_get_maps}()},
 \code{\link{brapi_get_references_referenceDbId}()},
 \code{\link{brapi_get_referencesets_referenceSetDbId}()},

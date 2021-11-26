@@ -40,7 +40,8 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_maps(con = con)
+#' brapi_get_maps(con = con,
+#'                type = "Physical Map")
 #' }
 #'
 #' @export
