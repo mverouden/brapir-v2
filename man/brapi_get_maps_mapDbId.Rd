@@ -51,6 +51,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_samples}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
+\code{\link{brapi_get_search_markerpositions_searchResultsDbId}()},
 \code{\link{brapi_get_search_references_searchResultsDbId}()},
 \code{\link{brapi_get_search_referencesets_searchResultsDbId}()},
 \code{\link{brapi_get_search_samples_searchResultsDbId}()},
@@ -67,6 +68,7 @@ Other brapi-genotyping:
 \code{\link{brapi_post_samples}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
+\code{\link{brapi_post_search_markerpositions}()},
 \code{\link{brapi_post_search_referencesets}()},
 \code{\link{brapi_post_search_references}()},
 \code{\link{brapi_post_search_samples}()},
@@ -78,7 +80,9 @@ Other brapi-genotyping:
 Other Genome Maps: 
 \code{\link{brapi_get_maps_mapDbId_linkagegroups}()},
 \code{\link{brapi_get_maps}()},
-\code{\link{brapi_get_markerpositions}()}
+\code{\link{brapi_get_markerpositions}()},
+\code{\link{brapi_get_search_markerpositions_searchResultsDbId}()},
+\code{\link{brapi_post_search_markerpositions}()}
 }
 \author{
 Maikel Verouden
