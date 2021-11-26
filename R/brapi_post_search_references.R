@@ -34,7 +34,7 @@
 #'    &quot;&quot;, when using multiple values supply as c(&quot;value1&quot;,
 #'    &quot;value2&quot;).
 #' @param referenceSetDbIds vector of type character; required: FALSE; The unique
-#'    database identifier(s) of a referenceset or referencesets to search.;
+#'    database identifier(s) of a reference set or reference sets to search.;
 #'    default: &quot;&quot;, when using multiple values supply as c(&quot;value1
 #'    &quot;, &quot;value2&quot;).
 #'

@@ -73,6 +73,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
 \code{\link{brapi_get_search_references_searchResultsDbId}()},
+\code{\link{brapi_get_search_referencesets_searchResultsDbId}()},
 \code{\link{brapi_get_search_samples_searchResultsDbId}()},
 \code{\link{brapi_get_search_variants_searchResultsDbId}()},
 \code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
@@ -87,6 +88,7 @@ Other brapi-genotyping:
 \code{\link{brapi_post_samples}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
+\code{\link{brapi_post_search_referencesets}()},
 \code{\link{brapi_post_search_references}()},
 \code{\link{brapi_post_search_samples}()},
 \code{\link{brapi_post_search_variantsets}()},
@@ -95,7 +97,9 @@ Other brapi-genotyping:
 \code{\link{brapi_put_samples_sampleDbId}()}
 
 Other Reference Sets: 
-\code{\link{brapi_get_referencesets_referenceSetDbId}()}
+\code{\link{brapi_get_referencesets_referenceSetDbId}()},
+\code{\link{brapi_get_search_referencesets_searchResultsDbId}()},
+\code{\link{brapi_post_search_referencesets}()}
 }
 \author{
 Maikel Verouden
