@@ -39,6 +39,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_callsets}()},
 \code{\link{brapi_get_calls}()},
 \code{\link{brapi_get_references_referenceDbId_bases}()},
+\code{\link{brapi_get_referencesets}()},
 \code{\link{brapi_get_references}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
