@@ -15,11 +15,11 @@ brapi_get_vendor_orders(
 \arguments{
 \item{con}{list; required: TRUE; BrAPI connection object}
 
-\item{orderId}{character; required: ; The order identifier returned by the
+\item{orderId}{character; required: FALSE; The order identifier returned by the
 vendor, when the order was successfully submitted with \strong{POST}
 \strong{/vendor/orders} as implemented in the \code{brapi_post_orders()} function.}
 
-\item{submissionId}{character; required: ; The submission identifier returned
+\item{submissionId}{character; required: FALSE; The submission identifier returned
 by the vendor, when a set of plates was successfully submitted  with
 \strong{POST /vendor/orders} as implemented in the \code{brapi_post_orders()}
 function.}
@@ -38,7 +38,7 @@ data.frame
 List current available orders
 }
 \details{
-List current available orders
+List current available orders.
 }
 \examples{
 \dontrun{
@@ -83,6 +83,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_variantsets_variantSetDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
+\code{\link{brapi_get_vendor_orders_orderId_plates}()},
 \code{\link{brapi_post_samples}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
@@ -94,6 +95,9 @@ Other brapi-genotyping:
 \code{\link{brapi_post_search_variants}()},
 \code{\link{brapi_post_variantsets_extract}()},
 \code{\link{brapi_put_samples_sampleDbId}()}
+
+Other Vendor: 
+\code{\link{brapi_get_vendor_orders_orderId_plates}()}
 }
 \author{
 Maikel Verouden

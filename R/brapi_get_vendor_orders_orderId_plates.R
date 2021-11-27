@@ -1,30 +1,26 @@
 #' @title
-#' get /vendor/orders
+#' get /vendor/orders/\{orderId\}/plates
 #'
 #' @description
-#' List current available orders
+#' Get the Plates for a specific Order
 #'
 #' @param con list; required: TRUE; BrAPI connection object
-#' @param orderId character; required: FALSE; The order identifier returned by the
+#' @param orderId character; required: TRUE; The order identifier returned by the
 #'    vendor, when the order was successfully submitted with **POST**
 #'    **/vendor/orders** as implemented in the `brapi_post_orders()` function.
-#' @param submissionId character; required: FALSE; The submission identifier returned
-#'    by the vendor, when a set of plates was successfully submitted  with
-#'    **POST /vendor/orders** as implemented in the `brapi_post_orders()`
-#'    function.
 #' @param page integer; required: FALSE; Used to request a specific page of data
 #'    to be returned. The page indexing starts at 0 (the first page is
 #'    `page = 0`). Default is `0`.
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details List current available orders.
+#' @details Retrieve the plate and sample details of an order being processed.
 #'
 #' @return data.frame
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping/2.0#/Vendor/get_vendor_orders }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping/2.0#/Vendor/get_vendor_orders__orderId__plates }{BrAPI SwaggerHub}
 #'
 #' @family brapi-genotyping
 #' @family Vendor
@@ -32,25 +28,25 @@
 #' @examples
 #' \dontrun{
 #' con <- brapi_db()$testserver
-#' brapi_get_vendor_orders(con = con)
+#' brapi_get_vendor_orders_orderId_plates(con = con,
+#'                                        orderId = "vendor_order1")
 #' }
 #'
 #' @export
-brapi_get_vendor_orders <- function(con = NULL,
-                                    orderId = '',
-                                    submissionId = '',
-                                    page = 0,
-                                    pageSize = 1000) {
+brapi_get_vendor_orders_orderId_plates <- function(con = NULL,
+                                                   orderId = '',
+                                                   page = 0,
+                                                   pageSize = 1000) {
   ## Create a list of used arguments
   usedArgs <- brapirv2:::brapi_usedArgs(origValues = FALSE)
   ## Check if BrAPI server can be reached given the connection details
   brapi_checkCon(con = usedArgs[["con"]], verbose = FALSE)
   ## Check validity of used and required arguments
-  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
+  brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "orderId")
   ## Obtain the call url
   callurl <- brapirv2:::brapi_GET_callURL(usedArgs = usedArgs,
-                                          callPath = "/vendor/orders",
-                                          reqArgs = "",
+                                          callPath = "/vendor/orders/{orderId}/plates",
+                                          reqArgs = "orderId",
                                           packageName = "BrAPI-Genotyping",
                                           callVersion = 2.0)
 
@@ -63,7 +59,7 @@ brapi_get_vendor_orders <- function(con = NULL,
     out <- brapirv2:::brapi_result2df(cont, usedArgs)
   })
   ## Set class of output
-  class(out) <- c(class(out), "brapi_get_vendor_orders")
+  class(out) <- c(class(out), "brapi_get_vendor_orders_orderId_plates")
   ## Show pagination information from metadata
   brapirv2:::brapi_serverinfo_metadata(cont)
   return(out)

@@ -64,6 +64,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_variantsets_variantSetDbId}()},
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
+\code{\link{brapi_get_vendor_orders_orderId_plates}()},
 \code{\link{brapi_get_vendor_orders}()},
 \code{\link{brapi_post_samples}()},
 \code{\link{brapi_post_search_callsets}()},
