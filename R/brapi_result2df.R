@@ -65,16 +65,16 @@ brapi_result2df <- function(cont, usedArgs) {
     resultList <- contList[["result"]]
     ## Solve Issue that get_serverinfo has "calls" instead of "data"
     if ("calls" %in% names(resultList)) {
-    names(resultList)[which(names(resultList) == "calls")] <- "data"
-  }
+      names(resultList)[which(names(resultList) == "calls")] <- "data"
+    }
     ## Determine payload variable value
     if ("data" %in% names(resultList)) {
-    payload <- ifelse(test = length(resultList) == 1,
-                      yes = "detail",
-                      no =  "master/detail")
-  } else {
-    payload <- "master"
-  }
+      payload <- ifelse(test = length(resultList) == 1,
+                        yes = "detail",
+                        no =  "master/detail")
+    } else {
+      payload <- "master"
+    }
     ## Handle and process payload variable
     switch(payload,
            "master" = {

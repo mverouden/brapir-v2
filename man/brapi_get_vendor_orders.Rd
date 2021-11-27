@@ -84,6 +84,9 @@ Other brapi-genotyping:
 \code{\link{brapi_get_variantsets}()},
 \code{\link{brapi_get_variants}()},
 \code{\link{brapi_get_vendor_orders_orderId_plates}()},
+\code{\link{brapi_get_vendor_orders_orderId_results}()},
+\code{\link{brapi_get_vendor_orders_orderId_status}()},
+\code{\link{brapi_get_vendor_specifications}()},
 \code{\link{brapi_post_samples}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
@@ -97,7 +100,10 @@ Other brapi-genotyping:
 \code{\link{brapi_put_samples_sampleDbId}()}
 
 Other Vendor: 
-\code{\link{brapi_get_vendor_orders_orderId_plates}()}
+\code{\link{brapi_get_vendor_orders_orderId_plates}()},
+\code{\link{brapi_get_vendor_orders_orderId_results}()},
+\code{\link{brapi_get_vendor_orders_orderId_status}()},
+\code{\link{brapi_get_vendor_specifications}()}
 }
 \author{
 Maikel Verouden
