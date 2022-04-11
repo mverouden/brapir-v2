@@ -17,14 +17,12 @@ brapi_get_search_callsets_searchResultsDbId(
 \item{searchResultsDbId}{character; required: TRUE; Unique identifier which
 references the search results}
 
+\item{page}{integer; required: FALSE; Used to request a specific page of data
+to be returned. The page indexing starts at 0 (the first page is
+\code{page = 0}). Default is \code{0}.}
+
 \item{pageSize}{integer; required: FALSE; The size of the pages to be
 returned. Default is \code{1000}.}
-
-\item{pageToken}{character; required: FALSE; Used to request a specific page
-of data to be returned. Tokenized pages are for large data sets, which can
-not be efficiently broken into indexed pages. Use the \code{nextPageToken} and
-\code{prevPageToken} from a prior response to construct a query and move to the
-next or previous page respectively.}
 }
 \value{
 data.frame

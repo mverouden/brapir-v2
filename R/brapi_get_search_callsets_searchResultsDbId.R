@@ -7,11 +7,9 @@
 #' @param con list; required: TRUE; BrAPI connection object
 #' @param searchResultsDbId character; required: TRUE; Unique identifier which
 #'    references the search results
-#' @param pageToken character; required: FALSE; Used to request a specific page
-#'    of data to be returned. Tokenized pages are for large data sets, which can
-#'    not be efficiently broken into indexed pages. Use the `nextPageToken` and
-#'    `prevPageToken` from a prior response to construct a query and move to the
-#'     next or previous page respectively.
+#' @param page integer; required: FALSE; Used to request a specific page of data
+#'    to be returned. The page indexing starts at 0 (the first page is
+#'    `page = 0`). Default is `0`.
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
