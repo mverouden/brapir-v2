@@ -59,6 +59,7 @@ brapi_get_search_germplasm_searchResultsDbId(con = con, searchResultsDbId = sear
 }
 \seealso{
 Other brapi-germplasm: 
+\code{\link{brapi_get_attributes}()},
 \code{\link{brapi_get_germplasm}()},
 \code{\link{brapi_post_search_germplasm}()}
 

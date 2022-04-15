@@ -93,6 +93,7 @@ brapi_get_germplasm(con = con)
 }
 \seealso{
 Other brapi-germplasm: 
+\code{\link{brapi_get_attributes}()},
 \code{\link{brapi_get_search_germplasm_searchResultsDbId}()},
 \code{\link{brapi_post_search_germplasm}()}
 
