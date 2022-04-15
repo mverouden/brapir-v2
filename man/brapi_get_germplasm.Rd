@@ -91,6 +91,15 @@ brapi_get_germplasm(con = con)
 \references{
 \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Germplasm/2.0#/Germplasm/get_germplasm }{BrAPI SwaggerHub}
 }
+\seealso{
+Other brapi-germplasm: 
+\code{\link{brapi_get_search_germplasm_searchResultsDbId}()},
+\code{\link{brapi_post_search_germplasm}()}
+
+Other Germplasm: 
+\code{\link{brapi_get_search_germplasm_searchResultsDbId}()},
+\code{\link{brapi_post_search_germplasm}()}
+}
 \author{
 Maikel Verouden
 }
