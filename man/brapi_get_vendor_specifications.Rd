@@ -21,7 +21,7 @@ Defines the plate format specification for the vendor.
 \examples{
 \dontrun{
 con <- brapi_db()$testserver
-brapi_get_vendor_specifications(con = con)
+
 }
 
 }
