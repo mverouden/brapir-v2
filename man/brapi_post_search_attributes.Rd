@@ -93,9 +93,9 @@ data.frame
 Submit a search request for Germplasm \code{Attributes}
 }
 \details{
-Submit a search request for \code{Attributes}. Function will return
-either the search results (Status 200 for an immediate response) or a
-\code{searchResultsDbId} (Status 202 for both a saved and an asynchronous
+Submit a search request for  Germplasm \code{Attributes}. Function will
+return either the search results (Status 200 for an immediate response) or
+a \code{searchResultsDbId} (Status 202 for both a saved and an asynchronous
 search).
 }
 \examples{
@@ -128,7 +128,9 @@ Other brapi-germplasm:
 \code{\link{brapi_get_attributevalues}()},
 \code{\link{brapi_get_germplasm}()},
 \code{\link{brapi_get_search_attributes_searchResultsDbId}()},
+\code{\link{brapi_get_search_attributevalues_searchResultsDbId}()},
 \code{\link{brapi_get_search_germplasm_searchResultsDbId}()},
+\code{\link{brapi_post_search_attributevalues}()},
 \code{\link{brapi_post_search_germplasm}()}
 
 Other Germplasm Attributes: 

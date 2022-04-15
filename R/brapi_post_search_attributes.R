@@ -55,9 +55,9 @@
 #' @param pageSize integer; required: FALSE; The size of the pages to be
 #'    returned. Default is `1000`.
 #'
-#' @details Submit a search request for `Attributes`. Function will return
-#'    either the search results (Status 200 for an immediate response) or a
-#'    `searchResultsDbId` (Status 202 for both a saved and an asynchronous
+#' @details Submit a search request for  Germplasm `Attributes`. Function will
+#'    return either the search results (Status 200 for an immediate response) or
+#'    a `searchResultsDbId` (Status 202 for both a saved and an asynchronous
 #'    search).
 #'
 #' @return data.frame
