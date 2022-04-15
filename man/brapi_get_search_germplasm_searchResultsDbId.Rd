@@ -62,6 +62,8 @@ Other brapi-germplasm:
 \code{\link{brapi_get_attributes}()},
 \code{\link{brapi_get_attributevalues}()},
 \code{\link{brapi_get_germplasm}()},
+\code{\link{brapi_get_search_attributes_searchResultsDbId}()},
+\code{\link{brapi_post_search_attributes}()},
 \code{\link{brapi_post_search_germplasm}()}
 
 Other Germplasm: 
