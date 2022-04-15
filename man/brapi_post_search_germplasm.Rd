@@ -145,6 +145,7 @@ brapi_post_search_germplasm(con = con,
 \seealso{
 Other brapi-germplasm: 
 \code{\link{brapi_get_attributes}()},
+\code{\link{brapi_get_attributevalues}()},
 \code{\link{brapi_get_germplasm}()},
 \code{\link{brapi_get_search_germplasm_searchResultsDbId}()}
 
