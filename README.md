@@ -31,7 +31,7 @@ protocol changes.
 
 An R package to use the [Breeding API
 (BrAPI)](https://brapi.org/documentation) for accessing BrAPI compliant
-plant breeding data.
+plant breeding databases.
 <!--See the [documentation](https://cip-riu.github.io/brapi/) for details.-->
 
 It can be installed using:
